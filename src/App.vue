@@ -23,7 +23,7 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
-body {
+/* body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,5 +35,10 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: black;
+} */
+
+.v-main__wrap {
+    background-size: 100%;
+    background-image: url('./assets/msi-background.jpg');
 }
 </style>
