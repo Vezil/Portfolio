@@ -1,26 +1,31 @@
 <template>
-    <v-app>
-        <v-main>
-            <Hello-Component></Hello-Component>
-        </v-main>
-    </v-app>
+    <div v-if="loading" class="mainApp">
+        <Loading />
+    </div>
+    <div v-else class="mainApp">
+        <Hello-Component />
+    </div>
 </template>
 
 <script>
+import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
 
 export default {
     name: 'App',
-
     components: {
-        HelloComponent
+        HelloComponent,
+        Loading
     },
 
-    data: () => ({
-        //
-    })
+    data() {
+        return {
+            loading: true
+        };
+    }
 };
 </script>
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
 /* body {
@@ -37,8 +42,9 @@ body {
     background-color: black;
 } */
 
-.v-main__wrap {
-    background-size: 100%;
-    background-image: url('./assets/msi-background.jpg');
+* {
+    margin: 0;
+    padding: 0;
 }
 </style>
+
