@@ -1,6 +1,12 @@
 <template>
     <div class="mainContainer">
-        <vue-typed-js :loop="true" :showCursor="true" :backSpeed="50" :strings="typingStrings">
+        <vue-typed-js
+            v-if="!loading"
+            :loop="true"
+            :showCursor="true"
+            :backSpeed="50"
+            :strings="typingStrings"
+        >
             <h1 class="typingText">
                 Hello! Here Szymon, I'm
                 <span class="typing"></span>
@@ -16,14 +22,23 @@ export default {
                 'FullStack Developer.',
                 'FrontEnd Developer.',
                 'BackendEnd Developer.'
-            ]
+            ],
+            loading: true
         };
+    },
+
+    mounted() {
+        setTimeout(() => {
+            this.loading = false;
+        }, 1500);
     }
 };
 </script>
-<style>
+<style >
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+body {
+    background: black;
+}
 .mainContainer {
     background-size: 100%;
     background-image: url('../assets/msi-background.jpg');
@@ -32,6 +47,7 @@ export default {
     height: 100vh;
     text-align: center;
     color: white;
+    animation: animate 2s linear;
 }
 
 .typing {
@@ -41,5 +57,17 @@ export default {
 .typingText {
     margin-top: 40%;
     margin-left: 10%;
+}
+
+@keyframes animate {
+    0% {
+        filter: grayscale(100%);
+        filter: blur(4px);
+        height: 100px;
+    }
+    100% {
+        filter: grayscale(0%);
+        filter: blur(0);
+    }
 }
 </style>

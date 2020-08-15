@@ -4,11 +4,13 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body {
+.loadingContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +19,48 @@ body {
 }
 .loader {
     position: relative;
-    width: 150px;
-    height: 100px;
-    border-radius: 50px;
-    background: linear;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent 40%, #e5f403);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+        width: 550px;
+        height: 550px;
+    }
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+        width: 600px;
+        height: 600px;
+    }
+}
+.loader:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg, transparent 40%, #e5f403);
+    border-radius: 50%;
+    z-index: 1000;
+    z-index: 1;
+    filter: blur(30px);
 }
 </style>
