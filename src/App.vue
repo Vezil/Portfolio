@@ -1,60 +1,56 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+    <div v-if="loading" class="mainApp">
+        <Loading />
+    </div>
+    <div v-else class="mainApp">
+        <Hello-Component />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Loading from './components/Loading';
+import HelloComponent from './components/HelloComponent';
 
 export default {
-  name: 'App',
+    name: 'App',
+    components: {
+        HelloComponent,
+        Loading
+    },
 
-  components: {
-    HelloWorld,
-  },
+    data() {
+        return {
+            loading: true
+        };
+    },
 
-  data: () => ({
-    //
-  }),
+    mounted() {
+        setTimeout(() => {
+            this.loading = false;
+        }, 1000);
+    }
 };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+</style>
+
