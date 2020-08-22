@@ -3,6 +3,7 @@
         <Loading />
     </div>
     <div v-else class="mainApp">
+        <Navbar />
         <Hello-Component />
     </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
+import Navbar from './components/Navbar';
 
 export default {
     name: 'App',
     components: {
         HelloComponent,
-        Loading
+        Loading,
+        Navbar
     },
 
     data() {
@@ -34,6 +37,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
+@import './assets/styles/main.scss';
 /* body {
     margin: 0;
     padding: 0;
@@ -47,10 +51,5 @@ body {
     min-height: 100vh;
     background-color: black;
 } */
-
-* {
-    margin: 0;
-    padding: 0;
-}
 </style>
 
