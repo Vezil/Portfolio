@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.mainContainer {
+    background: url('./assets/msi-background.jpg') no-repeat bottom center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    animation: animate 2s linear;
+
+    .typingText {
+        position: relative;
+        margin-right: 40vw;
+        margin-top: 10vw;
+        font-size: 2rem;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 20px 0;
+
+        .typing {
+            color: green;
+            text-shadow: 2px 2px black;
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            filter: grayscale(100%);
+            filter: blur(4px);
+            height: 100px;
+        }
+        100% {
+            filter: grayscale(0%);
+            filter: blur(0);
+        }
+    }
+}

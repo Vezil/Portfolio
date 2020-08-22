@@ -35,21 +35,6 @@ export default {
 };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
+<style lang="scss">
 @import './assets/styles/main.scss';
-/* body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: black;
-} */
 </style>
-
