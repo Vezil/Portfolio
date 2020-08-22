@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="navbarContainer">
         <header class="main-header">
             <div class="logo">
                 <a href="#">LOGO</a>
@@ -26,27 +26,6 @@
                 </li>
             </ul>
         </header>
-
-        <div class="hero">
-            <h1>Hero Text</h1>
-        </div>
-
-        <div class="container">
-            <p>
-                Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quasi vel itaque,
-                enim aliquid est doloremque ut inventore
-                voluptates veniam ipsum omnis quia, esse
-                facilis earum at perspiciatis expedita. Nulla, quod.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quasi vel itaque,
-                enim aliquid est doloremque ut inventore
-                voluptates veniam ipsum omnis quia, esse
-                facilis earum at perspiciatis expedita. Nulla, quod.
-            </p>
-        </div>
     </div>
 </template>
 <script>
