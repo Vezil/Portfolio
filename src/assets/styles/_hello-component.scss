@@ -16,11 +16,25 @@
     .typingText {
         position: relative;
         margin-right: 40vw;
-        margin-top: 10vw;
+        margin-top: 30vw;
         font-size: 2rem;
         padding: 2rem;
         background: rgba(0, 0, 0, 0.2);
         border-radius: 20px 0;
+        min-width: 400px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+            margin-top: 50vw;
+            padding: 3rem;
+            min-width: 350px;
+        }
+
+        @media screen and (max-width: 550px) {
+            min-width: 260px;
+            margin-right: 10vw;
+            font-size: 1rem;
+        }
 
         .typing {
             color: green;
@@ -40,3 +54,5 @@
         }
     }
 }
+
+//@TODO : REFACTOR - MOVE ANIMATE AND MEDIA TO SEPARATE FILE

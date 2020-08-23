@@ -9,6 +9,7 @@
         >
             <h1 class="typingText">
                 Hello! Here Szymon, I'm
+                <br />
                 <span class="typing"></span>
             </h1>
         </vue-typed-js>
