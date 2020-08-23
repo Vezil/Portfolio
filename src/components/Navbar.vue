@@ -13,16 +13,16 @@
 
             <ul class="nav-links">
                 <li class="nav-link">
-                    <a href="#">About</a>
+                    <a href="#" data-text="About">About</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Projects</a>
+                    <a href="#" data-text="Projects">Projects</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Skills</a>
+                    <a href="#" data-text="Skills">Skills</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Contact</a>
+                    <a href="#" data-text="Contact">Contact</a>
                 </li>
             </ul>
         </header>
