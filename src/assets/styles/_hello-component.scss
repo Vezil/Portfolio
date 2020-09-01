@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
 .mainContainer {
     background: url('./assets/images/msi-background.jpg') no-repeat bottom
@@ -22,6 +23,11 @@
         background: rgba(0, 0, 0, 0.2);
         border-radius: 20px 0;
         min-width: 400px;
+
+        font-family: 'Source Code Pro', monospace;
+
+        font-weight: 300;
+        letter-spacing: -3px;
 
         @media screen and (max-width: 768px) {
             font-size: 22px;
