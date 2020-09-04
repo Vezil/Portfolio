@@ -1,6 +1,12 @@
 .navbarContainer {
     font-family: 'Montserrat', sans-serif;
 
+    .logo {
+        background: url('./assets/images/logo.png');
+        width: 34px;
+        height: 42px;
+    }
+
     .main-header {
         position: fixed;
         display: flex;
