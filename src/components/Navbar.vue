@@ -2,7 +2,7 @@
     <div class="navbarContainer">
         <header class="main-header">
             <div class="logo">
-                <a href="#">VEZIL</a>
+                <a href="#">V_L</a>
             </div>
 
             <input type="checkbox" class="menu-btn" id="menu-btn" />
