@@ -3,24 +3,38 @@
         <Loading />
     </div>
     <div v-else class="mainApp">
+        <Navbar />
         <Hello-Component />
+
+        <div style="color:white" class="test">
+            <div v-for="(item, index) in 40" :key="index">
+                {{ item }}
+                {{ text }}
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
+import Navbar from './components/Navbar';
 
 export default {
     name: 'App',
     components: {
         HelloComponent,
-        Loading
+        Loading,
+        Navbar
     },
 
     data() {
         return {
-            loading: true
+            loading: true,
+            text: `Lorem ipsum dolor sit amet consectetu r adipisicing elit. Mo
+                lestias excepturi ipsa imped it magni cupiditate, voluptas commo
+                di unde autem, exercitationem odio ipsum pariatur! U llam porro
+                quis suscipit inventore consequuntur repellat numquam?`
         };
     },
 
@@ -32,25 +46,6 @@ export default {
 };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Popins:100,200,300,400,500,600,700,800,900');
-/* body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: black;
-} */
-
-* {
-    margin: 0;
-    padding: 0;
-}
+<style lang="scss">
+@import './assets/styles/main.scss';
 </style>
-
