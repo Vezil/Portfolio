@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
 .mainContainer {
-    background: url('./assets/images/msi-background.jpg') no-repeat bottom
+    background: url('./assets/images/msi-background.png') no-repeat bottom
         center;
     background-size: cover;
     height: 100vh;
@@ -13,6 +13,13 @@
     font-family: 'Indie Flower', cursive;
     color: white;
     animation: animate 2s linear;
+    transition: background 0.8s ease-in-out;
+
+    &:hover {
+        background: url('./assets/images/msi-background2.png') no-repeat bottom
+            center;
+        background-size: cover;
+    }
 
     .typingText {
         position: relative;

@@ -5,12 +5,10 @@
     <div v-else class="mainApp">
         <Navbar />
         <Hello-Component />
-
-        <div style="color:white" class="test">
-            <div v-for="(item, index) in 40" :key="index">
-                {{ item }}
-                {{ text }}
-            </div>
+        <div>
+            <h1 style="color:white; padding:5%;">
+                PROJECTS
+            </h1>
         </div>
     </div>
 </template>
@@ -30,11 +28,7 @@ export default {
 
     data() {
         return {
-            loading: true,
-            text: `Lorem ipsum dolor sit amet consectetu r adipisicing elit. Mo
-                lestias excepturi ipsa imped it magni cupiditate, voluptas commo
-                di unde autem, exercitationem odio ipsum pariatur! U llam porro
-                quis suscipit inventore consequuntur repellat numquam?`
+            loading: true
         };
     },
 
