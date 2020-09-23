@@ -2,13 +2,8 @@
     <div class="container">
         <div class="box">
             <div class="content">
-                <h2>YERBA</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Numquam saepe optio odit. Modi facilis quo nobis itaque rem
-                    ex tempore saepe! Illum vel illo eos reiciendis enim, dicta
-                    eaque repellat.
-                </p>
+                <h2>YERBA PROJECT</h2>
+                <p> This project is fine </p>
             </div>
         </div>
         <svg>
@@ -79,7 +74,8 @@ export default {};
 }
 
 .container .box:hover:before {
-    background: #fff;
+    background: url('../assets/images/msi-background2.png') no-repeat bottom
+        center;
     transition: 0.5s;
 }
 
