@@ -30,7 +30,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {}
+};
 </script>
 <style>
 .container {
@@ -74,8 +76,8 @@ export default {};
 }
 
 .container .box:hover:before {
-    background: url('../assets/images/msi-background2.png') no-repeat bottom
-        center;
+    background: url('../assets/images/project1.png') no-repeat bottom center;
+    background-size: cover;
     transition: 0.5s;
 }
 

@@ -4,9 +4,9 @@
         <br />
 
         <Project />
+        <!-- <Project />
         <Project />
-        <Project />
-        <Project />
+        <Project /> -->
     </div>
 </template>
 <script>
