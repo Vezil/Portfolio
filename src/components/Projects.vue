@@ -1,116 +1,118 @@
 <template>
-    <div class="projectsSection">
-        <!-- <h1>Projects</h1> -->
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+    <div class="projectsContainer">
+        <div class="projectsSection">
+            <!-- <h1>Projects</h1> -->
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title2</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title2</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title3</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title3</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title4</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title4</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title5</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title5</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="imgBox">
-                    <img src="../assets/images/project1.png" alt="" />
-                </div>
-                <div class="contentBox">
-                    <div>
-                        <h2>Title6</h2>
-                        <p
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Asperiores optio quas labore vitae eaque
-                            dolorem su nt quasi eos doloremque ea ani mi
-                            molestias perspiciatis nam exp licabo blanditiis,
-                            quo, voluptate e xercitationem hic!
-                        </p>
+            <div class="card">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="../assets/images/project1.png" alt="" />
+                    </div>
+                    <div class="contentBox">
+                        <div>
+                            <h2>Title6</h2>
+                            <p
+                                >Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Asperiores optio quas labore
+                                vitae eaque dolorem su nt quasi eos doloremque
+                                ea ani mi molestias perspiciatis nam exp licabo
+                                blanditiis, quo, voluptate e xercitationem hic!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,6 +128,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.projectsContainer {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    border-top-right-radius: 50px;
+    border-width: 3px;
+    border-top-style: groove;
+    border-top-color: black;
+}
 .projectsSection {
     box-sizing: border-box;
     display: flex;
