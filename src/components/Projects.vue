@@ -1,5 +1,6 @@
 <template>
     <div class="projectsContainer">
+        <h1>My Projects</h1>
         <div class="projectsSection">
             <Project
                 :logoLink="'store.png'"
