@@ -1,18 +1,21 @@
 <template>
     <div class="card">
-        <div class="box">
-            <div class="imgBox">
-                <img :src="require(`@/assets/images/${logoLink}`)" alt="link" />
-            </div>
-            <div class="contentBox">
-                <div>
-                    <h2>{{ title }}</h2>
-                    <p>
-                        {{ content }}
-                    </p>
+        <a :href="projectLink" target="_blank">
+            <div class="box">
+                <div class="imgBox">
+                    <img
+                        :src="require(`@/assets/images/${logoLink}`)"
+                        alt="link"
+                    />
+                </div>
+                <div class="contentBox">
+                    <div>
+                        <h2>{{ title }}</h2>
+                        <p v-html="content"> </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </template>
 
@@ -30,6 +33,11 @@ export default {
             default: ''
         },
         content: {
+            type: String,
+            required: true,
+            default: ''
+        },
+        projectLink: {
             type: String,
             required: true,
             default: ''
