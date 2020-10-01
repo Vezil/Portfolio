@@ -5,17 +5,14 @@
     <div v-else class="mainApp">
         <Navbar />
         <Hello-Component />
-        <div>
-            <h1 style="color:white; padding:5%;">
-                PROJECTS
-            </h1>
-        </div>
+        <Projects />
     </div>
 </template>
 
 <script>
 import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
+import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 
 export default {
@@ -23,7 +20,8 @@ export default {
     components: {
         HelloComponent,
         Loading,
-        Navbar
+        Navbar,
+        Projects
     },
 
     data() {

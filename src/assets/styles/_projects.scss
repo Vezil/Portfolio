@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+.projectsContainer {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    border-top-right-radius: 50px;
+    border-width: 3px;
+    border-top-style: groove;
+    border-top-color: black;
+}
+.projectsSection {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:65vh;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+
+.projectsSection .card {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.projectsSection .card .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+
+.projectsSection .card:hover .box {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.projectsSection .card .box .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.projectsSection .card .box .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+
+.projectsSection .card .box .contentBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/projectCardBackground.jpg') no-repeat bottom
+    center;
+background-size: cover;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+   
+}
+
+.projectsSection .card .box .contentBox div {
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg, #29323c, #485563);
+    transform: translateZ(100px);
+}
+
+.projectsSection .card .box .contentBox div h2 {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.projectsSection .card .box .contentBox div p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.projectsContainer h1{
+
+
+    // &:before{
+    //     position: relative;  //@TODO ADD UNDERLINE
+    // }
+ 
+    font-size: 40px;
+    padding: 40px;
+    color: #fff; 
+    text-shadow:0 0 50px #f06292;
+    font-family: 'Montserrat', sans-serif;
+
+
+    
+}
+
+
+
+
+//@TODO CHANGE TO SCSS
