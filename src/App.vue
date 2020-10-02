@@ -6,6 +6,7 @@
         <Navbar />
         <Hello-Component />
         <Projects />
+        <ContactForm />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
+import ContactForm from './components/ContactForm';
 
 export default {
     name: 'App',
@@ -21,7 +23,8 @@ export default {
         HelloComponent,
         Loading,
         Navbar,
-        Projects
+        Projects,
+        ContactForm
     },
 
     data() {
