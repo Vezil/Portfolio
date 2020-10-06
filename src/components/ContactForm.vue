@@ -3,13 +3,7 @@
         <section class="contact">
             <h2> Get in touch </h2>
 
-            <p class="text"
-                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Magni, error. Repellendus repellat voluptatibus impedit autem
-                dignissimos? Iste mollitia non quam illo incidunt, ratione
-                explicabo repellat delectus, repellendus quo, necessitatibus
-                perferendis!
-            </p>
+            <p class="text"> Do you have any question ? </p>
         </section>
         <section class="about">
             <div class="contentBox">
@@ -27,8 +21,15 @@
                             placeholder="Write your message here"
                         ></textarea>
                     </div>
-                    <div class="inputBox">
-                        <input type="submit" name="" value="Send" />
+                    <div class="inputBox sendButton">
+                        <a class="sendButtonHref" href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Send
+                            <i class="fa fa-send"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -38,7 +39,7 @@
 <script>
 export default {};
 </script>
-<style>
+<style >
 .contactContainer {
     background: #050b0f;
     text-align: center;
@@ -67,7 +68,7 @@ export default {};
 }
 
 .form .inputBox input {
-    width: 50%;
+    width: 30%;
     background: transparent;
     box-shadow: none;
     border: none;
@@ -84,7 +85,7 @@ export default {};
 }
 
 .form .inputBox textarea {
-    width: 50%;
+    width: 30%; /* @TODO - more for mobile and move all to scss. Upgrade backgrounds for mobile... */
     background: transparent;
     box-shadow: none;
     border: none;
@@ -108,5 +109,91 @@ export default {};
     color: #111;
     cursor: pointer;
     font-weight: 400;
+}
+
+.sendButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+}
+.sendButtonHref {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.sendButtonHref:hover {
+    color: #000;
+    background: #2196f3;
+    box-shadow: 0 0 10px #596e80, 0 0 40px #2196f3, 0 0 10px #2196f3;
+    transition-delay: 1s;
+}
+
+.sendButtonHref span {
+    position: absolute;
+    display: block;
+}
+
+.sendButtonHref span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.sendButtonHref:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.sendButtonHref span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.sendButtonHref:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.sendButtonHref span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.sendButtonHref:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.sendButtonHref span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.sendButtonHref:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
 }
 </style>
