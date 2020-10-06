@@ -32,7 +32,7 @@
             />
             <Project
                 :logoLink="'disney.png'"
-                :title="'Disney'"
+                :title="'Disney Plus'"
                 :content="disneyContent"
                 :projectLink="'https://vezil-disneyplus.netlify.app'"
             />
