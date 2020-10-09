@@ -117,16 +117,16 @@
                 animation: pulse 1s;
 
                 .menu-icon__line {
-                    background: rgb(0, 255, 213);
+                    background: #228dff;
                     animation: openMidLine 0.8s forwards;
 
                     &::before {
-                        background: rgb(0, 255, 213);
+                        background: #228dff;
                         animation: openTopLine 0.8s forwards;
                     }
 
                     &::after {
-                        background: rgb(0, 255, 213);
+                        background: #228dff;
                         animation: openBtmLine 0.8s forwards;
                     }
                 }
