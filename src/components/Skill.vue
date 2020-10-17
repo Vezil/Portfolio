@@ -1,7 +1,7 @@
 <template>
-    <div class="card">
+    <div class="card" :data-content="`${title}`">
         <div class="imgBox">
-            <img src="../assets/images/vuejs.png" alt="" />
+            <img :src="require(`@/assets/images/${logoLink}`)" alt="" />
         </div>
         <div class="contentBox">
             <h3>{{ title }}</h3>
@@ -21,6 +21,11 @@ export default {
             type: String,
             required: true,
             default: ''
+        },
+        logoLink: {
+            type: String,
+            required: true,
+            default: ''
         }
     }
 };
@@ -28,8 +33,8 @@ export default {
 <style scoped>
 .card {
     position: relative;
-    width: 320px;
-    height: 420px;
+    width: 220px;
+    height: 320px;
     background: #09161d;
     border-radius: 20px;
     overflow: hidden;
@@ -52,7 +57,7 @@ export default {
 }
 
 .card::after {
-    content: 'Vue';
+    content: attr(data-content);
     position: absolute;
     bottom: 0;
     left: 0;

@@ -1,6 +1,15 @@
 <template>
     <div class="skillsContainer">
-        <Skill :title="vueTitle" :description="vueDescription" />
+        <Skill
+            :title="vueTitle"
+            :description="vueDescription"
+            :logoLink="vueLogoLink"
+        />
+        <Skill
+            :title="nodeTitle"
+            :description="nodeDescription"
+            :logoLink="nodeLogoLink"
+        />
     </div>
 </template>
 <script>
@@ -14,8 +23,17 @@ export default {
     data() {
         return {
             vueTitle: 'Vue',
-            vueDescription: 'Description'
+            vueDescription: 'Description',
+            vueLogoLink: 'vue.png',
+            nodeTitle: 'Node',
+            nodeDescription: 'Description',
+            nodeLogoLink: 'node.png'
         };
     }
 };
 </script>
+<style>
+.skillsContainer {
+    width: 100%;
+}
+</style>
