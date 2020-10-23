@@ -1,14 +1,13 @@
 <template>
     <div class="skillsContainer">
+        <h1>My Skills</h1>
+
         <Skill
-            :title="vueTitle"
-            :description="vueDescription"
-            :logoLink="vueLogoLink"
-        />
-        <Skill
-            :title="nodeTitle"
-            :description="nodeDescription"
-            :logoLink="nodeLogoLink"
+            v-for="item in skills"
+            :key="item.title"
+            :title="item.title"
+            :description="item.description"
+            :logoLink="item.logoLink"
         />
     </div>
 </template>
@@ -22,18 +21,128 @@ export default {
 
     data() {
         return {
-            vueTitle: 'Vue',
-            vueDescription: 'Description',
-            vueLogoLink: 'vue.png',
-            nodeTitle: 'Node',
-            nodeDescription: 'Description',
-            nodeLogoLink: 'node.png'
+            skills: [
+                {
+                    title: 'Html',
+                    description: 'HTML Description',
+                    logoLink: 'html.png'
+                },
+
+                {
+                    title: 'Css',
+                    description: 'Css Description',
+                    logoLink: 'css.png'
+                },
+                {
+                    title: 'Scss',
+                    description: 'Scss Description',
+                    logoLink: 'scss.png'
+                },
+                {
+                    title: 'Bootstrap',
+                    description: 'Bootstrap Description',
+                    logoLink: 'bootstrap.png'
+                },
+                {
+                    title: 'Js',
+                    description: 'Js Description',
+                    logoLink: 'js.png'
+                },
+                {
+                    title: 'Vue',
+                    description: 'Vue Description',
+                    logoLink: 'vue.png'
+                },
+                {
+                    title: 'Nuxt',
+                    description: 'Nuxt Description',
+                    logoLink: 'nuxt.png'
+                },
+                {
+                    title: 'React',
+                    description: 'React Description',
+                    logoLink: 'react.png'
+                },
+                {
+                    title: 'Node',
+                    description: 'Node Description',
+                    logoLink: 'node.png'
+                },
+                {
+                    title: 'Express',
+                    description: 'Express Description',
+                    logoLink: 'express.png'
+                },
+                {
+                    title: 'Hapi',
+                    description: 'Hapi Description',
+                    logoLink: 'hapi.png'
+                },
+                {
+                    title: 'Sequelize',
+                    description: 'Sequelize Description',
+                    logoLink: 'sequelize.png'
+                },
+                {
+                    title: 'Redis',
+                    description: 'Redis Description',
+                    logoLink: 'redis.png'
+                },
+                {
+                    title: 'Docker',
+                    description: 'Docker Description',
+                    logoLink: 'docker.png'
+                },
+                {
+                    title: 'Php',
+                    description: 'Php Description',
+                    logoLink: 'php.png'
+                },
+                {
+                    title: 'Laravel',
+                    description: 'Laravel Description',
+                    logoLink: 'laravel.png'
+                },
+                {
+                    title: 'MySQL',
+                    description: 'MySQL Description',
+                    logoLink: 'mysql.png'
+                },
+                {
+                    title: 'Git',
+                    description: 'Git Description',
+                    logoLink: 'git.png'
+                },
+                {
+                    title: 'C++',
+                    description: 'C++ Description',
+                    logoLink: 'cplusplus.png'
+                },
+                {
+                    title: 'Others',
+                    description: 'Others Description',
+                    logoLink: 'others.png'
+                }
+            ]
         };
     }
 };
 </script>
 <style>
 .skillsContainer {
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 45vh;
+    flex-wrap: wrap;
+}
+
+.skillsContainer h1 {
+    font-size: 40px;
+    padding: 40px;
+    flex-basis: 100%;
+    color: #fff;
+    text-shadow: 0 0 50px #f06292;
+    font-family: 'Montserrat', sans-serif;
 }
 </style>

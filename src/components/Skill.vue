@@ -38,6 +38,7 @@ export default {
     background: #09161d;
     border-radius: 20px;
     overflow: hidden;
+    margin: 3%;
 }
 
 .card:before {
@@ -72,7 +73,6 @@ export default {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    z-index: 1;
 }
 .card .imgBox img {
     max-width: 100%;
@@ -90,7 +90,6 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 1;
 }
 
 .card .contentBox h3 {

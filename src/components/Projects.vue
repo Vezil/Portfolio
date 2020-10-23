@@ -40,7 +40,9 @@
                 :logoLink="'platformPig.png'"
                 :title="'Platform Pig'"
                 :content="platformPigContent"
-                :projectLink="'https://vezil.github.io/PlatformPig/PlatformPig.html?07'"
+                :projectLink="
+                    'https://vezil.github.io/PlatformPig/PlatformPig.html?07'
+                "
             />
         </div>
     </div>
