@@ -24,18 +24,26 @@ export default {
             skills: [
                 {
                     title: 'Html',
-                    description: 'HTML Description',
+                    description: `Hypertext Markup Language (HTML)
+                     is the standard markup language for documents
+                      designed to be displayed in a web browser + HTML5 ( the fifth and 
+                      latest major version of HTML that is a  
+                      (W3C) recommendation).`,
                     logoLink: 'html.png'
                 },
 
                 {
                     title: 'Css',
-                    description: 'Css Description',
+                    description: `Cascading Style Sheets (CSS) is a style sheet language used
+                     for describing the presentation of a document written in a markup language
+                      such as HTML.`,
                     logoLink: 'css.png'
                 },
                 {
                     title: 'Scss',
-                    description: 'Scss Description',
+                    description: `Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that
+                      is interpreted or compiled into Cascading Style Sheets (CSS).
+                      SassScript is the scripting language itself.`,
                     logoLink: 'scss.png'
                 },
                 {
