@@ -1,5 +1,5 @@
 <template>
-    <div class="projectsContainer">
+    <div class="projectsContainer" id="projectsSection">
         <h1>Commercial Projects</h1>
         <div class="projectsSection">
             <Project
@@ -40,9 +40,7 @@
                 :logoLink="'platformPig.png'"
                 :title="'Platform Pig'"
                 :content="platformPigContent"
-                :projectLink="
-                    'https://vezil.github.io/PlatformPig/PlatformPig.html?07'
-                "
+                :projectLink="'https://vezil.github.io/PlatformPig/PlatformPig.html?07'"
             />
         </div>
     </div>
