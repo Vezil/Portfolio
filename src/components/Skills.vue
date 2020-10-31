@@ -106,52 +106,85 @@ export default {
                 },
                 {
                     title: 'Hapi',
-                    description: 'Hapi Description',
+                    description: `Hapi is a rich framework (Node.js) for building applications and services.
+                     It enables developers to focus on writing reusable application logic instead 
+                     of spending time building infrastructure.`,
                     logoLink: 'hapi.png'
                 },
                 {
                     title: 'Sequelize',
-                    description: 'Sequelize Description',
+                    description: `
+                    Sequelize is a powerful library in Javascript that makes it
+                    easy to manage a SQL database. Sequelize can layer over different protocols,
+                    but here we'll use PostgreSQL. At its core, Sequelize is an Object-Relational Mapper.
+                    `,
                     logoLink: 'sequelize.png'
                 },
                 {
                     title: 'Redis',
-                    description: 'Redis Description',
+                    description: `Redis is an open source (BSD licensed),
+                    in-memory data structure store, used as a database,
+                    cache and message broker. It supports data structures 
+                    such as strings, hashes, lists, sets. We can use redis for queue also.`,
                     logoLink: 'redis.png'
                 },
                 {
                     title: 'Docker',
-                    description: 'Docker Description',
+                    description: `Docker is a tool designed to make it easier to create,
+                    deploy, and run applications by using containers. Containers allow a 
+                    developer to package up an application with all of the parts it needs,
+                    such as libraries and other dependencies, and deploy it as one package.`,
                     logoLink: 'docker.png'
                 },
                 {
                     title: 'Php',
-                    description: 'Php Description',
+                    description: `PHP (recursive acronym for PHP: Hypertext Preprocessor)
+                    is a widely-used open source general-purpose scripting language that
+                    is especially suited for web development and can be embedded into HTML.`,
                     logoLink: 'php.png'
                 },
                 {
                     title: 'Laravel',
-                    description: 'Laravel Description',
+                    description: `Laravel is a free, open-source PHP web framework,
+                    intended for the development of web applications following the model–view–controller (MVC)
+                    architectural pattern and based on Symfony.
+                    `,
                     logoLink: 'laravel.png'
                 },
                 {
                     title: 'MySQL',
-                    description: 'MySQL Description',
+                    description: `A relational database organizes data into one or more data tables
+                    in which data types may be related to each other; these relations help structure
+                    the data. SQL is a language programmers use to create, modify and extract data 
+                    from the relational database, as well as control user access to the database.`,
                     logoLink: 'mysql.png'
                 },
                 {
                     title: 'Git',
-                    description: 'Git Description',
+                    description: `Git is a distributed version-control system for tracking
+                    changes in source code during software development.
+                    It is designed for coordinating work among programmers,
+                    but it can be used to track changes in any set of files.
+                    `,
                     logoLink: 'git.png'
                 },
                 {
                     title: 'C++',
-                    description: 'C++ Description',
+                    description: `The language has expanded significantly over time,
+                    and modern C++ now has object-oriented, generic, and functional.
+                    Based on this language later was created popular programming language like
+                    Javascript, Php and others...
+                     `,
                     logoLink: 'cplusplus.png'
                 },
                 {
                     title: 'Others',
-                    description: 'Others Description',
+                    description: `I know also others stuff who can be usefull
+                    during the programing like:
+                    Photoshop (graphic editor), Camtasia Studio (video editor),
+                    Postman (for testing API), SEO (Search Engine Optimization), Facebook Pixel (Advertisements for facebook),
+                     Jest (for testing), OAuth 2.0 protocol (authorizing via e.g Google) ...
+                   `,
                     logoLink: 'others.png'
                 }
             ]
