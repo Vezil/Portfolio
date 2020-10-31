@@ -1,6 +1,8 @@
 <template>
-    <div class="projectsContainer">
-        <h1>Commercial Projects</h1>
+    <div class="projectsContainer" id="projectsSection">
+        <h1>
+            <u>Commercial Projects <i class="fa fa-book"></i></u
+        ></h1>
         <div class="projectsSection">
             <Project
                 :logoLink="'weloan.png'"
@@ -16,7 +18,9 @@
                 :projectLink="'https://www.israelbody.org'"
             />
         </div>
-        <h1>My Projects</h1>
+        <h1>
+            <u>My Projects <i class="fa fa-paint-brush"></i> </u>
+        </h1>
         <div class="projectsSection">
             <Project
                 :logoLink="'store.png'"
@@ -40,7 +44,9 @@
                 :logoLink="'platformPig.png'"
                 :title="'Platform Pig'"
                 :content="platformPigContent"
-                :projectLink="'https://vezil.github.io/PlatformPig/PlatformPig.html?07'"
+                :projectLink="
+                    'https://vezil.github.io/PlatformPig/PlatformPig.html?07'
+                "
             />
         </div>
     </div>

@@ -6,6 +6,7 @@
         <Navbar />
         <Hello-Component />
         <Projects />
+        <Skills />
         <ContactForm />
     </div>
 </template>
@@ -15,6 +16,7 @@ import Loading from './components/Loading';
 import HelloComponent from './components/HelloComponent';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
+import Skills from './components/Skills';
 import ContactForm from './components/ContactForm';
 
 export default {
@@ -24,6 +26,7 @@ export default {
         Loading,
         Navbar,
         Projects,
+        Skills,
         ContactForm
     },
 

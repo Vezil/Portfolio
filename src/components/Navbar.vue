@@ -8,21 +8,46 @@
             <input type="checkbox" class="menu-btn" id="menu-btn" />
 
             <label for="menu-btn" class="menu-icon">
-                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line" id="menuIconLine"></span>
             </label>
 
             <ul class="nav-links">
                 <li class="nav-link">
-                    <a href="#" data-text="About">About</a>
+                    <a
+                        href="#aboutSection"
+                        data-text="About"
+                        @click="closeMobileMenu"
+                        >About
+
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" data-text="Projects">Projects</a>
+                    <a
+                        href="#projectsSection"
+                        data-text="Projects"
+                        @click="closeMobileMenu"
+                        >Projects <i class="fa fa-book"> </i>
+                    </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" data-text="Skills">Skills</a>
+                    <a
+                        href="#skillsSection"
+                        data-text="Skills"
+                        @click="closeMobileMenu"
+                        >Skills
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" data-text="Contact">Contact</a>
+                    <a
+                        href="#contactSection"
+                        data-text="Contact"
+                        @click="closeMobileMenu"
+                        >Contact
+
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </a>
                 </li>
             </ul>
         </header>
@@ -51,6 +76,10 @@ export default {
                     header.classList.remove('scrolled');
                 }
             });
+        },
+
+        closeMobileMenu() {
+            document.getElementById('menuIconLine').click();
         }
     }
 };

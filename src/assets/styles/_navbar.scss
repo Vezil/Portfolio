@@ -5,7 +5,7 @@
         background: url('./assets/images/logo.png');
         width: 34px;
         height: 42px;
-        cursor: pointer;
+        cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
     }
 
     .main-header {
@@ -49,12 +49,13 @@
                 a {
                     margin: 2rem;
                     padding-top: 1rem 5rem;
-
+                    cursor: url('./assets/images/custom-cursor-pointer.png'),
+                        pointer !important;
                     &:before {
                         content: '';
                         position: absolute;
                         bottom: 25%;
-                        width: 70px;
+                        width: 5.5%;
                         height: 5px;
                         background: #228dff;
                         z-index: -1;
@@ -81,7 +82,6 @@
         .menu-icon {
             position: relative;
             padding: 26px 10px;
-            cursor: pointer;
             z-index: 1;
             display: none;
 

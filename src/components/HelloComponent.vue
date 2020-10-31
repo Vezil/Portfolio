@@ -1,5 +1,5 @@
 <template>
-    <div class="mainContainer">
+    <div class="mainContainer" id="aboutSection">
         <vue-typed-js
             v-if="!loading"
             :loop="true"
