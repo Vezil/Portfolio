@@ -1,6 +1,6 @@
 <template>
     <div class="skillsContainer" id="skillsSection">
-        <h1>My Skills</h1>
+        <h1>My Skills <i class="fa fa-cog" aria-hidden="true"></i></h1>
 
         <Skill
             v-for="item in skills"

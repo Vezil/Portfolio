@@ -4,24 +4,35 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    cursor: url('./assets/images/custom-cursor-default.png'), auto;
+}
+
 body {
     background: black;
 }
 
-html {
-    scroll-behavior: smooth;
+.card,
+.box {
+    cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
 }
 
-::-webkit-scrollbar{
-    width:12px;
+.skillsContainer > .card,
+.box {
+    cursor: url('./assets/images/custom-cursor-info.png'), pointer !important;
 }
 
-::-webkit-scrollbar-thumb{
-    background:linear-gradient(transparent,#0d6077);
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #0d6077);
     border-radius: 6px;
+    cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
 
-    &:hover{
-        background:linear-gradient(transparent,#00ffdd);
+    &:hover {
+        background: linear-gradient(transparent, #00ffdd);
     }
 }
-

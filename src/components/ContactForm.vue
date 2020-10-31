@@ -39,7 +39,7 @@
 <script>
 export default {};
 </script>
-<style >
+<style>
 .contactContainer {
     background: #050b0f;
     text-align: center;
@@ -107,7 +107,6 @@ export default {};
     width: 150px;
     background: #fff;
     color: #111;
-    cursor: pointer;
     font-weight: 400;
 }
 
@@ -128,6 +127,7 @@ export default {};
     font-size: 24px;
     overflow: hidden;
     transition: 0.2s;
+    cursor: url('../assets/images/custom-cursor-pointer.png'), pointer !important;
 }
 
 .sendButtonHref:hover {

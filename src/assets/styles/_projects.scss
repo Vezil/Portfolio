@@ -38,7 +38,7 @@
 
 .projectsSection .card:hover .box {
     transform: rotateY(180deg);
-    cursor: pointer;
+    cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
 }
 
 .projectsSection .card .box .imgBox {
@@ -91,6 +91,10 @@
 .projectsSection .card .box .contentBox div p {
     color: #fff;
     font-size: 16px;
+}
+
+.projectsSection .card .box .contentBox div a {
+    cursor: url('./assets/images/custom-cursor-code.png'), pointer !important;
 }
 
 .projectsContainer h1 {

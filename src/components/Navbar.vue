@@ -17,32 +17,37 @@
                         href="#aboutSection"
                         data-text="About"
                         @click="closeMobileMenu"
-                        >About</a
-                    >
+                        >About
+
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
                     <a
                         href="#projectsSection"
                         data-text="Projects"
                         @click="closeMobileMenu"
-                        >Projects</a
-                    >
+                        >Projects <i class="fa fa-book"> </i>
+                    </a>
                 </li>
                 <li class="nav-link">
                     <a
                         href="#skillsSection"
                         data-text="Skills"
                         @click="closeMobileMenu"
-                        >Skills</a
-                    >
+                        >Skills
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
                     <a
                         href="#contactSection"
                         data-text="Contact"
                         @click="closeMobileMenu"
-                        >Contact</a
-                    >
+                        >Contact
+
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </a>
                 </li>
             </ul>
         </header>

@@ -74,7 +74,7 @@ export default {
     bottom: 0;
     left: 0;
     font-weight: 600;
-    font-size: 8em;
+    font-size: 3.2em;
     color: rgba(0, 0, 0, 0.1);
 }
 .card .imgBox {
