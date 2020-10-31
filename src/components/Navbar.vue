@@ -19,7 +19,7 @@
                         @click="closeMobileMenu"
                         >About
 
-                        <i class="fa fa-info" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-link">

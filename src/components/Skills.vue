@@ -1,6 +1,8 @@
 <template>
     <div class="skillsContainer" id="skillsSection">
-        <h1>My Skills <i class="fa fa-cog" aria-hidden="true"></i></h1>
+        <h1>
+            <u>My Skills <i class="fa fa-cog" aria-hidden="true"></i> </u
+        ></h1>
 
         <Skill
             v-for="item in skills"
@@ -192,13 +194,17 @@ export default {
     }
 };
 </script>
-<style>
+<style lang="scss">
 .skillsContainer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     min-height: 45vh;
     flex-wrap: wrap;
+    background: url('../assets/images/pexels-photo-1287083.jpeg') no-repeat
+        center;
+    background-size: cover;
+    // https://www.pexels.com/photo/trees-surrounded-by-fogs-in-the-forest-1287083/ :)
 }
 
 .skillsContainer h1 {
@@ -208,5 +214,10 @@ export default {
     color: #fff;
     text-shadow: 0 0 50px #f06292;
     font-family: 'Montserrat', sans-serif;
+
+    u {
+        text-decoration: none;
+        border-bottom: 10px solid #228dff;
+    }
 }
 </style>

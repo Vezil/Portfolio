@@ -1,6 +1,8 @@
 <template>
     <div class="projectsContainer" id="projectsSection">
-        <h1>Commercial Projects <i class="fa fa-book"></i></h1>
+        <h1>
+            <u>Commercial Projects <i class="fa fa-book"></i></u
+        ></h1>
         <div class="projectsSection">
             <Project
                 :logoLink="'weloan.png'"
@@ -16,7 +18,9 @@
                 :projectLink="'https://www.israelbody.org'"
             />
         </div>
-        <h1>My Projects <i class="fa fa-paint-brush"></i></h1>
+        <h1>
+            <u>My Projects <i class="fa fa-paint-brush"></i> </u>
+        </h1>
         <div class="projectsSection">
             <Project
                 :logoLink="'store.png'"

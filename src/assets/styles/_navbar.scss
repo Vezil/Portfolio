@@ -51,12 +51,11 @@
                     padding-top: 1rem 5rem;
                     cursor: url('./assets/images/custom-cursor-pointer.png'),
                         pointer !important;
-
                     &:before {
                         content: '';
                         position: absolute;
                         bottom: 25%;
-                        width: 70px;
+                        width: 5.5%;
                         height: 5px;
                         background: #228dff;
                         z-index: -1;
