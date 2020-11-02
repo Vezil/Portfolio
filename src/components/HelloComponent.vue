@@ -13,6 +13,16 @@
                 <span class="typing"></span>
             </h1>
         </vue-typed-js>
+
+        <vue-typed-js v-if="!loading" :showCursor="true" a>
+            <h2 class="staticText">
+                <p>
+                    I have been programming since <b>2016</b> and I have
+                    <b>1</b> year of commercial experience as FullStack
+                    Developer
+                </p>
+            </h2>
+        </vue-typed-js>
     </div>
 </template>
 <script>
