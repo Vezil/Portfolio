@@ -5,11 +5,11 @@
         ></h1>
 
         <Skill
-            v-for="item in skills"
-            :key="item.title"
-            :title="item.title"
-            :description="item.description"
-            :logoLink="item.logoLink"
+            v-for="skill in skills"
+            :key="skill.logoLink"
+            :title="skill.title"
+            :description="skill.description"
+            :logoLink="skill.logoLink"
         />
     </div>
 </template>

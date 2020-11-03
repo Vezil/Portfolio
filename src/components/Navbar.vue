@@ -1,9 +1,9 @@
 <template>
     <div class="navbarContainer">
         <header class="main-header">
-            <div class="logo">
-                <a href="#"></a>
-            </div>
+            <a :href="githubLink" target="_blank">
+                <div class="logo"> </div>
+            </a>
 
             <input type="checkbox" class="menu-btn" id="menu-btn" />
 
@@ -56,7 +56,9 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            githubLink: 'https://github.com/Vezil?tab=repositories'
+        };
     },
 
     mounted() {
