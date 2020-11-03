@@ -10,12 +10,16 @@
                 <div class="form">
                     <label class="formGroup">
                         <input type="text" class="formControl" required />
-                        <span>Your Name</span>
+                        <span>
+                            <i class="fa fa-user-circle"></i> Your Name
+                        </span>
                         <span class="border"></span>
                     </label>
                     <label class="formGroup">
                         <input type="email" class="formControl" required />
-                        <span for="">Your Mail</span>
+                        <span for="">
+                            <i class="fa fa-envelope-open-o"> Your Mail </i>
+                        </span>
                         <span class="border"></span>
                     </label>
                     <label class="formGroup">
@@ -25,7 +29,9 @@
                             class="formControl"
                             required
                         ></textarea>
-                        <span for="">Your Message</span>
+                        <span for="">
+                            <i class="fa fa-quora"> Your Message </i>
+                        </span>
                         <span class="border"></span>
                     </label>
 
