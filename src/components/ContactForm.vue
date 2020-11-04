@@ -59,8 +59,27 @@ export default {};
     text-align: center;
     color: #fff !important;
     background: url('../assets/images/contact.png');
-
+    height: 80vh;
     padding: 50px;
+
+    .contact {
+        position: relative;
+        margin-top: 5%;
+        right: 20%;
+
+        h2 {
+            font-size: 5rem;
+
+            @media screen and (max-width: 850px) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .about {
+        position: relative;
+        right: 20%;
+    }
 
     .contactContainer h2 {
         padding: 20px;
@@ -220,13 +239,6 @@ export default {};
         -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     }
 
-    h3 {
-        text-transform: uppercase;
-        font-size: 45px;
-        font-family: 'Montserrat-Bold';
-        text-align: center;
-        margin-bottom: 12px;
-    }
     p {
         text-align: center;
         padding: 0 10px;
