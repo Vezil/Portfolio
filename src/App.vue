@@ -8,6 +8,7 @@
         <Projects />
         <Skills />
         <ContactForm />
+        <Footer />
     </div>
 </template>
 
@@ -18,6 +19,7 @@ import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 export default {
     name: 'App',
@@ -27,7 +29,8 @@ export default {
         Navbar,
         Projects,
         Skills,
-        ContactForm
+        ContactForm,
+        Footer
     },
 
     data() {
