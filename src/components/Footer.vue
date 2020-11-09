@@ -63,12 +63,12 @@ export default {
     justify-content: space-evenly;
     align-items: center;
     background: #111111;
-    color: rgb(168, 167, 167);
+    color: rgb(173, 169, 169);
     font-size: 2em;
     text-transform: capitalize;
-    background: url('../assets/images/footerBackground.png') no-repeat center;
-    background-size: cover;
-    // https://www.fg-a.com/black-backgrounds.shtml
+    background: url('../assets/images/footerBackground.png') no-repeat left;
+    background-size: 100vw 200px;
+    // https://www.rawpixel.com/image/580718/black-geometric-modern-background
 
     .customButton {
         display: flex;
