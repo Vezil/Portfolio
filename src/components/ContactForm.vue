@@ -7,9 +7,10 @@
         </section>
         <section class="about">
             <div class="contentBox">
-                <div class="form">
+                <form class="form" @submit.prevent="submit">
                     <label class="formGroup">
                         <input
+                            name="userName"
                             v-model="formData.name"
                             type="text"
                             class="formControl"
@@ -40,6 +41,7 @@
                         }"
                     >
                         <input
+                            name="userEmail"
                             v-model="formData.email"
                             type="email"
                             class="formControl"
@@ -72,9 +74,8 @@
                         }"
                     >
                         <textarea
+                            name="userMessage"
                             v-model="formData.message"
-                            name=""
-                            id=""
                             class="formControl"
                             required
                         ></textarea>
@@ -99,17 +100,14 @@
                         <span class="border"></span>
                     </label>
 
-                    <div
-                        class="inputBox sendButton"
-                        type="submit"
-                        @click="submit"
-                    >
+                    <div class="inputBox sendButton" type="submit">
                         <a class="sendButtonHref">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
-                            Send
+                            <input type="submit" value="SEND TEST" /> Send
+                            <!-- fix type submit -->
                             <i class="fa fa-send"></i>
                         </a>
                     </div>
@@ -122,12 +120,13 @@
                     <p class="typo__p" v-if="submitStatus === 'PENDING'">
                         Sending...
                     </p>
-                </div>
+                </form>
             </div>
         </section>
     </div>
 </template>
 <script>
+import emailjs from 'emailjs-com';
 import { validationMixin } from 'vuelidate';
 import {
     required,
@@ -172,6 +171,10 @@ export default {
         }
     },
 
+    mounted() {
+        emailjs.init(process.env.VUE_APP_EMAILJS_USER_ID);
+    },
+
     data() {
         return {
             isSubmited: false,
@@ -185,7 +188,7 @@ export default {
     },
 
     methods: {
-        submit() {
+        submit(e) {
             this.$v.$touch();
 
             this.isSubmited = true;
@@ -197,6 +200,17 @@ export default {
                 setTimeout(() => {
                     this.submitStatus = 'OK';
                 }, 500);
+
+                try {
+                    emailjs.sendForm(
+                        process.env.VUE_APP_EMAILJS_SERVICE_ID,
+                        process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+                        e.target,
+                        process.env.VUE_APP_EMAILJS_USER_ID
+                    );
+                } catch (error) {
+                    console.error(error);
+                }
             }
 
             this.submitStatus = 'PENDING';
@@ -400,6 +414,11 @@ export default {
         position: relative;
         display: block;
         margin-bottom: 48px;
+
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
 
         span {
             font-size: 15px;
