@@ -7,51 +7,219 @@
         </section>
         <section class="about">
             <div class="contentBox">
-                <div class="form">
+                <form class="form" @submit.prevent="submit">
                     <label class="formGroup">
-                        <input type="text" class="formControl" required />
+                        <input
+                            name="userName"
+                            v-model="formData.name"
+                            type="text"
+                            class="formControl"
+                            required
+                        />
                         <span>
                             <i class="fa fa-user-circle"></i> Your Name
                         </span>
+                        <div v-if="nameError">
+                            <div class="error" v-if="!$v.formData.name.required"
+                                >Name is required</div
+                            >
+                            <div
+                                class="error"
+                                v-if="!$v.formData.name.minLength"
+                            >
+                                Name must have at least
+                                {{ $v.formData.name.$params.minLength.min }}
+                                letters.
+                            </div>
+                        </div>
                         <span class="border"></span>
                     </label>
-                    <label class="formGroup">
-                        <input type="email" class="formControl" required />
+                    <label
+                        class="formGroup"
+                        :class="{
+                            'form-group--error': $v.formData.email.$error
+                        }"
+                    >
+                        <input
+                            name="userEmail"
+                            v-model="formData.email"
+                            type="email"
+                            class="formControl"
+                            required
+                        />
+
                         <span for="">
                             <i class="fa fa-envelope-open-o"> Your Mail </i>
                         </span>
+                        <div v-if="emailError">
+                            <div
+                                class="error"
+                                v-if="!$v.formData.email.required"
+                                >Email is required</div
+                            >
+                            <div
+                                class="error"
+                                v-if="!$v.formData.email.minLength"
+                                >Email must have at least
+                                {{ $v.formData.email.$params.minLength.min }}
+                                letters.</div
+                            >
+                        </div>
                         <span class="border"></span>
                     </label>
-                    <label class="formGroup">
+                    <label
+                        class="formGroup"
+                        :class="{
+                            'form-group--error': $v.formData.message.$error
+                        }"
+                    >
                         <textarea
-                            name=""
-                            id=""
+                            name="userMessage"
+                            v-model="formData.message"
                             class="formControl"
                             required
                         ></textarea>
                         <span for="">
                             <i class="fa fa-quora"> Your Message </i>
                         </span>
+                        <div v-if="messageError">
+                            <div
+                                class="error"
+                                v-if="!$v.formData.message.required"
+                            >
+                                Message is required
+                            </div>
+                            <div
+                                class="error"
+                                v-if="!$v.formData.message.minLength"
+                                >Message must have at least
+                                {{ $v.formData.message.$params.minLength.min }}
+                                letters.</div
+                            >
+                        </div>
                         <span class="border"></span>
                     </label>
 
                     <div class="inputBox sendButton">
-                        <a class="sendButtonHref" href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Send
-                            <i class="fa fa-send"></i>
-                        </a>
+                        <button type="submit">
+                            <a class="sendButtonHref">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Send
+                                <!-- fix type submit -->
+                                <i class="fa fa-send"></i>
+                            </a>
+                        </button>
                     </div>
-                </div>
+
+                    <p class="typo__p" v-if="submitStatus === 'OK'">
+                        Thanks for your submission!
+                    </p>
+                    <p class="typo__p" v-if="submitStatus === 'ERROR'">
+                        Error
+                    </p>
+                    <p class="typo__p" v-if="submitStatus === 'PENDING'">
+                        Sending...
+                    </p>
+                </form>
             </div>
         </section>
     </div>
 </template>
 <script>
-export default {};
+import emailjs from 'emailjs-com';
+import { validationMixin } from 'vuelidate';
+import {
+    required,
+    minLength,
+    maxLength,
+    email
+} from 'vuelidate/lib/validators';
+
+export default {
+    mixins: [validationMixin],
+
+    validations: {
+        formData: {
+            name: {
+                required,
+                minLength: minLength(4),
+                maxLength: maxLength(30)
+            },
+            email: {
+                required,
+                email,
+                minLength: minLength(10),
+                maxLength: maxLength(40)
+            },
+            message: {
+                required,
+                minLength: minLength(10),
+                maxLength: maxLength(250)
+            }
+        }
+    },
+
+    computed: {
+        nameError() {
+            return this.isSubmited && this.$v.formData.name.$error;
+        },
+        emailError() {
+            return this.isSubmited && this.$v.formData.email.$error;
+        },
+        messageError() {
+            return this.isSubmited && this.$v.formData.message.$error;
+        }
+    },
+
+    mounted() {
+        emailjs.init(process.env.VUE_APP_EMAILJS_USER_ID);
+    },
+
+    data() {
+        return {
+            isSubmited: false,
+            submitStatus: null,
+            formData: {
+                name: '',
+                email: '',
+                message: ''
+            }
+        };
+    },
+
+    methods: {
+        submit(e) {
+            this.$v.$touch();
+
+            this.isSubmited = true;
+
+            if (this.$v.$invalid) {
+                this.submitStatus = 'ERROR';
+                return;
+            } else {
+                setTimeout(() => {
+                    this.submitStatus = 'OK';
+                }, 500);
+
+                try {
+                    emailjs.sendForm(
+                        process.env.VUE_APP_EMAILJS_SERVICE_ID,
+                        process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+                        e.target,
+                        process.env.VUE_APP_EMAILJS_USER_ID
+                    );
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            this.submitStatus = 'PENDING';
+        }
+    }
+};
 </script>
 <style lang="scss">
 .contactContainer {
@@ -144,6 +312,10 @@ export default {};
         justify-content: center;
         align-items: center;
         font-family: consolas;
+        button {
+            background: black;
+            border: none;
+        }
     }
     .sendButtonHref {
         position: relative;
@@ -250,6 +422,11 @@ export default {};
         display: block;
         margin-bottom: 48px;
 
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+
         span {
             font-size: 15px;
             color: #00ade6;
@@ -305,8 +482,7 @@ export default {};
 
     input,
     textarea,
-    select,
-    button {
+    select {
         font-family: 'Montserrat-Regular';
         color: #fff;
         font-size: 15px;

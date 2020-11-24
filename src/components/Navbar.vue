@@ -1,7 +1,7 @@
 <template>
     <div class="navbarContainer">
         <header class="main-header">
-            <a :href="githubLink" target="_blank">
+            <a href="#aboutSection">
                 <div class="logo"> </div>
             </a>
 
@@ -55,12 +55,6 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            githubLink: 'https://github.com/Vezil?tab=repositories'
-        };
-    },
-
     mounted() {
         this.initMenuScrolled();
     },
