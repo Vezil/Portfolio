@@ -70,6 +70,10 @@ export default {
     background-size: 100vw 200px;
     // https://www.rawpixel.com/image/580718/black-geometric-modern-background
 
+    @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
     .customButton {
         display: flex;
         justify-content: center;
