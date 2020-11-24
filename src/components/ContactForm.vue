@@ -100,17 +100,20 @@
                         <span class="border"></span>
                     </label>
 
-                    <div class="inputBox sendButton" type="submit">
-                        <a class="sendButtonHref">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <input type="submit" value="SEND TEST" /> Send
-                            <!-- fix type submit -->
-                            <i class="fa fa-send"></i>
-                        </a>
+                    <div class="inputBox sendButton">
+                        <button type="submit">
+                            <a class="sendButtonHref">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Send
+                                <!-- fix type submit -->
+                                <i class="fa fa-send"></i>
+                            </a>
+                        </button>
                     </div>
+
                     <p class="typo__p" v-if="submitStatus === 'OK'">
                         Thanks for your submission!
                     </p>
@@ -309,6 +312,10 @@ export default {
         justify-content: center;
         align-items: center;
         font-family: consolas;
+        button {
+            background: black;
+            border: none;
+        }
     }
     .sendButtonHref {
         position: relative;
@@ -475,8 +482,7 @@ export default {
 
     input,
     textarea,
-    select,
-    button {
+    select {
         font-family: 'Montserrat-Regular';
         color: #fff;
         font-size: 15px;
