@@ -14,6 +14,9 @@
                             v-model="formData.name"
                             type="text"
                             class="formControl"
+                            :class="
+                                $v.formData.name.$anyError ? 'errorInput' : ''
+                            "
                             required
                         />
                         <span>
@@ -45,6 +48,9 @@
                             v-model="formData.email"
                             type="email"
                             class="formControl"
+                            :class="
+                                $v.formData.email.$anyError ? 'errorInput' : ''
+                            "
                             required
                         />
 
@@ -77,11 +83,17 @@
                             name="userMessage"
                             v-model="formData.message"
                             class="formControl"
+                            :class="
+                                $v.formData.message.$anyError
+                                    ? 'errorInput'
+                                    : ''
+                            "
                             required
                         ></textarea>
                         <span for="">
                             <i class="fa fa-quora"> Your Message </i>
                         </span>
+
                         <div v-if="messageError">
                             <div
                                 class="error"
@@ -89,6 +101,7 @@
                             >
                                 Message is required
                             </div>
+
                             <div
                                 class="error"
                                 v-if="!$v.formData.message.minLength"
@@ -228,7 +241,7 @@ export default {
     color: #fff !important;
     background: url('../assets/images/contact.png');
     height: 80vh;
-    padding: 50px;
+    padding: 3rem;
 
     .contact {
         position: relative;
@@ -491,6 +504,10 @@ export default {
     textarea.formControl {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .errorInput {
+        border-bottom: 2px solid rgb(255, 72, 72) !important;
     }
 }
 </style>
