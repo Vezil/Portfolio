@@ -70,6 +70,7 @@
                                 {{ $v.formData.email.$params.minLength.min }}
                                 letters.</div
                             >
+                            <div class="error" v-else>Incorrect email</div>
                         </div>
                         <span class="border"></span>
                     </label>
@@ -121,20 +122,23 @@
                                 <span></span>
                                 <span></span>
                                 Send
-                                <!-- fix type submit -->
                                 <i class="fa fa-send"></i>
                             </a>
                         </button>
                     </div>
 
-                    <p class="typo__p" v-if="submitStatus === 'OK'">
-                        Thanks for your submission!
+                    <p class="typo__p" v-if="submitStatus === STATUS_OK">
+                        <span style="margin-right:6px;"
+                            >Thanks for your submission!</span
+                        >
+                        <i style="color:green" class="fa fa-check"></i>
                     </p>
-                    <p class="typo__p" v-if="submitStatus === 'ERROR'">
-                        Error
+                    <p class="typo__p" v-if="submitStatus === STATUS_ERROR">
+                        <span style="margin-right:6px;">Error!</span>
+                        <i style="color:red" class="fa fa-times"></i>
                     </p>
-                    <p class="typo__p" v-if="submitStatus === 'PENDING'">
-                        Sending...
+                    <p class="typo__p" v-if="submitStatus === STATUS_PENDING">
+                        <Loading />
                     </p>
                 </form>
             </div>
@@ -150,9 +154,11 @@ import {
     maxLength,
     email
 } from 'vuelidate/lib/validators';
+import Loading from './Loading.vue';
 
 export default {
     mixins: [validationMixin],
+    components: { Loading },
 
     validations: {
         formData: {
@@ -199,37 +205,46 @@ export default {
                 name: '',
                 email: '',
                 message: ''
-            }
+            },
+            STATUS_OK: 'OK',
+            STATUS_PENDING: 'PENDING',
+            STATUS_ERROR: 'ERROR'
         };
     },
 
     methods: {
-        submit(e) {
+        async submit(e) {
             this.$v.$touch();
 
             this.isSubmited = true;
 
             if (this.$v.$invalid) {
-                this.submitStatus = 'ERROR';
+                this.submitStatus = this.STATUS_ERROR;
                 return;
             } else {
-                setTimeout(() => {
-                    this.submitStatus = 'OK';
-                }, 500);
-
+                this.submitStatus = this.STATUS_PENDING;
                 try {
-                    emailjs.sendForm(
+                    await emailjs.sendForm(
                         process.env.VUE_APP_EMAILJS_SERVICE_ID,
                         process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
                         e.target,
                         process.env.VUE_APP_EMAILJS_USER_ID
                     );
+
+                    this.$v.$reset();
+
+                    this.formData = {
+                        name: '',
+                        email: '',
+                        message: ''
+                    };
+
+                    this.submitStatus = this.STATUS_OK;
                 } catch (error) {
+                    this.submitStatus = this.STATUS_ERROR;
                     console.error(error);
                 }
             }
-
-            this.submitStatus = 'PENDING';
         }
     }
 };
@@ -245,7 +260,7 @@ export default {
 
     .contact {
         position: relative;
-        margin-top: 5%;
+        margin-top: 2%;
         right: 20%;
 
         h2 {
@@ -508,6 +523,20 @@ export default {
 
     .errorInput {
         border-bottom: 2px solid rgb(255, 72, 72) !important;
+    }
+
+    @media screen and (max-height: 500px) {
+        margin-bottom: 20%;
+    }
+
+    @media screen and (max-height: 900px) {
+        margin-bottom: 8%;
+    }
+
+    .typo__p {
+        position: relative;
+        top: -18px;
+        padding-bottom: 30px;
     }
 }
 </style>

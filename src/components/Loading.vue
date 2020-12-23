@@ -1,26 +1,24 @@
 <template>
     <div class="loadingContainer">
-        <div class="loader"></div>
+        <span>Sending...</span><div class="loader"></div>
     </div>
 </template>
 
-<style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<style scoped lang="scss">
 .loadingContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: #000;
+
+    span {
+        margin-right: 15px;
+    }
 }
 .loader {
     position: relative;
-    width: 550px;
-    height: 550px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: linear-gradient(45deg, transparent 40%, #e5f403);
     animation: animate 2s linear infinite;
@@ -29,14 +27,12 @@
     0% {
         transform: rotate(0deg);
         filter: hue-rotate(0deg);
-        width: 550px;
-        height: 550px;
+        width: 55px;
+        height: 55px;
     }
     100% {
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
-        width: 600px;
-        height: 600px;
     }
 }
 .loader:before {

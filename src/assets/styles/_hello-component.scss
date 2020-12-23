@@ -56,10 +56,10 @@
         }
     }
 
-    .staticText{
+    .staticText {
         font-family: 'Open Sans';
         position: absolute;
-        top:30%;
+        top: 30%;
         left: 14%;
         transform: translate3d(-50%, -50%, 0);
         background-color: rgba(#000, 0.5);
@@ -69,63 +69,61 @@
         font-size: 15px;
         font-weight: 400;
         border: 2px solid #b78846;
-        &:before, &:after {
-          content: "•";
-          position: absolute;
-          width: 14px;
-          height: 14px;
-          font-size: 12px;
-          color: #b78846;
-          border: 2px solid #b78846;
-          line-height: 12px;
-          top: 5px;
-          text-align: center;
+        &:before,
+        &:after {
+            content: '•';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            font-size: 12px;
+            color: #b78846;
+            border: 2px solid #b78846;
+            line-height: 12px;
+            top: 5px;
+            text-align: center;
         }
         &:before {
-          left: 5px;
-         
-          
+            left: 5px;
         }
         &:after {
-          right: 5px;
-          
+            right: 5px;
         }
-        p{
+        p {
             position: relative;
             border: 2px solid #b78846;
             padding: 40px;
-            &:before, &:after {
-              content: "•";
-              position: absolute;
-              width: 14px;
-              height: 14px;
-              font-size: 14px;
-              color: #b78846;
-              border: 2px solid #b78846;
-              line-height: 12px;
-              bottom: -2px;
-              text-align: center;
+            &:before,
+            &:after {
+                content: '•';
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                font-size: 14px;
+                color: #b78846;
+                border: 2px solid #b78846;
+                line-height: 12px;
+                bottom: -2px;
+                text-align: center;
             }
             &:before {
-              left: -2px;
+                left: -2px;
             }
             &:after {
-              right: -2px;
+                right: -2px;
             }
 
             @media screen and (max-width: 1640px) {
-               padding:28px;
+                padding: 28px;
             }
 
             @media screen and (max-width: 550px) {
-               padding:20px;
+                padding: 20px;
             }
         }
 
-
-        @media screen and (max-width: 1440px) {
-            top:16%;
-            left:52%;
+        @media screen and (max-width: 1250px) {
+            top: 16%;
+            left: 52%;
         }
 
         @media screen and (max-width: 550px) {
