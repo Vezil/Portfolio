@@ -258,6 +258,16 @@ export default {
     height: 80vh;
     padding: 3rem;
 
+    @media screen and (max-width: 768px) {
+        background: url('../assets/images/contact-mobile.png') no-repeat bottom
+            center;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 850px) {
+        margin-left: 30px;
+    }
+
     .contact {
         position: relative;
         margin-top: 2%;

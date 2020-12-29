@@ -72,7 +72,8 @@ export default {
     // https://www.rawpixel.com/image/580718/black-geometric-modern-background
 
     @media screen and (max-width: 768px) {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        padding: 1rem;
     }
 
     .customButton {
@@ -180,6 +181,10 @@ export default {
             box-shadow: 0 0 10px #05345d, 0 0 40px #092d52, 0 0 10px #4b5a69;
             transition-delay: 1s;
         }
+
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
 
     .cv .customButtonHref {
@@ -203,6 +208,10 @@ export default {
             background: #e2622f;
             box-shadow: 0 0 10px #ff5e00, 0 0 40px #ff7b00, 0 0 10px #ff7b00;
             transition-delay: 1s;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
         }
     }
 }

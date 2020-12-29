@@ -34,7 +34,10 @@
                 font-size: 2rem;
                 color: #fff;
                 font-weight: 700;
-                background: #272727;
+                background: url('./assets/images/navbarMobile.png') no-repeat
+                    bottom center;
+                background-size: cover;
+                // https://www.rawpixel.com/image/580049/black-geometrical-background
                 transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
                 clip-path: circle(200px at top right);
 
