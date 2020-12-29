@@ -13,8 +13,14 @@
     padding: 0 10vw;
     font-family: 'Indie Flower', cursive;
     color: white;
-    animation: animate 2s linear;
     transition: background 0.8s ease-in-out;
+    @media screen and (max-width: 768px) {
+        animation: mobileAnimate 2s linear;
+    }
+
+    @media screen and (min-width: 769px) {
+        animation: animate 2s linear;
+    }
 
     &:hover {
         background: url('./assets/images/msi-background2.png') no-repeat bottom
@@ -146,8 +152,36 @@
         0% {
             filter: grayscale(100%);
             filter: blur(4px);
+        }
+        100% {
+            filter: grayscale(0%);
+            filter: blur(0);
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            filter: grayscale(100%);
+            filter: blur(4px);
             background: url('./assets/images/msi-background-init.png') no-repeat
                 bottom center;
+            background-size: cover;
+        }
+        100% {
+            filter: grayscale(0%);
+            filter: blur(0);
+        }
+    }
+
+    @keyframes mobileAnimate {
+        0% {
+            filter: grayscale(100%);
+            filter: blur(4px);
+
+            background: url('./assets/images/msi-background-mobile-init.png')
+                no-repeat bottom center;
+
+            background-size: cover;
         }
         100% {
             filter: grayscale(0%);
