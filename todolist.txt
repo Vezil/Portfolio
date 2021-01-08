@@ -1,0 +1,4 @@
+now:
+-scss files and hard refactor STYLES
+then:
+-4k and 8k resolution test
