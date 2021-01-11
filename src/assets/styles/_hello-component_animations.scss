@@ -1,0 +1,29 @@
+@keyframes animate {
+    0% {
+        filter: grayscale(100%);
+        filter: blur(4px);
+        background: url('./assets/images/msi-background-init.png') no-repeat
+            bottom center;
+        background-size: cover;
+    }
+    100% {
+        filter: grayscale(0%);
+        filter: blur(0);
+    }
+}
+
+@keyframes mobileAnimate {
+    0% {
+        filter: grayscale(100%);
+        filter: blur(4px);
+
+        background: url('./assets/images/msi-background-mobile-init.png')
+            no-repeat bottom center;
+
+        background-size: cover;
+    }
+    100% {
+        filter: grayscale(0%);
+        filter: blur(0);
+    }
+}

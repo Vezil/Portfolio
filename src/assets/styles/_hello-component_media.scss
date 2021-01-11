@@ -1,0 +1,55 @@
+.mainContainer {
+    @media screen and (min-width: 769px) {
+        animation: animate 2s linear;
+    }
+
+    @media screen and (max-width: 768px) {
+        animation: mobileAnimate 2s linear;
+        background: url('./assets/images/msi-background-mobile.png') no-repeat
+            bottom center;
+        background-size: cover;
+
+        &:hover {
+            background: url('./assets/images/msi-background-mobile.png')
+                no-repeat bottom center;
+            background-size: cover;
+        }
+    }
+
+    .typingText {
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+            min-width: 350px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        @media screen and (max-width: 550px) {
+            min-width: 260px;
+            font-size: 1rem;
+        }
+    }
+
+    .staticText {
+        p {
+            @media screen and (max-width: 1640px) {
+                padding: 28px;
+            }
+
+            @media screen and (max-width: 550px) {
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 1250px) {
+            top: 16%;
+            left: 52%;
+        }
+
+        @media screen and (max-width: 550px) {
+            max-width: 170px;
+            font-size: 0.7rem;
+        }
+    }
+}

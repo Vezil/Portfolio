@@ -14,30 +14,11 @@
     font-family: 'Indie Flower', cursive;
     color: white;
     transition: background 0.8s ease-in-out;
-    @media screen and (max-width: 768px) {
-        animation: mobileAnimate 2s linear;
-    }
-
-    @media screen and (min-width: 769px) {
-        animation: animate 2s linear;
-    }
 
     &:hover {
         background: url('./assets/images/msi-background2.png') no-repeat bottom
             center;
         background-size: cover;
-    }
-
-    @media screen and (max-width: 768px) {
-        background: url('./assets/images/msi-background-mobile.png') no-repeat
-            bottom center;
-        background-size: cover;
-
-        &:hover {
-            background: url('./assets/images/msi-background-mobile.png')
-                no-repeat bottom center;
-            background-size: cover;
-        }
     }
 
     .typingText {
@@ -52,19 +33,6 @@
         font-family: 'Source Code Pro', monospace;
         font-weight: 300;
         letter-spacing: -3px;
-
-        @media screen and (max-width: 768px) {
-            font-size: 22px;
-            min-width: 350px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        @media screen and (max-width: 550px) {
-            min-width: 260px;
-            font-size: 1rem;
-        }
 
         .typing {
             color: green;
@@ -127,67 +95,6 @@
             &:after {
                 right: -2px;
             }
-
-            @media screen and (max-width: 1640px) {
-                padding: 28px;
-            }
-
-            @media screen and (max-width: 550px) {
-                padding: 20px;
-            }
-        }
-
-        @media screen and (max-width: 1250px) {
-            top: 16%;
-            left: 52%;
-        }
-
-        @media screen and (max-width: 550px) {
-            max-width: 170px;
-            font-size: 0.7rem;
-        }
-    }
-
-    @keyframes animate {
-        0% {
-            filter: grayscale(100%);
-            filter: blur(4px);
-        }
-        100% {
-            filter: grayscale(0%);
-            filter: blur(0);
-        }
-    }
-
-    @keyframes animate {
-        0% {
-            filter: grayscale(100%);
-            filter: blur(4px);
-            background: url('./assets/images/msi-background-init.png') no-repeat
-                bottom center;
-            background-size: cover;
-        }
-        100% {
-            filter: grayscale(0%);
-            filter: blur(0);
-        }
-    }
-
-    @keyframes mobileAnimate {
-        0% {
-            filter: grayscale(100%);
-            filter: blur(4px);
-
-            background: url('./assets/images/msi-background-mobile-init.png')
-                no-repeat bottom center;
-
-            background-size: cover;
-        }
-        100% {
-            filter: grayscale(0%);
-            filter: blur(0);
         }
     }
 }
-
-//@TODO : REFACTOR - MOVE ANIMATE AND MEDIA TO SEPARATE FILE
