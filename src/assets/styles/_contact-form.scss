@@ -13,31 +13,7 @@
 
         h2 {
             font-size: 5rem;
-
-            @media screen and (max-width: 850px) {
-                font-size: 3rem;
-            }
         }
-    }
-
-    @media screen and (max-width: 850px) {
-        margin-left: 30px;
-    }
-
-    @media screen and (max-width: 768px) {
-        background: url('./assets/images/contact-mobile.png') no-repeat bottom
-            center;
-        background-size: cover;
-    }
-
-    @media screen and (min-width: 900px) and (max-width: 1024px) {
-        .contactContent {
-            section {
-                width: 120%;
-            }
-        }
-
-        margin-top: 20%;
     }
 
     .about {
@@ -49,10 +25,6 @@
         background-size: cover;
         background-position: center;
         text-align: center;
-
-        @media screen and (max-width: 1024px) {
-            width: 100%;
-        }
     }
 
     .form {
@@ -201,10 +173,6 @@
                 transition: all 0.2s ease;
                 transform-origin: 0 0;
                 cursor: text; //TODO CUSTOM CURSOR
-
-                @media screen and (max-width: 550px) {
-                    left: 10%;
-                }
             }
             span.border {
                 height: 2px;
@@ -239,10 +207,6 @@
                         }
                     }
                 }
-
-                @media screen and (max-width: 550px) {
-                    width: 90%;
-                }
             }
 
             input,
@@ -271,13 +235,5 @@
         padding: 0 10px;
         margin-bottom: 55px;
         line-height: 1.8;
-    }
-
-    @media screen and (max-height: 500px) {
-        margin-bottom: 20%;
-    }
-
-    @media screen and (max-height: 900px) {
-        margin-bottom: 8%;
     }
 }
