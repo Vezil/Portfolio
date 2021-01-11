@@ -1,0 +1,34 @@
+.footerSection {
+    @media screen and (max-width: 900px) {
+        margin-top: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    @media screen and (max-height: 600px) {
+        margin-top: 300px;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin-top: 300px;
+    }
+
+    .github {
+        .customButtonHref {
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .cv {
+        .customButtonHref {
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+    }
+}

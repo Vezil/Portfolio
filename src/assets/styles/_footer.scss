@@ -14,11 +14,6 @@
     background-size: 100vw 200px;
     // https://www.rawpixel.com/image/580718/black-geometric-modern-background
 
-    @media screen and (max-width: 768px) {
-        font-size: 1.1rem;
-        padding: 1rem;
-    }
-
     .customButton {
         display: flex;
         justify-content: center;
@@ -102,71 +97,58 @@
         }
     }
 
-    .github .customButtonHref {
-        color: #0004ff;
-        span:nth-child(1) {
-            background: linear-gradient(90deg, transparent, #4b5a69);
-        }
+    .github {
+        .customButtonHref {
+            color: #0004ff;
+            span {
+                &:nth-child(1) {
+                    background: linear-gradient(90deg, transparent, #4b5a69);
+                }
+                &:nth-child(2) {
+                    background: linear-gradient(180deg, transparent, #4b5a69);
+                }
+                &:nth-child(3) {
+                    background: linear-gradient(270deg, transparent, #4b5a69);
+                }
+                &:nth-child(4) {
+                    background: linear-gradient(360deg, transparent, #4b5a69);
+                }
+            }
 
-        span:nth-child(2) {
-            background: linear-gradient(180deg, transparent, #4b5a69);
-        }
-        span:nth-child(3) {
-            background: linear-gradient(270deg, transparent, #4b5a69);
-        }
-        span:nth-child(4) {
-            background: linear-gradient(360deg, transparent, #4b5a69);
-        }
-
-        &:hover {
-            color: rgb(255, 255, 255);
-            background: #000286;
-            box-shadow: 0 0 10px #05345d, 0 0 40px #092d52, 0 0 10px #4b5a69;
-            transition-delay: 1s;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 1rem;
+            &:hover {
+                color: rgb(255, 255, 255);
+                background: #000286;
+                box-shadow: 0 0 10px #05345d, 0 0 40px #092d52, 0 0 10px #4b5a69;
+                transition-delay: 1s;
+            }
         }
     }
 
-    .cv .customButtonHref {
-        color: #e2622f;
-        span:nth-child(1) {
-            background: linear-gradient(90deg, transparent, #ff7b00);
-        }
+    .cv {
+        .customButtonHref {
+            color: #e2622f;
 
-        span:nth-child(2) {
-            background: linear-gradient(180deg, transparent, #ff7b00);
-        }
-        span:nth-child(3) {
-            background: linear-gradient(270deg, transparent, #ff7b00);
-        }
-        span:nth-child(4) {
-            background: linear-gradient(360deg, transparent, #ff7b00);
-        }
+            span {
+                &:nth-child(1) {
+                    background: linear-gradient(90deg, transparent, #ff7b00);
+                }
+                &:nth-child(2) {
+                    background: linear-gradient(180deg, transparent, #ff7b00);
+                }
+                &:nth-child(3) {
+                    background: linear-gradient(270deg, transparent, #ff7b00);
+                }
+                &:nth-child(4) {
+                    background: linear-gradient(360deg, transparent, #ff7b00);
+                }
+            }
 
-        &:hover {
-            color: #000;
-            background: #e2622f;
-            box-shadow: 0 0 10px #ff5e00, 0 0 40px #ff7b00, 0 0 10px #ff7b00;
-            transition-delay: 1s;
+            &:hover {
+                color: #000;
+                background: #e2622f;
+                box-shadow: 0 0 10px #ff5e00, 0 0 40px #ff7b00, 0 0 10px #ff7b00;
+                transition-delay: 1s;
+            }
         }
-
-        @media screen and (max-width: 768px) {
-            font-size: 1rem;
-        }
-    }
-
-    @media screen and (max-width: 500px) {
-        margin-top: 300px;
-    }
-
-    @media screen and (max-height: 600px) {
-        margin-top: 300px;
-    }
-
-    @media screen and (max-width: 900px) {
-        margin-top: 200px;
     }
 }

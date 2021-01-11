@@ -1,10 +1,14 @@
 .contactContainer {
-    .contact {
-        h2 {
-            @media screen and (max-width: 850px) {
-                font-size: 3rem;
-            }
+    @media screen and (min-width: 900px) and (max-width: 1024px) {
+        section {
+            width: 120%;
         }
+
+        margin-top: 20%;
+    }
+
+    @media screen and (max-height: 900px) {
+        margin-bottom: 8%;
     }
 
     @media screen and (max-width: 850px) {
@@ -17,12 +21,16 @@
         background-size: cover;
     }
 
-    @media screen and (min-width: 900px) and (max-width: 1024px) {
-        section {
-            width: 120%;
-        }
+    @media screen and (max-height: 500px) {
+        margin-bottom: 20%;
+    }
 
-        margin-top: 20%;
+    .contact {
+        h2 {
+            @media screen and (max-width: 850px) {
+                font-size: 3rem;
+            }
+        }
     }
 
     .contentBox {
@@ -41,12 +49,5 @@
                 width: 90%;
             }
         }
-    }
-    @media screen and (max-height: 500px) {
-        margin-bottom: 20%;
-    }
-
-    @media screen and (max-height: 900px) {
-        margin-bottom: 8%;
     }
 }
