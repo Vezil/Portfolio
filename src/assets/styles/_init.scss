@@ -11,16 +11,18 @@ html {
 
 body {
     background: black;
-}
 
-.card,
-.box {
-    cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
-}
+    .card,
+    .box {
+        cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
+    }
 
-.skillsContainer > .card,
-.box {
-    cursor: url('./assets/images/custom-cursor-info.png'), pointer !important;
+    .skillsContainer {
+        .card,
+        .box {
+            cursor: url('./assets/images/custom-cursor-info.png'), pointer !important;
+        }
+    }
 }
 
 ::-webkit-scrollbar {
