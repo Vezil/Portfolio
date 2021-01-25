@@ -50,4 +50,44 @@
             }
         }
     }
+
+    @media screen and (min-width: 2300px) {
+        background: url('./assets/images/contact.png') no-repeat bottom;
+        background-size: contain;
+
+        .contact {
+            h2 {
+                font-size: 8rem;
+            }
+        }
+
+        .form {
+            .formControl {
+                height: 250px !important;
+            }
+
+            textarea.formControl {
+                padding-top: 100px !important;
+            }
+
+            input,
+            textarea,
+            select {
+                font-size: 45px !important;
+            }
+
+            .formGroup {
+                span {
+                    font-size: 45px;
+                }
+            }
+
+            .sendButtonHref {
+                margin-top: 10%;
+
+                padding: 35px 65px;
+                font-size: 58px;
+            }
+        }
+    }
 }

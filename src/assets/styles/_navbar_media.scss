@@ -153,3 +153,33 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .navbarContainer {
+        .main-header {
+            .nav-links {
+                .nav-link {
+                    a {
+                        &::before {
+                            font-size: 1.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 2300px) {
+    .navbarContainer {
+        .main-header {
+            .nav-links {
+                font-size: 3rem;
+
+                .nav-link {
+                    padding: 3rem;
+                }
+            }
+        }
+    }
+}
