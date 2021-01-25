@@ -1,57 +1,55 @@
-.contactContainer {
-    @media screen and (min-width: 900px) and (max-width: 1024px) {
+@media screen and (max-width: 550px) {
+    .contactContainer {
+        .formGroup {
+            span {
+                left: 10%;
+            }
+            .formControl {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactContainer {
+        background: url('./assets/images/contact-mobile.png') no-repeat bottom
+            center;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contactContainer {
+        margin-left: 30px;
+        .contact {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .contactContainer {
         section {
             width: 120%;
         }
 
         margin-top: 20%;
     }
+}
 
-    @media screen and (max-height: 900px) {
-        margin-bottom: 8%;
-    }
-
-    @media screen and (max-width: 850px) {
-        margin-left: 30px;
-    }
-
-    @media screen and (max-width: 768px) {
-        background: url('./assets/images/contact-mobile.png') no-repeat bottom
-            center;
-        background-size: cover;
-    }
-
-    @media screen and (max-height: 500px) {
-        margin-bottom: 20%;
-    }
-
-    .contact {
-        h2 {
-            @media screen and (max-width: 850px) {
-                font-size: 3rem;
-            }
-        }
-    }
-
-    .contentBox {
-        @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+    .contactContainer {
+        .contentBox {
             width: 100%;
         }
     }
-    .formGroup {
-        span {
-            @media screen and (max-width: 550px) {
-                left: 10%;
-            }
-        }
-        .formControl {
-            @media screen and (max-width: 550px) {
-                width: 90%;
-            }
-        }
-    }
+}
 
-    @media screen and (min-width: 2300px) {
+@media screen and (min-width: 2300px) {
+    .contactContainer {
         background: url('./assets/images/contact.png') no-repeat bottom;
         background-size: contain;
 
@@ -89,5 +87,17 @@
                 font-size: 58px;
             }
         }
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .contactContainer {
+        margin-bottom: 20%;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .contactContainer {
+        margin-bottom: 8%;
     }
 }

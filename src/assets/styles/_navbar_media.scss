@@ -1,3 +1,19 @@
+@media screen and (max-width: 500px) {
+    .navbarContainer {
+        .main-header {
+            .nav-links {
+                .nav-link {
+                    a {
+                        &::before {
+                            font-size: 1.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 890px) {
     .navbarContainer {
         .main-header {
@@ -131,38 +147,6 @@
                     &::after {
                         background: #228dff;
                         animation: openBtmLine 0.8s forwards;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .navbarContainer {
-        .main-header {
-            .nav-links {
-                .nav-link {
-                    a {
-                        &::before {
-                            font-size: 1.7em;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .navbarContainer {
-        .main-header {
-            .nav-links {
-                .nav-link {
-                    a {
-                        &::before {
-                            font-size: 1.7em;
-                        }
                     }
                 }
             }
