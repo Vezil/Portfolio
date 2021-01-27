@@ -1,11 +1,16 @@
 @media screen and (max-width: 550px) {
     .mainContainer {
         .staticText {
-            max-width: 170px;
+            max-width: 80vw;
             font-size: 0.7rem;
+            padding: 2px;
             p {
                 padding: 20px;
             }
+        }
+        .typingText {
+            font-size: 14px !important;
+            min-width: 80vw !important;
         }
     }
 }
@@ -57,7 +62,7 @@
     }
 }
 
-@media screen and (min-width: 2300px) {
+@media screen and (min-width: 3840px) {
     .mainContainer {
         min-width: 1260px;
         font-size: 4rem;

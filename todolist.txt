@@ -1,6 +1,1 @@
-now:
--scss files and hard refactor STYLES
-then:
--4k and 8k resolution test
-if errors message then info about error -> on the left/right from the button send instead of bottom ?
--"it's me when click on the head icon?"
+flavicon

@@ -1,11 +1,20 @@
 @media screen and (max-width: 550px) {
     .contactContainer {
-        .formGroup {
-            span {
-                left: 10%;
+        .form {
+            .formGroup {
+                span {
+                    left: 10%;
+                    font-size: 10px !important;
+                }
+                .formControl {
+                    width: 90%;
+                }
+                .error {
+                    font-size: 10px !important;
+                }
             }
-            .formControl {
-                width: 90%;
+            .sendButtonHref {
+                font-size: 1rem !important;
             }
         }
     }
@@ -48,11 +57,38 @@
     }
 }
 
-@media screen and (min-width: 2300px) {
+@media screen and (min-width: 2560px) {
     .contactContainer {
         background: url('./assets/images/contact.png') no-repeat bottom;
         background-size: contain;
+        .form {
+            .formControl {
+                height: 150px !important;
+            }
+            input,
+            textarea,
+            select {
+                font-size: 28px !important;
+            }
 
+            .formGroup {
+                span {
+                    font-size: 28px;
+                }
+            }
+
+            .sendButtonHref {
+                margin-top: 10%;
+
+                padding: 25px 55px;
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .contactContainer {
         .contact {
             h2 {
                 font-size: 8rem;
