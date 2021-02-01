@@ -1,0 +1,80 @@
+@media screen and (max-width: 550px) {
+    .mainContainer {
+        .staticText {
+            max-width: 80vw;
+            font-size: 0.7rem;
+            padding: 2px;
+            p {
+                padding: 20px;
+            }
+        }
+        .typingText {
+            font-size: 14px !important;
+            min-width: 80vw !important;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        animation: mobileAnimate 2s linear;
+        background: url('./assets/images/msi-background-mobile.png') no-repeat
+            bottom center;
+        background-size: cover;
+
+        &:hover {
+            background: url('./assets/images/msi-background-mobile.png')
+                no-repeat bottom center;
+            background-size: cover;
+        }
+        .typingText {
+            font-size: 22px;
+            min-width: 350px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mainContainer {
+        animation: animate 2s linear;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .mainContainer {
+        .staticText {
+            top: 16%;
+            left: 52%;
+        }
+    }
+}
+
+@media screen and (max-width: 1640px) {
+    .mainContainer {
+        .staticText {
+            p {
+                padding: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .mainContainer {
+        min-width: 1260px;
+        font-size: 4rem;
+        .staticText {
+            max-width: 670px !important;
+            p {
+                font-size: 2.5rem;
+            }
+        }
+
+        .typingText {
+            font-size: 5rem;
+        }
+    }
+}

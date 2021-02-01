@@ -55,7 +55,7 @@
                         content: '';
                         position: absolute;
                         bottom: 25%;
-                        width: 5.5%;
+                        width: 4%;
                         height: 5px;
                         background: #228dff;
                         z-index: -1;
@@ -94,8 +94,8 @@
                 border-radius: 4px;
                 transition: background 0.8s ease;
 
-                &::before,
-                &::after {
+                &:before,
+                &:after {
                     content: '';
                     position: absolute;
                     height: 100%;
@@ -105,11 +105,11 @@
                     transition: background 0.8s ease;
                 }
 
-                &::before {
+                &:before {
                     transform: translateY(-5px);
                 }
 
-                &::after {
+                &:after {
                     transform: translateY(5px);
                 }
             }

@@ -14,10 +14,10 @@
             </h1>
         </vue-typed-js>
 
-        <vue-typed-js v-if="!loading" :showCursor="true" a>
+        <vue-typed-js v-if="!loading" :showCursor="true">
             <h2 class="staticText">
                 <p>
-                    I have been programming since <b>2016</b> and I have
+                    I have been programming since <b>2016</b> and I have over
                     <b>1</b> year of commercial experience as FullStack
                     Developer
                 </p>
@@ -41,7 +41,7 @@ export default {
     mounted() {
         setTimeout(() => {
             this.loading = false;
-        }, 1500);
+        }, 1000);
     }
 };
 </script>
