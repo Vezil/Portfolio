@@ -172,18 +172,20 @@
                 top: 11px;
                 transition: all 0.2s ease;
                 transform-origin: 0 0;
-                cursor: text; //TODO CUSTOM CURSOR
+                cursor: url('./assets/images/custom-cursor-text.png'), text !important;
             }
-            span.border {
-                height: 2px;
-                display: block;
-                position: relative;
-                width: 40%;
-                margin: auto;
-                left: 0;
-                top: 0px;
-                transform: scaleX(0);
-                transition: all 0.15s ease;
+            span {
+                .border {
+                    height: 2px;
+                    display: block;
+                    position: relative;
+                    width: 40%;
+                    margin: auto;
+                    left: 0;
+                    top: 0px;
+                    transform: scaleX(0);
+                    transition: all 0.15s ease;
+                }
             }
 
             .formControl {
@@ -215,11 +217,19 @@
                 font-family: 'Montserrat-Regular';
                 color: #fff;
                 font-size: 15px;
+                cursor: url('./assets/images/custom-cursor-text.png'), text !important;
             }
 
-            textarea.formControl {
-                padding-top: 10px;
-                padding-bottom: 10px;
+            textarea {
+                height: 110px !important;
+            }
+
+            textarea {
+                padding-top: 30px;
+                .formControl {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
             }
         }
 
