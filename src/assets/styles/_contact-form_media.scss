@@ -61,6 +61,12 @@
     }
 }
 
+@media screen and (max-width: 1376px) {
+    .contactContainer {
+        margin-bottom: 17% !important;
+    }
+}
+
 @media screen and (min-width: 2560px) {
     .contactContainer {
         background: url('./assets/images/contact.png') no-repeat bottom;
