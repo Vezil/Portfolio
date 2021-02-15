@@ -66,7 +66,7 @@ export default {
                     delivery or order direct to the table.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Takeaway-order',
+                    title: 'Takeaway-Order',
                     projectLink: 'https://order.storekit.com/quarantinos/menu'
                 }
             ],
