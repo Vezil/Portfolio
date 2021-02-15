@@ -56,7 +56,7 @@ export default {
                     food recipes and many others things...<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Weloan',
+                    title: 'Israelbody',
                     projectLink: 'https://www.israelbody.org'
                 },
                 {
@@ -66,7 +66,7 @@ export default {
                     delivery or order direct to the table.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Order',
+                    title: 'Takeaway-Order',
                     projectLink: 'https://order.storekit.com/quarantinos/menu'
                 }
             ],
