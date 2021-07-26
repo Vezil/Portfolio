@@ -147,7 +147,10 @@
                             <i style="color:green" class="fa fa-check"></i>
                         </p>
                         <p class="typo__p" v-if="submitStatus === STATUS_ERROR">
-                            <span style="margin-right:6px;">Error!</span>
+                            <span style="margin-right:6px;">
+                                Something went wrong! Check if your email is
+                                correct or try again later
+                            </span>
                             <i style="color:red" class="fa fa-times"></i>
                         </p>
                         <p
