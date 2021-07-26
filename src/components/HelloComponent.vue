@@ -8,7 +8,7 @@
             :strings="typingStrings"
         >
             <h1 class="typingText">
-                Hello! Here Szymon, I'm
+                Hello! Here Szymon, I'm a
                 <br />
                 <span class="typing"></span>
             </h1>
