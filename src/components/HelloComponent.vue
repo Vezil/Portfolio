@@ -8,7 +8,7 @@
             :strings="typingStrings"
         >
             <h1 class="typingText">
-                Hello! Here Szymon, I'm
+                Hello! Here Szymon, I'm a
                 <br />
                 <span class="typing"></span>
             </h1>
@@ -18,7 +18,7 @@
             <h2 class="staticText">
                 <p>
                     I have been programming since <b>2016</b> and I have over
-                    <b>1.5</b> year of commercial experience as FullStack
+                    <b>1.5</b> years of commercial experience as a FullStack
                     Developer
                 </p>
             </h2>
