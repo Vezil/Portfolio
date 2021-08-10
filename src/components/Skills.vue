@@ -56,7 +56,7 @@ export default {
                     logoLink: 'bootstrap.png'
                 },
                 {
-                    title: 'Js',
+                    title: 'Javascript',
                     description: `JavaScript is a programming language commonly used in web development.
                     It was originally developed by Netscape as a means to add dynamic and interactive 
                     elements to websites. 
