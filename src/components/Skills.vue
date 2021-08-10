@@ -180,6 +180,13 @@ export default {
                     logoLink: 'cplusplus.png'
                 },
                 {
+                    title: 'Typescript',
+                    description: `TypeScript is an open-source language which builds on JavaScript,
+                    one of the world’s most used tools, by adding static type definitions. All valid JavaScript code is also TypeScript code.
+                     `,
+                    logoLink: 'Typescript_logo_2020.png'
+                },
+                {
                     title: 'Others',
                     description: `I know also others stuff who can be usefull
                     during the programing like:
