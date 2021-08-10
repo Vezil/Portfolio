@@ -1,7 +1,7 @@
 <template>
     <div class="mainContainer" id="aboutSection">
         <vue-typed-js
-            v-if="!loading"
+            v-if="!isLoading"
             :loop="true"
             :showCursor="true"
             :backSpeed="50"
@@ -14,7 +14,7 @@
             </h1>
         </vue-typed-js>
 
-        <vue-typed-js v-if="!loading" :showCursor="true">
+        <div v-if="!isLoading">
             <h2 class="staticText">
                 <p>
                     I have been programming since <b>2016</b> and I have over
@@ -22,7 +22,7 @@
                     Developer
                 </p>
             </h2>
-        </vue-typed-js>
+        </div>
     </div>
 </template>
 <script>
@@ -34,13 +34,13 @@ export default {
                 'FrontEnd Developer.',
                 'BackendEnd Developer.'
             ],
-            loading: true
+            isLoading: true
         };
     },
 
     mounted() {
         setTimeout(() => {
-            this.loading = false;
+            this.isLoading = false;
         }, 1000);
     }
 };

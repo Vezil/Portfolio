@@ -15,12 +15,6 @@
     color: white;
     transition: background 0.8s ease-in-out;
 
-    &:hover {
-        background: url('./assets/images/msi-background2.png') no-repeat bottom
-            center;
-        background-size: cover;
-    }
-
     .typingText {
         position: relative;
         margin-right: 40vw;
