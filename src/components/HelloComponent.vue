@@ -17,8 +17,8 @@
         <div v-if="!isLoading">
             <h2 class="staticText">
                 <p>
-                    I have been programming since <b>2016</b> and I have over
-                    <b>1.5</b> years of commercial experience as a FullStack
+                    I have been programming since <b>2016</b> and I have
+                    <b>2</b> years of commercial experience as a FullStack
                     Developer
                 </p>
             </h2>
