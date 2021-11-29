@@ -36,7 +36,7 @@ export default {
     data() {
         return {
             githubLink: 'https://github.com/Vezil',
-            cvFileLink: 'SzymonWojaczekCVwithRODO.pdf',
+            cvFileLink: `Szymon'sResumeWithRodo.pdf`,
             cvFileName: 'SzymonWojaczekCV.pdf'
         };
     },

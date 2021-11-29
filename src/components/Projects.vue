@@ -60,14 +60,15 @@ export default {
                     projectLink: 'https://www.israelbody.org'
                 },
                 {
-                    logoLink: 'order.png',
-                    content: `<br/>Project created mainly in Vue/Node(hapi). On this page is a lot
+                    logoLink: 'takeaway-order.png',
+                    content: `<br/>Project created mainly in Vue/Node(hapi)/PostgreSQL. On this page is a lot
                     of integrations with Payment Systems like Adyen, Paypal and POS systems (like deliverect). We can buy food via pickup,
                     delivery or order direct to the table.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
                     title: 'Takeaway-Order',
-                    projectLink: 'https://order.storekit.com/quarantinos/menu'
+                    projectLink:
+                        'https://order.storekit.com/ballie-ballerson/menu'
                 }
             ],
 
