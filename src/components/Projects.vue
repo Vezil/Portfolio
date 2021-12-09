@@ -110,6 +110,19 @@ export default {
                     title: 'Platform Pig',
                     projectLink:
                         'https://vezil.github.io/PlatformPig/PlatformPig.html?07'
+                },
+                {
+                    logoLink: 'erp-system.png',
+                    content: `<br/>Project created mainly in Vue/Node(express)/Sequelize/MySql. In this project, there are two roles.
+                    Admin (Employer) and User (Employee). As a Employee, you can request holidays, and change your password. As an Employer
+                    you can add Employees, add contracts, accept or deny vacations and reset password. Test credentials for a user : <b>user@erp.test password</b>
+                    Test credentials for an admin : <b>admin@erp.test password</b>
+                       <a style="text-decoration:none; color:gold; padding:5px;"
+                    href="https://github.com/Vezil/ERP-Employee-server" target="_blank">Source Code (backend)</a><br/>
+                    <a style="text-decoration:none; color:gold; padding:5px;" href="https://github.com/Vezil/ERP-Employee-frontend" target="_blank">Source Code (frontend)</a>
+                     `,
+                    title: 'ERP System',
+                    projectLink: 'https://vezil-erp-system.netlify.app'
                 }
             ]
         };
