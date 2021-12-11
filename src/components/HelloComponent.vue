@@ -32,7 +32,7 @@ export default {
             typingStrings: [
                 'FullStack Developer.',
                 'FrontEnd Developer.',
-                'BackendEnd Developer.'
+                'BackEnd Developer.'
             ],
             isLoading: true
         };
