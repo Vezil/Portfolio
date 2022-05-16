@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import HelloComponent from './components/HelloComponent';
-import Projects from './components/Projects';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
+const HelloComponent = () => import('./components/HelloComponent');
+const Projects = () => import('./components/Projects');
+const Navbar = () => import('./components/Navbar');
+const Skills = () => import('./components/Skills');
+const ContactForm = () => import('./components/ContactForm');
+const Footer = () => import('./components/Footer');
 
 export default {
     name: 'App',
