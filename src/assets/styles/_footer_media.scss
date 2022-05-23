@@ -4,26 +4,48 @@
     }
 }
 
+
 @media screen and (max-width: 768px) {
     .footerSection {
+        display: flex;
+        flex-direction: column-reverse;
         font-size: 1rem;
         padding: 10%;
 
         .github {
             .customButtonHref {
-                font-size: 1rem;
-                padding: 5px 12px;
+                padding: 20px 31px;
+                text-align: center;
+                font-size: 2.2rem;
+                margin-top: 30px;
+                margin-bottom: 30px;
             }
         }
 
         .cv {
             .customButtonHref {
-                font-size: 1rem;
-                padding: 5px 12px;
+                padding: 20px 31px;
+                text-align: center;
+                font-size: 2.2rem;
+                margin-top: 30px;
             }
+        }
+
+        .linkedin {
+            .customButtonHref {
+                padding: 20px 31px;
+                text-align: center;
+                font-size: 2.2rem;
+                margin-top: 10px;
+            }
+        }
+
+        .allRightsReserved {
+            padding-bottom: 20px;
         }
     }
 }
+
 
 @media screen and (max-width: 900px) {
     .footerSection {

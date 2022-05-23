@@ -1,6 +1,6 @@
 <template>
     <div class="footerSection">
-        <div>
+        <div class="allRightsReserved">
             &copy; {{ new Date().getFullYear() }} Szymon Wojaczek. All rights
             reserved
         </div>
@@ -11,6 +11,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
+
                     GitHub
                     <i class="fa fa-github-alt" aria-hidden="true"></i>
                 </a>
