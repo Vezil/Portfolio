@@ -32,6 +32,7 @@
     .form {
         .inputBox {
             margin-bottom: 40px;
+
             input {
                 width: 30%;
                 background: transparent;
@@ -49,9 +50,11 @@
                 color: #fff;
             }
         }
+
         textarea {
             resize: none;
         }
+
         textarea::placeholder {
             color: #fff;
         }
@@ -65,11 +68,13 @@
             justify-content: center;
             align-items: center;
             font-family: consolas;
+
             button {
                 background: black;
                 border: none;
             }
         }
+
         .sendButtonHref {
             position: relative;
             display: inline-block;
@@ -152,6 +157,7 @@
                 }
             }
         }
+
         .formGroup {
             position: relative;
             display: block;
@@ -176,6 +182,7 @@
                 transform-origin: 0 0;
                 cursor: url('./assets/images/custom-cursor-text.png'), text !important;
             }
+
             span {
                 .border {
                     height: 2px;
@@ -200,13 +207,16 @@
                 font-size: 15px;
                 background: none;
                 font-family: 'Montserrat-SemiBold';
+
                 &:focus,
                 &:valid {
                     border: none;
                     border-bottom: 2px solid #fff;
-                    & + span {
+
+                    &+span {
                         transform: translateY(-22px) scale(0.8);
-                        & + .border {
+
+                        &+.border {
                             transform: scaleX(1);
                         }
                     }
@@ -228,6 +238,7 @@
 
             textarea {
                 padding-top: 30px;
+
                 .formControl {
                     padding-top: 10px;
                     padding-bottom: 10px;

@@ -1,6 +1,6 @@
 <template>
     <div class="footerSection">
-        <div>
+        <div class="allRightsReserved">
             &copy; {{ new Date().getFullYear() }} Szymon Wojaczek. All rights
             reserved
         </div>
@@ -11,6 +11,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
+
                     GitHub
                     <i class="fa fa-github-alt" aria-hidden="true"></i>
                 </a>
@@ -28,6 +29,22 @@
                 </a>
             </div>
         </div>
+        <div>
+            <div class="customButton linkedin">
+                <a
+                    class="customButtonHref"
+                    :href="linkedinLink"
+                    target="_blank"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Linkedin
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -36,6 +53,8 @@ export default {
     data() {
         return {
             githubLink: 'https://github.com/Vezil',
+            linkedinLink:
+                'https://www.linkedin.com/in/szymon-wojaczek-1b0b0317b',
             cvFileLink: `Szymon'sResumeWithRodo.pdf`,
             cvFileName: 'SzymonWojaczekCV.pdf'
         };

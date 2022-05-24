@@ -105,26 +105,30 @@
 
     .github {
         .customButtonHref {
-            color: #0004ff;
+            color: #555;
+
             span {
                 &:nth-child(1) {
-                    background: linear-gradient(90deg, transparent, #4b5a69);
+                    background: linear-gradient(90deg, transparent, rgb(57, 57, 57));
                 }
+
                 &:nth-child(2) {
-                    background: linear-gradient(180deg, transparent, #4b5a69);
+                    background: linear-gradient(180deg, transparent, rgb(57, 57, 57));
                 }
+
                 &:nth-child(3) {
-                    background: linear-gradient(270deg, transparent, #4b5a69);
+                    background: linear-gradient(270deg, transparent, rgb(57, 57, 57));
                 }
+
                 &:nth-child(4) {
-                    background: linear-gradient(360deg, transparent, #4b5a69);
+                    background: linear-gradient(360deg, transparent, rgb(57, 57, 57));
                 }
             }
 
             &:hover {
                 color: rgb(255, 255, 255);
-                background: #000286;
-                box-shadow: 0 0 10px #05345d, 0 0 40px #092d52, 0 0 10px #4b5a69;
+                background: #555;
+                box-shadow: 0 0 10px rgb(57, 57, 57), 0 0 40px rgb(57, 57, 57), 0 0 10px rgb(57, 57, 57);
                 transition-delay: 1s;
             }
         }
@@ -138,12 +142,15 @@
                 &:nth-child(1) {
                     background: linear-gradient(90deg, transparent, #ff7b00);
                 }
+
                 &:nth-child(2) {
                     background: linear-gradient(180deg, transparent, #ff7b00);
                 }
+
                 &:nth-child(3) {
                     background: linear-gradient(270deg, transparent, #ff7b00);
                 }
+
                 &:nth-child(4) {
                     background: linear-gradient(360deg, transparent, #ff7b00);
                 }
@@ -157,4 +164,36 @@
             }
         }
     }
+
+    .linkedin {
+        .customButtonHref {
+            color: #0e76a8;
+
+            span {
+                &:nth-child(1) {
+                    background: linear-gradient(90deg, transparent, #00628f);
+                }
+
+                &:nth-child(2) {
+                    background: linear-gradient(180deg, transparent, #00628f);
+                }
+
+                &:nth-child(3) {
+                    background: linear-gradient(270deg, transparent, #00628f);
+                }
+
+                &:nth-child(4) {
+                    background: linear-gradient(360deg, transparent, #00628f);
+                }
+            }
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                background: #0e76a8;
+                box-shadow: 0 0 10px #00628f, 0 0 40px #00628f, 0 0 10px #00628f;
+                transition-delay: 1s;
+            }
+        }
+    }
+
 }
