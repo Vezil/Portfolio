@@ -1,5 +1,5 @@
 @media screen and (max-width: 550px) {
-    .contactContainer {
+    .contact-container {
         .form {
             .formGroup {
                 span {
@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .contactContainer {
+    .contact-container {
         background: url('./assets/images/contact-mobile.png') no-repeat bottom center;
         background-size: cover;
         padding: 0;
@@ -69,7 +69,7 @@
 }
 
 @media screen and (max-width: 850px) {
-    .contactContainer {
+    .contact-container {
         margin-left: 30px;
 
         .contact {
@@ -81,7 +81,7 @@
 }
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
-    .contactContainer {
+    .contact-container {
         section {
             width: 120%;
         }
@@ -91,21 +91,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .contactContainer {
-        .contentBox {
+    .contact-container {
+        .content-box {
             width: 100%;
         }
     }
 }
 
 @media screen and (max-width: 1376px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 17% !important;
     }
 }
 
 @media screen and (min-width: 2560px) {
-    .contactContainer {
+    .contact-container {
         background: url('./assets/images/contact.png') no-repeat bottom;
         background-size: contain;
 
@@ -137,7 +137,7 @@
 }
 
 @media screen and (min-width: 3840px) {
-    .contactContainer {
+    .contact-container {
         .contact {
             h2 {
                 font-size: 8rem;
@@ -178,13 +178,13 @@
 }
 
 @media screen and (max-height: 500px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 20%;
     }
 }
 
 @media screen and (max-height: 900px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 8%;
     }
 }

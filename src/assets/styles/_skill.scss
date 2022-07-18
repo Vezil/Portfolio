@@ -1,4 +1,4 @@
-.skillsContainer {
+.skills-container {
     .card {
         position: relative;
         width: 220px;
@@ -34,14 +34,14 @@
                 transform: skewY(390deg);
             }
 
-            .imgBox {
+            .img-box {
                 img {
                     max-width: 50%;
                 }
             }
         }
 
-        .imgBox {
+        .img-box {
             position: relative;
             width: 100%;
             display: flex;
@@ -54,7 +54,7 @@
             }
         }
 
-        .contentBox {
+        .content-box {
             position: relative;
             padding: 20px;
             display: flex;

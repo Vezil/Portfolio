@@ -1,6 +1,6 @@
 @media screen and (max-width: 550px) {
-    .mainContainer {
-        .staticText {
+    .main-container {
+        .static-text {
             max-width: 80vw;
             font-size: 0.7rem;
             padding: 2px;
@@ -8,7 +8,7 @@
                 padding: 20px;
             }
         }
-        .typingText {
+        .typing-text {
             font-size: 14px !important;
             min-width: 80vw !important;
         }
@@ -16,8 +16,8 @@
 }
 
 @media screen and (max-width: 768px) {
-    .mainContainer {
-        animation: mobileAnimate 2s linear;
+    .main-container {
+        animation: mobile-animate 2s linear;
         background: url('./assets/images/msi-background-mobile.png') no-repeat
             bottom center;
         background-size: cover;
@@ -27,7 +27,7 @@
                 no-repeat bottom center;
             background-size: cover;
         }
-        .typingText {
+        .typing-text {
             font-size: 22px;
             min-width: 350px;
             position: absolute;
@@ -38,14 +38,14 @@
 }
 
 @media screen and (min-width: 769px) {
-    .mainContainer {
+    .main-container {
         animation: animate 2s linear;
     }
 }
 
 @media screen and (max-width: 1250px) {
-    .mainContainer {
-        .staticText {
+    .main-container {
+        .static-text {
             top: 16%;
             left: 52%;
         }
@@ -53,8 +53,8 @@
 }
 
 @media screen and (max-width: 1640px) {
-    .mainContainer {
-        .staticText {
+    .main-container {
+        .static-text {
             p {
                 padding: 28px;
             }
@@ -63,17 +63,17 @@
 }
 
 @media screen and (min-width: 3840px) {
-    .mainContainer {
+    .main-container {
         min-width: 1260px;
         font-size: 4rem;
-        .staticText {
+        .static-text {
             max-width: 670px !important;
             p {
                 font-size: 2.5rem;
             }
         }
 
-        .typingText {
+        .typing-text {
             font-size: 5rem;
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <div class="contactContainer" id="contactSection">
+    <div class="contact-container" id="contact-section">
         <div class="contactContent">
             <section class="contact">
                 <h2> Get in touch </h2>
@@ -8,7 +8,7 @@
             </section>
 
             <section class="about">
-                <div class="contentBox">
+                <div class="content-box">
                     <form class="form" @submit.prevent="submit">
                         <label class="formGroup">
                             <input

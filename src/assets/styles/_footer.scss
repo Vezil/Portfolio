@@ -1,4 +1,4 @@
-.footerSection {
+.footer-section {
     position: relative;
     bottom: 0;
     width: 100%;
@@ -14,13 +14,13 @@
     background-size: 87vw 200px;
     // https://www.rawpixel.com/image/580718/black-geometric-modern-background
 
-    .customButton {
+    .custom-button {
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: 'Montserrat-Regular';
 
-        .customButtonHref {
+        .custom-button-href {
             position: relative;
             display: inline-block;
             padding: 15px 30px;
@@ -104,7 +104,7 @@
     }
 
     .github {
-        .customButtonHref {
+        .custom-button-href {
             color: #555;
 
             span {
@@ -135,7 +135,7 @@
     }
 
     .cv {
-        .customButtonHref {
+        .custom-button-href {
             color: #e2622f;
 
             span {
@@ -166,7 +166,7 @@
     }
 
     .linkedin {
-        .customButtonHref {
+        .custom-button-href {
             color: #0e76a8;
 
             span {

@@ -5,10 +5,10 @@
         @mouseover="showDescrption = true"
         @mouseleave="showDescrption = false"
     >
-        <div class="imgBox">
+        <div class="img-box">
             <img :src="require(`@/assets/images/${logoLink}`)" alt="" />
         </div>
-        <div class="contentBox">
+        <div class="content-box">
             <h3>{{ title }}</h3>
             <h2 v-if="showDescrption" class="description">{{ description }}</h2>
         </div>

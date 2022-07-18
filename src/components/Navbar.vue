@@ -1,7 +1,7 @@
 <template>
-    <div class="navbarContainer">
+    <div class="navbar-container">
         <header class="main-header">
-            <a href="#aboutSection">
+            <a href="#about-section">
                 <div class="logo"> </div>
             </a>
 
@@ -14,7 +14,7 @@
             <ul class="nav-links">
                 <li class="nav-link">
                     <a
-                        href="#aboutSection"
+                        href="#about-section"
                         data-text="About"
                         @click="closeMobileMenu"
                         >About
@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-link">
                     <a
-                        href="#projectsSection"
+                        href="#projects-section"
                         data-text="Projects"
                         @click="closeMobileMenu"
                         >Projects <i class="fa fa-book"> </i>
@@ -32,7 +32,7 @@
                 </li>
                 <li class="nav-link">
                     <a
-                        href="#skillsSection"
+                        href="#skills-section"
                         data-text="Skills"
                         @click="closeMobileMenu"
                         >Skills
@@ -41,7 +41,7 @@
                 </li>
                 <li class="nav-link">
                     <a
-                        href="#contactSection"
+                        href="#contact-section"
                         data-text="Contact"
                         @click="closeMobileMenu"
                         >Contact

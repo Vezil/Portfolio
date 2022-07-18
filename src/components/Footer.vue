@@ -1,12 +1,12 @@
 <template>
-    <div class="footerSection">
-        <div class="allRightsReserved">
+    <div class="footer-section">
+        <div class="all-rights-reserved">
             &copy; {{ new Date().getFullYear() }} Szymon Wojaczek. All rights
             reserved
         </div>
         <div>
-            <div class="customButton github">
-                <a class="customButtonHref" :href="githubLink" target="_blank">
+            <div class="custom-button github">
+                <a class="custom-button-href" :href="githubLink" target="_blank">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -18,8 +18,8 @@
             </div>
         </div>
         <div>
-            <div class="customButton cv">
-                <a class="customButtonHref" @click="downloadCV">
+            <div class="custom-button cv">
+                <a class="custom-button-href" @click="downloadCV">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -30,9 +30,9 @@
             </div>
         </div>
         <div>
-            <div class="customButton linkedin">
+            <div class="custom-button linkedin">
                 <a
-                    class="customButtonHref"
+                    class="custom-button-href"
                     :href="linkedinLink"
                     target="_blank"
                 >

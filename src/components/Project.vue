@@ -1,14 +1,14 @@
 <template>
     <div class="card">
-        <a :href="projectLink" target="_blank">
+        <a :href="project - link" target="_blank">
             <div class="box">
-                <div class="imgBox">
+                <div class="img-box">
                     <img
                         :src="require(`@/assets/images/${logoLink}`)"
                         alt="link"
                     />
                 </div>
-                <div class="contentBox">
+                <div class="content-box">
                     <div>
                         <h2>{{ title }}</h2>
                         <p v-html="content"> </p>
@@ -45,4 +45,3 @@ export default {
     }
 };
 </script>
-

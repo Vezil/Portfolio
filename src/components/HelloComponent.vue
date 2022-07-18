@@ -1,5 +1,5 @@
 <template>
-    <div class="mainContainer" id="aboutSection">
+    <div class="main-container" id="about-section">
         <vue-typed-js
             v-if="!isLoading"
             :loop="true"
@@ -7,7 +7,7 @@
             :backSpeed="50"
             :strings="typingStrings"
         >
-            <h1 class="typingText">
+            <h1 class="typing-text">
                 Hello! Here Szymon, I'm a
                 <br />
                 <span class="typing"></span>
@@ -15,7 +15,7 @@
         </vue-typed-js>
 
         <div v-if="!isLoading">
-            <h2 class="staticText">
+            <h2 class="static-text">
                 <p>
                     I have been programming since <b>2016</b> and I have
                     <b>2</b> years of commercial experience as a FullStack

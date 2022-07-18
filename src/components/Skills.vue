@@ -1,5 +1,5 @@
 <template>
-    <div class="skillsContainer" id="skillsSection">
+    <div class="skills-container" id="skills-section">
         <h1>
             <u>My Skills <i class="fa fa-cog" aria-hidden="true"></i> </u
         ></h1>

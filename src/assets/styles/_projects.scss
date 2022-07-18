@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
-.projectsContainer {
+.projects-container {
     background: url('./assets/images/pexels-photo-1252869.jpeg') no-repeat
         center;
     background-size: cover;
@@ -9,7 +9,7 @@
     border-top-style: groove;
     border-top-color: black;
 
-    .projectsSection {
+    .projects-section {
         box-sizing: border-box;
         display: flex;
         justify-content: space-evenly;
@@ -35,7 +35,7 @@
                 transform-style: preserve-3d;
                 transition: 1s ease;
 
-                .imgBox {
+                .img-box {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -52,7 +52,7 @@
                     }
                 }
 
-                .contentBox {
+                .content-box {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -102,7 +102,7 @@
             }
         }
 
-        .projectLink {
+        .project-link {
             text-decoration: none;
             color: gold;
             padding: 5px;
