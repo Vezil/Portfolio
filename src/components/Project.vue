@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <a :href="project - link" target="_blank">
+        <a :href="projectLink" target="_blank">
             <div class="box">
                 <div class="img-box">
                     <img

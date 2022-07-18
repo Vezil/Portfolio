@@ -1,16 +1,12 @@
-@media screen and (max-width: 500px) {
-    .footer-section {
-        margin-top: 300px;
-    }
-}
-
-
 @media screen and (max-width: 768px) {
     .footer-section {
         display: flex;
         flex-direction: column-reverse;
         font-size: 1rem;
         padding: 10%;
+        margin-top: 100px;
+        height: 80vh;
+        background-size: 87vw 80vh;
 
         .github {
             .custom-button-href {
@@ -43,18 +39,5 @@
         .all-rights-reserved {
             padding-bottom: 20px;
         }
-    }
-}
-
-
-@media screen and (max-width: 900px) {
-    .footer-section {
-        margin-top: 200px;
-    }
-}
-
-@media screen and (max-height: 600px) {
-    .footer-section {
-        margin-top: 300px;
     }
 }

@@ -6,11 +6,11 @@
         <div class="projects-section">
             <Project
                 v-for="project in commercialProjects"
-                :key="project.project - link"
+                :key="project.projectLink"
                 :logoLink="project.logoLink"
                 :title="project.title"
                 :content="project.content"
-                :project-link="project.project - link"
+                :project-link="project.projectLink"
             />
         </div>
         <h1>
@@ -19,11 +19,11 @@
         <div class="projects-section">
             <Project
                 v-for="project in myProjects"
-                :key="project.project - link"
+                :key="project.projectLink"
                 :logoLink="project.logoLink"
                 :title="project.title"
                 :content="project.content"
-                :project-link="project.project - link"
+                :project-link="project.projectLink"
             />
         </div>
     </div>
