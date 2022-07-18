@@ -41,6 +41,7 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
+
                     img {
                         position: absolute;
                         top: 0;
@@ -83,6 +84,7 @@
                             color: #fff;
                             font-size: 16px;
                         }
+
                         a {
                             cursor: url('./assets/images/custom-cursor-code.png'),
                                 pointer !important;
@@ -97,6 +99,16 @@
                     cursor: url('./assets/images/custom-cursor-pointer.png'),
                         pointer !important;
                 }
+            }
+        }
+
+        .projectLink {
+            text-decoration: none;
+            color: gold;
+            padding: 5px;
+
+            &:hover {
+                color: rgb(150, 128, 6);
             }
         }
     }
