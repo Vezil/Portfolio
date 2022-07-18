@@ -10,7 +10,7 @@
     }
 }
 
-@keyframes openTopLine {
+@keyframes open-top-line {
     0% {
         transform: translateY(-5px) rotate(0deg);
     }
@@ -24,7 +24,7 @@
     }
 }
 
-@keyframes openMidLine {
+@keyframes open-mid-line {
     50% {
         transform: rotate(0deg);
     }
@@ -34,7 +34,7 @@
     }
 }
 
-@keyframes openBtmLine {
+@keyframes open-btm-line {
     0% {
         transform: translateY(5px) rotate(0deg);
     }
@@ -48,7 +48,7 @@
     }
 }
 
-@keyframes closeTopLine {
+@keyframes close-top-line {
     0% {
         transform: translateY(-5px) rotate(0deg);
     }
@@ -62,7 +62,7 @@
     }
 }
 
-@keyframes closeMidLine {
+@keyframes close-mid-line {
     50% {
         transform: rotate(0deg);
     }
@@ -72,7 +72,7 @@
     }
 }
 
-@keyframes closeBtmLine {
+@keyframes close-btm-line {
     0% {
         transform: translateY(5px) rotate(0deg);
     }

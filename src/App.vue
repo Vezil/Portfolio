@@ -1,5 +1,5 @@
 <template>
-    <div class="mainApp">
+    <div class="main-app">
         <Navbar />
         <Hello-Component />
         <Projects />

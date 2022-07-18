@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-.mainContainer {
+.main-container {
     background: url('./assets/images/msi-background.png') no-repeat bottom
         center;
     background-size: cover;
@@ -15,7 +15,7 @@
     color: white;
     transition: background 0.8s ease-in-out;
 
-    .typingText {
+    .typing-text {
         position: relative;
         margin-right: 40vw;
         margin-top: 30vw;
@@ -34,7 +34,7 @@
         }
     }
 
-    .staticText {
+    .static-text {
         font-family: 'Open Sans';
         position: absolute;
         top: 30%;

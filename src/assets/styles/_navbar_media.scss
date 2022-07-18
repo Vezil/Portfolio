@@ -1,5 +1,5 @@
 @media screen and (max-width: 500px) {
-    .navbarContainer {
+    .navbar-container {
         .main-header {
             .nav-links {
                 .nav-link {
@@ -15,22 +15,22 @@
 }
 
 @media screen and (max-width: 890px) {
-    .navbarContainer {
+    .navbar-container {
         .main-header {
             .menu-icon {
                 display: block;
 
                 &__line {
-                    animation: closeMidLine 0.8s backwards;
+                    animation: close-mid-line 0.8s backwards;
                     animation-direction: reverse;
 
                     &::before {
-                        animation: closeTopLine 0.8s backwards;
+                        animation: close-top-line 0.8s backwards;
                         animation-direction: reverse;
                     }
 
                     &::after {
-                        animation: closeBtmLine 0.8s backwards;
+                        animation: close-btm-line 0.8s backwards;
                         animation-direction: reverse;
                     }
                 }
@@ -139,16 +139,16 @@
 
                 .menu-icon__line {
                     background: #228dff;
-                    animation: openMidLine 0.8s forwards;
+                    animation: open-mid-line 0.8s forwards;
 
                     &::before {
                         background: #228dff;
-                        animation: openTopLine 0.8s forwards;
+                        animation: open-top-line 0.8s forwards;
                     }
 
                     &::after {
                         background: #228dff;
-                        animation: openBtmLine 0.8s forwards;
+                        animation: open-btm-line 0.8s forwards;
                     }
                 }
             }
@@ -157,7 +157,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .navbarContainer {
+    .navbar-container {
         .main-header {
             .nav-links {
                 .nav-link {
@@ -175,7 +175,7 @@
 }
 
 @media screen and (min-width: 3840px) {
-    .navbarContainer {
+    .navbar-container {
         .main-header {
             .logo {
                 background: url('./assets/images/logo-big.png');

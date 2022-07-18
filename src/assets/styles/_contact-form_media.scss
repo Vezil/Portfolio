@@ -1,13 +1,13 @@
 @media screen and (max-width: 550px) {
-    .contactContainer {
+    .contact-container {
         .form {
-            .formGroup {
+            .form-group {
                 span {
                     left: 10%;
                     font-size: 10px !important;
                 }
 
-                .formControl {
+                .form-control {
                     width: 90%;
                 }
 
@@ -20,7 +20,7 @@
                 }
             }
 
-            .sendButtonHref {
+            .send-button-href {
                 font-size: 1rem !important;
             }
         }
@@ -28,19 +28,19 @@
 }
 
 @media screen and (max-width: 768px) {
-    .contactContainer {
+    .contact-container {
         background: url('./assets/images/contact-mobile.png') no-repeat bottom center;
         background-size: cover;
         padding: 0;
 
         .form {
-            .formGroup {
+            .form-group {
                 span {
                     left: 11%;
                 }
             }
 
-            .formControl {
+            .form-control {
                 width: 80% !important;
             }
 
@@ -69,7 +69,7 @@
 }
 
 @media screen and (max-width: 850px) {
-    .contactContainer {
+    .contact-container {
         margin-left: 30px;
 
         .contact {
@@ -81,7 +81,7 @@
 }
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
-    .contactContainer {
+    .contact-container {
         section {
             width: 120%;
         }
@@ -91,26 +91,26 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .contactContainer {
-        .contentBox {
+    .contact-container {
+        .content-box {
             width: 100%;
         }
     }
 }
 
 @media screen and (max-width: 1376px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 17% !important;
     }
 }
 
 @media screen and (min-width: 2560px) {
-    .contactContainer {
+    .contact-container {
         background: url('./assets/images/contact.png') no-repeat bottom;
         background-size: contain;
 
         .form {
-            .formControl {
+            .form-control {
                 height: 150px !important;
             }
 
@@ -120,13 +120,13 @@
                 font-size: 28px !important;
             }
 
-            .formGroup {
+            .form-group {
                 span {
                     font-size: 28px;
                 }
             }
 
-            .sendButtonHref {
+            .send-button-href {
                 margin-top: 10%;
 
                 padding: 25px 55px;
@@ -137,7 +137,7 @@
 }
 
 @media screen and (min-width: 3840px) {
-    .contactContainer {
+    .contact-container {
         .contact {
             h2 {
                 font-size: 8rem;
@@ -145,12 +145,12 @@
         }
 
         .form {
-            .formControl {
+            .form-control {
                 height: 250px !important;
             }
 
             textarea {
-                .formControl {
+                .form-control {
                     padding-top: 100px !important;
                 }
             }
@@ -161,13 +161,13 @@
                 font-size: 45px !important;
             }
 
-            .formGroup {
+            .form-group {
                 span {
                     font-size: 45px;
                 }
             }
 
-            .sendButtonHref {
+            .send-button-href {
                 margin-top: 10%;
 
                 padding: 35px 65px;
@@ -178,13 +178,13 @@
 }
 
 @media screen and (max-height: 500px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 20%;
     }
 }
 
 @media screen and (max-height: 900px) {
-    .contactContainer {
+    .contact-container {
         margin-bottom: 8%;
     }
 }

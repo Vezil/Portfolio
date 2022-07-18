@@ -1,29 +1,29 @@
 <template>
-    <div class="projectsContainer" id="projectsSection">
+    <div class="projects-container" id="projects-section">
         <h1>
             <u>Commercial Projects <i class="fa fa-book"></i></u>
         </h1>
-        <div class="projectsSection">
+        <div class="projects-section">
             <Project
                 v-for="project in commercialProjects"
-                :key="project.projectlink"
+                :key="project.project - link"
                 :logoLink="project.logoLink"
                 :title="project.title"
                 :content="project.content"
-                :projectLink="project.projectLink"
+                :project-link="project.project - link"
             />
         </div>
         <h1>
             <u>My Projects <i class="fa fa-paint-brush"></i> </u>
         </h1>
-        <div class="projectsSection">
+        <div class="projects-section">
             <Project
                 v-for="project in myProjects"
-                :key="project.projectlink"
+                :key="project.project - link"
                 :logoLink="project.logoLink"
                 :title="project.title"
                 :content="project.content"
-                :projectLink="project.projectLink"
+                :project-link="project.project - link"
             />
         </div>
     </div>
@@ -77,7 +77,7 @@ export default {
                     logoLink: 'store.png',
                     content: `<br/>Small shop created in react.js .We can make payment
                     via Paypal<br/><br/>
-                    <a class="projectLink" 
+                    <a class="project-link" 
                     href="https://github.com/Vezil/Store" target="_blank">Source Code</a>`,
                     title: 'Store',
                     projectLink: 'https://vezil-store.netlify.app'
@@ -86,7 +86,7 @@ export default {
                     logoLink: 'chat.png',
                     content: `<br/>This chat was created in react.js and node.js + socket.io.
                     You can find here some funcionality like emojify.<br/><br/>
-                    <a class="projectLink"
+                    <a class="project-link"
                     href="https://github.com/Vezil/NodeChat" target="_blank">Source Code</a>`,
                     title: 'Chat',
                     projectLink: 'https://vezil-nodechat.netlify.app'
@@ -95,7 +95,7 @@ export default {
                     logoLink: 'disney.png',
                     content: `<br/>This project is reproduce disney plus website
                     (created in vue.js)<br/><br/>
-                    <a class="projectLink" 
+                    <a class="project-link" 
                     href="https://github.com/Vezil/disneyplus" target="_blank">Source Code</a>`,
                     title: 'Disney Plus',
                     projectLink: 'https://vezil-disneyplus.netlify.app'
@@ -104,7 +104,7 @@ export default {
                     logoLink: 'platformPig.png',
                     content: `<br/>Experimental Platform Game created
                     in Javascript.<br/><br/> 
-                    <a class="projectLink"
+                    <a class="project-link"
                     href="https://github.com/Vezil/PlatformPig" target="_blank">Source Code</a>
                 `,
                     title: 'Platform Pig',
@@ -116,9 +116,9 @@ export default {
                     content: `<br/>Project created mainly in Vue/Node(express)/Sequelize/MySql. In this project, there are two roles.
                     Admin (Employer) and User (Employee). As a Employee, you can request holidays, and change your password. As an Employer
                     you can add Employees, add contracts, accept or deny vacations and reset password. Test credentials for a user and admin are available on github project description :)<br/>
-                    <a class="projectLink"
+                    <a class="project-link"
                     href="https://github.com/Vezil/ERP-Employee-server" target="_blank">Source Code (backend)</a><br/>
-                    <a class="projectLink" href="https://github.com/Vezil/ERP-Employee-frontend" target="_blank">Source Code (frontend)</a>
+                    <a class="project-link" href="https://github.com/Vezil/ERP-Employee-frontend" target="_blank">Source Code (frontend)</a>
                      `,
                     title: 'ERP System',
                     projectLink: 'https://vezil-erp-system.netlify.app'
@@ -127,7 +127,7 @@ export default {
                     logoLink: '2048-game.png',
                     content: `<br/>A project based on the game "2048". Project created with javascript + p5.js library,
                      there are also some unit tests. Special thanks for the Coding Traing channel for inspiration :)<br/><br/>
-                    <a class="projectLink"
+                    <a class="project-link"
                     href="https://github.com/Vezil/2048-game" target="_blank">Source Code</a><br/>
                      `,
                     title: '2048 Game',
