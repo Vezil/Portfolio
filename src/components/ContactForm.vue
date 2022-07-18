@@ -10,12 +10,12 @@
             <section class="about">
                 <div class="content-box">
                     <form class="form" @submit.prevent="submit">
-                        <label class="formGroup">
+                        <label class="form-group">
                             <input
                                 name="userName"
                                 v-model="formData.name"
                                 type="text"
-                                class="formControl"
+                                class="form-control"
                                 :class="
                                     $v.formData.name.$anyError
                                         ? 'errorInput'
@@ -44,7 +44,7 @@
                             <span class="border"></span>
                         </label>
                         <label
-                            class="formGroup"
+                            class="form-group"
                             :class="{
                                 'form-group--error': $v.formData.email.$error
                             }"
@@ -53,7 +53,7 @@
                                 name="userEmail"
                                 v-model="formData.email"
                                 type="text"
-                                class="formControl"
+                                class="form-control"
                                 :class="
                                     $v.formData.email.$anyError
                                         ? 'errorInput'
@@ -85,7 +85,7 @@
                             <span class="border"></span>
                         </label>
                         <label
-                            class="formGroup"
+                            class="form-group"
                             :class="{
                                 'form-group--error': $v.formData.message.$error
                             }"
@@ -93,7 +93,7 @@
                             <textarea
                                 name="userMessage"
                                 v-model="formData.message"
-                                class="formControl"
+                                class="form-control"
                                 :class="
                                     $v.formData.message.$anyError
                                         ? 'errorInput'
@@ -129,7 +129,7 @@
 
                         <div class="inputBox sendButton">
                             <button type="submit">
-                                <a class="sendButtonHref">
+                                <a class="send-button-href">
                                     <span></span>
                                     <span></span>
                                     <span></span>
