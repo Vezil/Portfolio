@@ -5,7 +5,6 @@
     background: url('./assets/images/contact.png') no-repeat 70% 0%;
     height: 80vh;
     padding: 3rem;
-
     margin-bottom: 5%;
 
     .contact {
@@ -30,7 +29,7 @@
     }
 
     .form {
-        .inputBox {
+        .input-box {
             margin-bottom: 40px;
 
             input {
@@ -63,7 +62,7 @@
             outline: none;
         }
 
-        .sendButton {
+        .send-button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -168,7 +167,7 @@
                 margin-top: 20px;
             }
 
-            .errorInput {
+            .error-input {
                 border-bottom: 2px solid rgb(255, 72, 72) !important;
             }
 
@@ -213,10 +212,10 @@
                     border: none;
                     border-bottom: 2px solid #fff;
 
-                    &+span {
+                    & + span {
                         transform: translateY(-22px) scale(0.8);
 
-                        &+.border {
+                        & + .border {
                             transform: scaleX(1);
                         }
                     }

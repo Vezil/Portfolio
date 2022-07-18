@@ -1,6 +1,6 @@
 <template>
     <div class="contact-container" id="contact-section">
-        <div class="contactContent">
+        <div class="contact-content">
             <section class="contact">
                 <h2> Get in touch </h2>
 
@@ -18,7 +18,7 @@
                                 class="form-control"
                                 :class="
                                     $v.formData.name.$anyError
-                                        ? 'errorInput'
+                                        ? 'error-input'
                                         : ''
                                 "
                                 required
@@ -56,7 +56,7 @@
                                 class="form-control"
                                 :class="
                                     $v.formData.email.$anyError
-                                        ? 'errorInput'
+                                        ? 'error-input'
                                         : ''
                                 "
                                 required
@@ -96,7 +96,7 @@
                                 class="form-control"
                                 :class="
                                     $v.formData.message.$anyError
-                                        ? 'errorInput'
+                                        ? 'error-input'
                                         : ''
                                 "
                                 required
@@ -127,7 +127,7 @@
                             <span class="border"></span>
                         </label>
 
-                        <div class="inputBox sendButton">
+                        <div class="input-box send-button">
                             <button type="submit">
                                 <a class="send-button-href">
                                     <span></span>
