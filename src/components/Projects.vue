@@ -132,6 +132,16 @@ export default {
                      `,
                     title: '2048 Game',
                     projectLink: 'https://vezil.github.io/2048-game'
+                },
+                               {
+                    logoLink: 'twitter-clone.png',
+                    content: `<br/>Project created mainly in React/Node/Prisma/Typescript/Postgres. Create your account and try it!
+                    In the app you can add your bio, add your tweets, you can follow someone, comment someone other tweet...<br/><br/>
+                    <a class="project-link"
+                    href="https://github.com/Vezil/twitter-clone-backend" target="_blank">Source Code (backend)</a><br/>
+                    <a class="project-link" href="https://github.com/Vezil/twitter-clone-frontend" target="_blank">Source Code (frontend)</a>`,
+                    title: 'Twitter Clone',
+                    projectLink: 'https://vezil-twitter-clone.netlify.app/'
                 }
             ]
         };
