@@ -69,6 +69,16 @@ export default {
                     title: 'Takeaway-Order',
                     projectLink:
                         'https://order.storekit.com/ballie-ballerson/menu'
+                },
+                {
+                    logoLink: 'oferteo.png',
+                    content: `<br/>Project created mainly in Vue/Java (I'm working only on frontend). We can order here
+                    specific service from one of the companies that will match our Inquiry(rfp).<br/><br/>
+                    <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
+                     `,
+                    title: 'Oferteo',
+                    projectLink:
+                        'https://www.oferteo.pl'
                 }
             ],
 
