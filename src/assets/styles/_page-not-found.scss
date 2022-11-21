@@ -1,0 +1,100 @@
+.page-not-found {
+    background: url('./assets/images/hu-tao.png') no-repeat bottom center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    .text-wrapper {
+        $light-color: #3e2e6a;
+        $dark-color: #130b52;
+
+        position: fixed;
+        top: 30%;
+        left: 110%;
+        font-weight: 700;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        .title {
+            font-size: 4rem;
+            color: #fbe6d3;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: -1px -1px 0 $dark-color, 1px -1px 0 $dark-color,
+                -1px 1px 0 $dark-color, 1px 1px 0 $dark-color;
+            &:after {
+                content: attr(data-title);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: hidden;
+                color: #f3576c;
+                transform: translate(0.4vw, 0.3vh);
+                mix-blend-mode: darken;
+                text-align: center;
+                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
+                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
+                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
+                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
+                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
+                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
+                    7px 6px 0px $dark-color;
+            }
+        }
+
+        .first-part {
+            $dark-color: #130b52;
+            $light-color: #3e2e6a;
+
+            font-size: 7rem;
+            font-weight: 900;
+            text-shadow: -1px -1px 0 $dark-color 1px -1px 0 $dark-color -1px 1px
+                0 $dark-color 1px 1px 0 $dark-color;
+
+            &:after {
+                position: absolute;
+                top: -168px;
+                left: 60px;
+                transform: translate(2vw, 2vh);
+                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
+                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
+                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
+                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
+                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
+                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
+                    7px 6px 0px $dark-color;
+            }
+        }
+
+        .second-part {
+            &:after {
+                position: absolute;
+                top: 320px;
+                left: 80px;
+            }
+        }
+
+        .third-part {
+            &:after {
+                position: absolute;
+                top: 400px;
+                left: 80px;
+            }
+        }
+
+        .redirect {
+            position: absolute;
+            top: 500px;
+            left: 120px;
+            transition: color 0.5s ease;
+            cursor: url(/img/custom-cursor-pointer.e0f83a0c.png), pointer !important;
+            font-size: 2rem;
+            color: #fbe6d3;
+
+            &:hover {
+                color: #f3576c;
+            }
+        }
+    }
+}
