@@ -5,6 +5,9 @@
     width: 100vw;
 
     .text-wrapper {
+        $light-color: #3e2e6a;
+        $dark-color: #130b52;
+
         position: fixed;
         top: 30%;
         left: 110%;
@@ -17,9 +20,8 @@
             color: #fbe6d3;
             text-transform: uppercase;
             text-align: center;
-            text-shadow: -1px -1px 0 #3e2e6a, 1px -1px 0 #3e2e6a,
-                -1px 1px 0 #3e2e6a, 1px 1px 0 #3e2e6a;
-
+            text-shadow: -1px -1px 0 $dark-color, 1px -1px 0 $dark-color,
+                -1px 1px 0 $dark-color, 1px 1px 0 $dark-color;
             &:after {
                 content: attr(data-title);
                 position: absolute;
@@ -31,56 +33,59 @@
                 transform: translate(0.4vw, 0.3vh);
                 mix-blend-mode: darken;
                 text-align: center;
-                text-shadow: 1px 0px 0px #3e2e6a, 0px 1px 0px #130b52,
-                    2px 1px 0px #3e2e6a, 1px 2px 0px #130b52,
-                    3px 2px 0px #3e2e6a, 2px 3px 0px #130b52,
-                    4px 3px 0px #3e2e6a, 3px 4px 0px #130b52,
-                    5px 4px 0px #3e2e6a, 4px 5px 0px #130b52,
-                    6px 5px 0px #3e2e6a, 5px 6px 0px #130b52,
-                    7px 6px 0px #3e2e6a;
+                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
+                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
+                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
+                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
+                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
+                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
+                    7px 6px 0px $dark-color;
             }
         }
 
         .first-part {
-            $first: #130b52;
-            $second: #3e2e6a;
-            font-size: 5rem;
+            $dark-color: #130b52;
+            $light-color: #3e2e6a;
+
+            font-size: 7rem;
             font-weight: 900;
-            text-shadow: -1px -1px 0 $first, 1px -1px 0 $first,
-                -1px 1px 0 $first, 1px 1px 0 $first;
+            text-shadow: -1px -1px 0 $dark-color 1px -1px 0 $dark-color -1px 1px
+                0 $dark-color 1px 1px 0 $dark-color;
 
             &:after {
                 position: absolute;
                 top: -168px;
                 left: 60px;
                 transform: translate(2vw, 2vh);
-                text-shadow: 1px 0px 0px $first, 0px 1px 0px $second,
-                    2px 1px 0px $first, 1px 2px 0px $second, 3px 2px 0px $first,
-                    2px 3px 0px $second, 4px 3px 0px $first, 3px 4px 0px $second,
-                    5px 4px 0px $first, 4px 5px 0px $second, 6px 5px 0px $first,
-                    5px 6px 0px $second, 7px 6px 0px $first;
+                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
+                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
+                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
+                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
+                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
+                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
+                    7px 6px 0px $dark-color;
             }
         }
 
         .second-part {
             &:after {
                 position: absolute;
-                top: 60px;
-                left: 60px;
+                top: 320px;
+                left: 80px;
             }
         }
 
         .third-part {
             &:after {
                 position: absolute;
-                top: 120px;
-                left: 60px;
+                top: 400px;
+                left: 80px;
             }
         }
 
         .redirect {
             position: absolute;
-            top: 210px;
+            top: 500px;
             left: 120px;
             transition: color 0.5s ease;
             cursor: url(/img/custom-cursor-pointer.e0f83a0c.png), pointer !important;

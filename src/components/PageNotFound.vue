@@ -6,6 +6,7 @@
             <div class="title third-part" data-title="are you lost?"></div>
 
             <div class="redirect" @click="redirectToLandingPage">
+                <i class="fa fa-solid fa-arrow-left"></i>
                 Go back to the Landing Page
             </div>
         </div>
