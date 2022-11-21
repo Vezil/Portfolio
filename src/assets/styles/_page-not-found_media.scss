@@ -8,7 +8,7 @@
             .second-part {
                 &:after {
                     position: absolute;
-                    top: 120px;
+                    top: 220px;
                     left: 60px;
                 }
             }
@@ -16,13 +16,13 @@
             .third-part {
                 &:after {
                     position: absolute;
-                    top: 200px;
+                    top: 300px;
                     left: 60px;
                 }
             }
 
             .redirect {
-                top: 300px;
+                top: 400px;
             }
         }
     }

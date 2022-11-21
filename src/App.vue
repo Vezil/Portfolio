@@ -1,14 +1,11 @@
 <template>
-    <div v-if="!showPageNotFound" class="main-app">
+    <div class="main-app">
         <Navbar />
         <Hello-Component />
         <Projects />
         <Skills />
         <ContactForm />
         <Footer />
-    </div>
-    <div v-else>
-        <PageNotFound />
     </div>
 </template>
 
@@ -19,7 +16,6 @@ const Navbar = () => import('./components/Navbar');
 const Skills = () => import('./components/Skills');
 const ContactForm = () => import('./components/ContactForm');
 const Footer = () => import('./components/Footer');
-const PageNotFound = () => import('./components/PageNotFound');
 
 export default {
     name: 'App',
@@ -29,17 +25,7 @@ export default {
         Projects,
         Skills,
         ContactForm,
-        Footer,
-        PageNotFound
-    },
-    computed: {
-        showPageNotFound() {
-            return (
-                window.location.pathname !== '/' &&
-                window.location.pathname.trim() !== '' &&
-                !window.location.pathname.startsWith('#')
-            );
-        }
+        Footer
     }
 };
 </script>

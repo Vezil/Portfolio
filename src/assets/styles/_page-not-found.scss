@@ -70,7 +70,7 @@
         .second-part {
             &:after {
                 position: absolute;
-                top: 320px;
+                top: 420px;
                 left: 80px;
             }
         }
@@ -78,14 +78,14 @@
         .third-part {
             &:after {
                 position: absolute;
-                top: 400px;
+                top: 500px;
                 left: 80px;
             }
         }
 
         .redirect {
             position: absolute;
-            top: 500px;
+            top: 600px;
             left: 120px;
             transition: color 0.5s ease;
             cursor: url(/img/custom-cursor-pointer.e0f83a0c.png), pointer !important;
