@@ -3,4 +3,93 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+
+    .text-wrapper {
+        position: fixed;
+        top: 30%;
+        left: 110%;
+        font-weight: 700;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        .title {
+            font-size: 4rem;
+            color: #fbe6d3;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: -1px -1px 0 #3e2e6a, 1px -1px 0 #3e2e6a,
+                -1px 1px 0 #3e2e6a, 1px 1px 0 #3e2e6a;
+
+            &:after {
+                content: attr(data-title);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: hidden;
+                color: #f3576c;
+                transform: translate(0.4vw, 0.3vh);
+                mix-blend-mode: darken;
+                text-align: center;
+                text-shadow: 1px 0px 0px #3e2e6a, 0px 1px 0px #130b52,
+                    2px 1px 0px #3e2e6a, 1px 2px 0px #130b52,
+                    3px 2px 0px #3e2e6a, 2px 3px 0px #130b52,
+                    4px 3px 0px #3e2e6a, 3px 4px 0px #130b52,
+                    5px 4px 0px #3e2e6a, 4px 5px 0px #130b52,
+                    6px 5px 0px #3e2e6a, 5px 6px 0px #130b52,
+                    7px 6px 0px #3e2e6a;
+            }
+        }
+
+        .first-part {
+            $first: #130b52;
+            $second: #3e2e6a;
+            font-size: 5rem;
+            font-weight: 900;
+            text-shadow: -1px -1px 0 $first, 1px -1px 0 $first,
+                -1px 1px 0 $first, 1px 1px 0 $first;
+
+            &:after {
+                position: absolute;
+                top: -168px;
+                left: 60px;
+                transform: translate(2vw, 2vh);
+                text-shadow: 1px 0px 0px $first, 0px 1px 0px $second,
+                    2px 1px 0px $first, 1px 2px 0px $second, 3px 2px 0px $first,
+                    2px 3px 0px $second, 4px 3px 0px $first, 3px 4px 0px $second,
+                    5px 4px 0px $first, 4px 5px 0px $second, 6px 5px 0px $first,
+                    5px 6px 0px $second, 7px 6px 0px $first;
+            }
+        }
+
+        .second-part {
+            &:after {
+                position: absolute;
+                top: 60px;
+                left: 60px;
+            }
+        }
+
+        .third-part {
+            &:after {
+                position: absolute;
+                top: 120px;
+                left: 60px;
+            }
+        }
+
+        .redirect {
+            position: absolute;
+            top: 210px;
+            left: 120px;
+            transition: color 0.5s ease;
+            cursor: url(/img/custom-cursor-pointer.e0f83a0c.png), pointer !important;
+            font-size: 2rem;
+            color: #fbe6d3;
+
+            &:hover {
+                color: #f3576c;
+            }
+        }
+    }
 }

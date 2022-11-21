@@ -1,11 +1,13 @@
 <template>
     <div class="page-not-found">
         <div class="text-wrapper">
-            <span class="title">Oya, are you lost?</span>
+            <div class="title first-part" data-title="Error 404"></div>
+            <div class="title second-part" data-title="Oya,"></div>
+            <div class="title third-part" data-title="are you lost?"></div>
 
-            <span class="redirect" @click="redirectToLandingPage">
-                Go back to the main page
-            </span>
+            <div class="redirect" @click="redirectToLandingPage">
+                Go back to the Landing Page
+            </div>
         </div>
     </div>
 </template>
