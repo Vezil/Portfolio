@@ -32,6 +32,16 @@
             font-family: 'Luckiest Guy';
             font-size: 20px;
 
+            .about-option-visible {
+                opacity: 1;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .about-option-invisible {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
             .nav-link {
                 transition: opacity 0.4s ease-in-out,
                     transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);

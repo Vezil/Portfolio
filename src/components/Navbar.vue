@@ -10,9 +10,15 @@
             <label for="menu-btn" class="menu-icon">
                 <span class="menu-icon__line" id="menuIconLine"></span>
             </label>
-
             <ul class="nav-links">
-                <li class="nav-link">
+                <li
+                    class="nav-link"
+                    :class="
+                        showMenuAbout
+                            ? 'about-option-visible'
+                            : 'about-option-invisible'
+                    "
+                >
                     <a
                         href="#about-section"
                         data-text="About"
@@ -55,10 +61,14 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            showMenuAbout: false
+        };
+    },
     mounted() {
         this.initMenuScrolled();
     },
-
     methods: {
         initMenuScrolled() {
             const header = document.querySelector('.main-header');
@@ -71,9 +81,10 @@ export default {
                 } else {
                     header.classList.remove('scrolled');
                 }
+
+                this.showMenuAbout = scrollPosition > 720;
             });
         },
-
         closeMobileMenu() {
             document.getElementById('menuIconLine').click();
         }
