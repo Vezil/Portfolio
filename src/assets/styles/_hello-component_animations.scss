@@ -2,8 +2,8 @@
     0% {
         filter: grayscale(100%);
         filter: blur(4px);
-        background: url('./assets/images/msi-background-init.png') no-repeat
-            bottom center;
+        background: url('./assets/images/iceland-background-init.webp')
+            no-repeat bottom center;
         background-size: cover;
     }
     100% {
@@ -17,7 +17,7 @@
         filter: grayscale(100%);
         filter: blur(4px);
 
-        background: url('./assets/images/msi-background-mobile-init.png')
+        background: url('./assets/images/iceland-background-mobile-init.webp')
             no-repeat bottom center;
 
         background-size: cover;
