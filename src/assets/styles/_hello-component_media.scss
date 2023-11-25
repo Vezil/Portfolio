@@ -34,21 +34,17 @@
             bottom: 0;
             left: 0;
         }
+
+        .static-text {
+            top: 70%;
+            left: 50%;
+        }
     }
 }
 
 @media screen and (min-width: 769px) {
     .main-container {
         animation: animate 2s linear;
-    }
-}
-
-@media screen and (max-width: 1250px) {
-    .main-container {
-        .static-text {
-            top: 70%;
-            left: 50%;
-        }
     }
 }
 
