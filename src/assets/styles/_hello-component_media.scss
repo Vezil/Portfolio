@@ -1,16 +1,16 @@
 @media screen and (max-width: 550px) {
     .main-container {
+        font-size: 18px;
+
         .static-text {
-            max-width: 80vw;
-            font-size: 0.7rem;
+            width: 90%;
             padding: 2px;
             p {
                 padding: 20px;
             }
         }
         .typing-text {
-            font-size: 14px !important;
-            min-width: 80vw !important;
+            min-width: 90% !important;
         }
     }
 }
@@ -18,12 +18,12 @@
 @media screen and (max-width: 768px) {
     .main-container {
         animation: mobile-animate 2s linear;
-        background: url('./assets/images/msi-background-mobile.png') no-repeat
-            bottom center;
+        background: url('./assets/images/iceland-background-mobile.webp')
+            no-repeat bottom center;
         background-size: cover;
 
         &:hover {
-            background: url('./assets/images/msi-background-mobile.png')
+            background: url('./assets/images/iceland-background-mobile.webp')
                 no-repeat bottom center;
             background-size: cover;
         }
@@ -46,8 +46,8 @@
 @media screen and (max-width: 1250px) {
     .main-container {
         .static-text {
-            top: 16%;
-            left: 52%;
+            top: 70%;
+            left: 50%;
         }
     }
 }
