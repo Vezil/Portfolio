@@ -29,7 +29,8 @@
 
 @media screen and (max-width: 768px) {
     .contact-container {
-        background: url('./assets/images/contact-mobile.png') no-repeat bottom center;
+        background: url('./assets/images/contact-mobile.png') no-repeat bottom
+            center;
         background-size: cover;
         padding: 0;
 
@@ -43,7 +44,6 @@
             .form-control {
                 width: 80% !important;
             }
-
         }
 
         .contact {
@@ -131,47 +131,6 @@
 
                 padding: 25px 55px;
                 font-size: 48px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 3840px) {
-    .contact-container {
-        .contact {
-            h2 {
-                font-size: 8rem;
-            }
-        }
-
-        .form {
-            .form-control {
-                height: 250px !important;
-            }
-
-            textarea {
-                .form-control {
-                    padding-top: 100px !important;
-                }
-            }
-
-            input,
-            textarea,
-            select {
-                font-size: 45px !important;
-            }
-
-            .form-group {
-                span {
-                    font-size: 45px;
-                }
-            }
-
-            .send-button-href {
-                margin-top: 10%;
-
-                padding: 35px 65px;
-                font-size: 58px;
             }
         }
     }

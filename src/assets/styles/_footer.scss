@@ -43,7 +43,7 @@
                 color: #000;
                 background: #f6f8fa;
                 box-shadow: 0 0 10px #596e80, 0 0 40px #f6f8fa, 0 0 10px #f6f8fa;
-                transition-delay: 1s;
+                transition-delay: 600ms;
             }
 
             span {
@@ -80,25 +80,25 @@
                 span {
                     &:nth-child(1) {
                         left: 100%;
-                        transition: 1s;
+                        transition: 600ms;
                     }
 
                     &:nth-child(2) {
                         top: 100%;
-                        transition: 1s;
-                        transition-delay: 0.25s;
+                        transition: 600ms;
+                        transition-delay: 150ms;
                     }
 
                     &:nth-child(3) {
                         right: 100%;
-                        transition: 1s;
-                        transition-delay: 0.5s;
+                        transition: 600ms;
+                        transition-delay: 300ms;
                     }
 
                     &:nth-child(4) {
                         bottom: 100%;
-                        transition: 1s;
-                        transition-delay: 0.75s;
+                        transition: 600ms;
+                        transition-delay: 450ms;
                     }
                 }
             }
@@ -111,27 +111,44 @@
 
             span {
                 &:nth-child(1) {
-                    background: linear-gradient(90deg, transparent, rgb(57, 57, 57));
+                    background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgb(57, 57, 57)
+                    );
                 }
 
                 &:nth-child(2) {
-                    background: linear-gradient(180deg, transparent, rgb(57, 57, 57));
+                    background: linear-gradient(
+                        180deg,
+                        transparent,
+                        rgb(57, 57, 57)
+                    );
                 }
 
                 &:nth-child(3) {
-                    background: linear-gradient(270deg, transparent, rgb(57, 57, 57));
+                    background: linear-gradient(
+                        270deg,
+                        transparent,
+                        rgb(57, 57, 57)
+                    );
                 }
 
                 &:nth-child(4) {
-                    background: linear-gradient(360deg, transparent, rgb(57, 57, 57));
+                    background: linear-gradient(
+                        360deg,
+                        transparent,
+                        rgb(57, 57, 57)
+                    );
                 }
             }
 
             &:hover {
                 color: rgb(255, 255, 255);
                 background: #555;
-                box-shadow: 0 0 10px rgb(57, 57, 57), 0 0 40px rgb(57, 57, 57), 0 0 10px rgb(57, 57, 57);
-                transition-delay: 1s;
+                box-shadow: 0 0 10px rgb(57, 57, 57), 0 0 40px rgb(57, 57, 57),
+                    0 0 10px rgb(57, 57, 57);
+                transition-delay: 600ms;
             }
         }
     }
@@ -162,7 +179,7 @@
                 color: #000;
                 background: #e2622f;
                 box-shadow: 0 0 10px #ff5e00, 0 0 40px #ff7b00, 0 0 10px #ff7b00;
-                transition-delay: 1s;
+                transition-delay: 600ms;
             }
         }
     }
@@ -193,9 +210,8 @@
                 color: rgb(255, 255, 255);
                 background: #0e76a8;
                 box-shadow: 0 0 10px #00628f, 0 0 40px #00628f, 0 0 10px #00628f;
-                transition-delay: 1s;
+                transition-delay: 600ms;
             }
         }
     }
-
 }

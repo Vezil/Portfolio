@@ -17,9 +17,9 @@
         <div v-if="!isLoading">
             <h2 class="static-text">
                 <p>
-                    I have been programming since <b>2016</b> and I have over
-                    <b>3</b> years of commercial experience as a FullStack
-                    Developer / FrontEnd Developer
+                    I have been programming since <b>2016</b>, accumulating over
+                    <b>{{ yearsOfPrograming }}</b> years of commercial
+                    experience as a Software Engineer.
                 </p>
             </h2>
         </div>
@@ -37,7 +37,11 @@ export default {
             isLoading: true
         };
     },
-
+    computed: {
+        yearsOfPrograming() {
+            return new Date().getFullYear() - 2020;
+        }
+    },
     mounted() {
         setTimeout(() => {
             this.isLoading = false;
