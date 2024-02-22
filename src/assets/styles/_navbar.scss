@@ -63,11 +63,13 @@
                     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
                     cursor: url('./assets/images/custom-cursor-pointer.png'),
                         pointer !important;
+                    position: relative;
+
                     &:before {
                         content: '';
                         position: absolute;
-                        bottom: 25%;
-                        width: 5%;
+                        width: 100%;
+                        bottom: -5px;
                         height: 5px;
                         background: #228dff;
                         z-index: -1;

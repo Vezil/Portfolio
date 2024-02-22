@@ -155,24 +155,6 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .navbar-container {
-        .main-header {
-            .nav-links {
-                .nav-link {
-                    a {
-                        &:hover {
-                            &:before {
-                                width: 8.5%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media screen and (min-width: 3840px) {
     .navbar-container {
         .main-header {
@@ -192,14 +174,6 @@
 
                 .nav-link {
                     padding: 3rem;
-
-                    a {
-                        &:hover {
-                            &:before {
-                                width: 6%;
-                            }
-                        }
-                    }
                 }
             }
         }
