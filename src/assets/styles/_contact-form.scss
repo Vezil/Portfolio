@@ -128,30 +128,30 @@
                 color: #000;
                 background: #2196f3;
                 box-shadow: 0 0 10px #596e80, 0 0 40px #2196f3, 0 0 10px #2196f3;
-                transition-delay: 1s;
+                transition-delay: 600ms;
 
                 span {
                     &:nth-child(1) {
                         left: 100%;
-                        transition: 1s;
+                        transition: 600ms;
                     }
 
                     &:nth-child(2) {
                         top: 100%;
-                        transition: 1s;
-                        transition-delay: 0.25s;
+                        transition: 600ms;
+                        transition-delay: 150ms;
                     }
 
                     &:nth-child(3) {
                         right: 100%;
-                        transition: 1s;
-                        transition-delay: 0.5s;
+                        transition: 600ms;
+                        transition-delay: 300ms;
                     }
 
                     &:nth-child(4) {
                         bottom: 100%;
-                        transition: 1s;
-                        transition-delay: 0.75s;
+                        transition: 600ms;
+                        transition-delay: 450ms;
                     }
                 }
             }
