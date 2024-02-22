@@ -154,28 +154,3 @@
         }
     }
 }
-
-@media screen and (min-width: 3840px) {
-    .navbar-container {
-        .main-header {
-            .logo {
-                background: url('./assets/images/logo-big.png');
-                width: 102px;
-                height: 126px;
-                cursor: url('./assets/images/custom-cursor-pointer.png'),
-                    pointer !important;
-            }
-
-            &.scrolled {
-                height: 150px;
-            }
-            .nav-links {
-                font-size: 3rem;
-
-                .nav-link {
-                    padding: 3rem;
-                }
-            }
-        }
-    }
-}
