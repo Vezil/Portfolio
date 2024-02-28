@@ -6,7 +6,11 @@
         </div>
         <div>
             <div class="custom-button github">
-                <a class="custom-button-href" :href="githubLink" target="_blank">
+                <a
+                    class="custom-button-href"
+                    :href="githubLink"
+                    target="_blank"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -55,7 +59,7 @@ export default {
             githubLink: 'https://github.com/Vezil',
             linkedinLink:
                 'https://www.linkedin.com/in/szymon-wojaczek-1b0b0317b',
-            cvFileLink: `Szymon'sResumeWithRodo.pdf`,
+            cvFileLink: `SzymonWojaczekCV.pdf`,
             cvFileName: 'SzymonWojaczekCV.pdf'
         };
     },
