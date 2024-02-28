@@ -4,7 +4,7 @@
             <section class="contact">
                 <h2> Get in touch </h2>
 
-                <p class="text"> Do you have any question ? </p>
+                <p class="text"> Do you have any question? </p>
             </section>
 
             <section class="about">
@@ -141,17 +141,17 @@
                         </div>
 
                         <p class="typo__p" v-if="submitStatus === STATUS_OK">
-                            <span style="margin-right:6px;"
+                            <span style="margin-right: 6px"
                                 >Thanks for your submission!</span
                             >
-                            <i style="color:green" class="fa fa-check"></i>
+                            <i style="color: green" class="fa fa-check"></i>
                         </p>
                         <p class="typo__p" v-if="submitStatus === STATUS_ERROR">
-                            <span style="margin-right:6px;">
+                            <span style="margin-right: 6px">
                                 Something went wrong! Check if your email is
                                 correct or try again later
                             </span>
-                            <i style="color:red" class="fa fa-times"></i>
+                            <i style="color: red" class="fa fa-times"></i>
                         </p>
                         <p
                             class="typo__p"
