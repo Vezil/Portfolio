@@ -30,9 +30,9 @@ export default {
     data() {
         return {
             typingStrings: [
-                'FullStack Developer.',
-                'FrontEnd Developer.',
-                'BackEnd Developer.'
+                'Full-Stack Engineer.',
+                'Front-End Engineer.',
+                'Back-End Engineer.'
             ],
             isLoading: true
         };
