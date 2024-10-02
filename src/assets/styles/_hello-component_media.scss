@@ -5,7 +5,7 @@
         .static-text {
             width: 90%;
             padding: 2px;
-            p {
+            div {
                 padding: 20px;
             }
         }
@@ -51,7 +51,7 @@
 @media screen and (max-width: 1640px) {
     .main-container {
         .static-text {
-            p {
+            div {
                 padding: 28px;
             }
         }

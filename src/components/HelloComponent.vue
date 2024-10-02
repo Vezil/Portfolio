@@ -16,11 +16,15 @@
 
         <div v-if="!isLoading">
             <h2 class="static-text">
-                <p>
-                    I have been programming since <b>2016</b>, accumulating over
-                    <b>{{ yearsOfPrograming }}</b> years of commercial
-                    experience as a Software Engineer.
-                </p>
+                <div>
+                    <p>I have been programming</p>
+                    <p>since <b>2016</b>, accumulating </p>
+                    <p>
+                        over <b>{{ yearsOfPrograming }}</b> years of commercial
+                        experience as a
+                    </p>
+                    <p>Software Engineer.</p>
+                </div>
             </h2>
         </div>
     </div>
