@@ -34,6 +34,7 @@ export default {
     data() {
         return {
             typingStrings: [
+                'Software Engineer.',
                 'Full-Stack Engineer.',
                 'Front-End Engineer.',
                 'Back-End Engineer.'
