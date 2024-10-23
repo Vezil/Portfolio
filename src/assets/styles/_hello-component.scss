@@ -40,7 +40,7 @@
         font-family: 'Open Sans';
         position: absolute;
         top: 30%;
-        left: 20%;
+        left: 19%;
         transform: translate3d(-50%, -50%, 0);
         background-color: rgba(#000, 0.5);
         width: 50%;
@@ -49,47 +49,12 @@
         font-size: 15px;
         font-weight: 400;
         border: 0.175rem solid #228dff;
-        &:before,
-        &:after {
-            content: '•';
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            font-size: 12px;
-            color: #228dff;
-            border: 0.175rem solid #228dff;
-            line-height: 12px;
-            top: 5px;
-            text-align: center;
-        }
-        &:before {
-            left: 5px;
-        }
-        &:after {
-            right: 5px;
-        }
         div {
             position: relative;
             border: 0.175rem solid #228dff;
-            padding: 40px;
-            &:before,
-            &:after {
-                content: '•';
-                position: absolute;
-                width: 14px;
-                height: 14px;
-                font-size: 14px;
-                color: #228dff;
-                border: 0.175rem solid #228dff;
-                line-height: 12px;
-                bottom: -2px;
+            padding: 1rem;
+            p {
                 text-align: center;
-            }
-            &:before {
-                left: -0.175rem;
-            }
-            &:after {
-                right: -0.175rem;
             }
         }
     }
