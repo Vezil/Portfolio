@@ -17,12 +17,12 @@
         <div v-if="!isLoading">
             <h2 class="static-text">
                 <div>
-                    <p>I have been programming</p>
-                    <p>since <b>2016</b>, accumulating </p>
+                    <p>I have been programming since <b>2016</b>,</p>
                     <p>
-                        over <b>{{ yearsOfPrograming }}</b> years of commercial
-                        experience as a
-                    </p>
+                        accumulating over
+                        <b>{{ yearsOfPrograming }}</b> years of</p
+                    >
+                    <p>commercial experience as a</p>
                     <p>Software Engineer.</p>
                 </div>
             </h2>
@@ -34,6 +34,7 @@ export default {
     data() {
         return {
             typingStrings: [
+                'Software Engineer.',
                 'Full-Stack Engineer.',
                 'Front-End Engineer.',
                 'Back-End Engineer.'
