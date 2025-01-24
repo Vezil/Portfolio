@@ -44,8 +44,7 @@ export default {
                     content: `<br/>Project created mainly in Nuxt/Vue/Node(express). 
                     This website is using for taking loans (private or business)<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>`,
-                    title: 'Weloan',
-                    projectLink: 'https://weloan-app.prpl.io'
+                    title: 'Weloan'
                 },
                 {
                     logoLink: 'israelbody.png',
@@ -56,8 +55,7 @@ export default {
                     food recipes and many others things...<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Israelbody',
-                    projectLink: 'https://www.israelbody.org'
+                    title: 'Israelbody'
                 },
                 {
                     logoLink: 'takeaway-order.png',
@@ -66,9 +64,7 @@ export default {
                     delivery or order direct to the table.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Takeaway-Order',
-                    projectLink:
-                        'https://order.storekit.com/ballie-ballerson/menu'
+                    title: 'Takeaway-Order'
                 },
                 {
                     logoLink: 'oferteo.png',
@@ -76,9 +72,7 @@ export default {
                     specific service from one of the companies that will match our Inquiry(rfp).<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Oferteo',
-                    projectLink:
-                        'https://www.oferteo.pl'
+                    title: 'Oferteo'
                 }
             ],
 
@@ -143,7 +137,7 @@ export default {
                     title: '2048 Game',
                     projectLink: 'https://vezil.github.io/2048-game'
                 },
-                               {
+                {
                     logoLink: 'twitter-clone.png',
                     content: `<br/>Project created mainly in React/Node/Prisma/Typescript/Postgres. Create your account and try it!
                     In the app you can add your bio, add your tweets, you can follow someone, comment someone other tweet...<br/><br/>

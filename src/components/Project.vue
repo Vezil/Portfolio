@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <a :href="projectLink" target="_blank">
+        <span @click="goToProject">
             <div class="box">
                 <div class="img-box">
                     <img
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </span>
     </div>
 </template>
 
@@ -39,8 +39,15 @@ export default {
         },
         projectLink: {
             type: String,
-            required: true,
+            required: false,
             default: ''
+        }
+    },
+    methods: {
+        goToProject() {
+            if (this.projectLink) {
+                window.open(this.projectLink, '_blank');
+            }
         }
     }
 };
