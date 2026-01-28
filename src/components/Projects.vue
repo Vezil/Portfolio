@@ -40,39 +40,46 @@ export default {
         return {
             commercialProjects: [
                 {
-                    logoLink: 'weloan.png',
-                    content: `<br/>Project created mainly in Nuxt/Vue/Node(express). 
-                    This website is using for taking loans (private or business)<br/><br/>
+                    logoLink: 'weloan.webp',
+                    content: `<br/>The project was primarily developed using Nuxt, Vue, and Node.js (Express).
+                    The platform is designed to facilitate private and business loan applications.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>`,
                     title: 'Weloan'
                 },
                 {
-                    logoLink: 'israelbody.png',
-                    content: `<br/>Project created mainly in Nuxt/Vue/Node(express). There is also
-                    Elasticsearch for searching content and Tranzilla system for payment.
-                    In this website we can find a large store with many products and a system 
-                    of coupons and discounts,
-                    food recipes and many others things...<br/><br/>
+                    logoLink: 'israelbody.webp',
+                    content: `<br/>The project was primarily developed using Nuxt, Vue, and Node.js (Express).
+                    It also integrates Elasticsearch for content search and the Tranzilla payment system.
+                    The platform features a large online store with a wide range of products, a coupon and discount system, food recipes,
+                    and additional content.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
                     title: 'Israelbody'
                 },
                 {
-                    logoLink: 'takeaway-order.png',
-                    content: `<br/>Project created mainly in Vue/Node(hapi)/PostgreSQL. On this page is a lot
-                    of integrations with Payment Systems like Adyen, Paypal and POS systems (like deliverect). We can buy food via pickup,
-                    delivery or order direct to the table.<br/><br/>
+                    logoLink: 'takeaway-storekit.webp',
+                    content: `<br/>The project was primarily developed using Vue, Node.js (Hapi), and PostgreSQL.
+                    The platform integrates multiple payment systems, including Adyen, PayPal, and POS solutions such as Deliverect.
+                    Users can order food for pickup, delivery, or direct-to-table service.<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
-                    title: 'Takeaway-Order'
+                    title: 'Takeaway-Order Storekit'
                 },
                 {
-                    logoLink: 'oferteo.png',
-                    content: `<br/>Project created mainly in Vue/Java (I'm working only on frontend). We can order here
-                    specific service from one of the companies that will match our Inquiry(rfp).<br/><br/>
+                    logoLink: 'oferteo.webp',
+                    content: `<br/>The project was developed using Vue and Java, with my contribution focused exclusively on the frontend.
+                    The platform allows users to request specific services from companies matched to their inquiry (RFP)<br/><br/>
                     <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
                      `,
                     title: 'Oferteo'
+                },
+                {
+                    logoLink: 'linked-client.webp',
+                    content: `<br/>The project was primarily developed using Vue, Express.js, Typescript and MongoDB.
+                    LinkedClient provides an AI-powered sales assistant designed to increase efficiency and close rates while reducing operational costs and administrative workload.<br/><br/>
+                    <span style="cursor:no-drop; color:gray; padding:5px;">Source Code</span>
+                     `,
+                    title: 'LinkedClient'
                 }
             ],
 
