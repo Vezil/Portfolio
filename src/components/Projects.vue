@@ -85,36 +85,39 @@ export default {
 
             myProjects: [
                 {
-                    logoLink: 'store.png',
-                    content: `<br/>Small shop created in react.js .We can make payment
-                    via Paypal<br/><br/>
+                    logoLink: 'store.webp',
+                    content: `<br/>A fully responsive e-commerce web application built with React.js,
+                    featuring a product catalog, pricing display, and an integrated PayPal payment system.<br/><br/>
                     <a class="project-link" 
                     href="https://github.com/Vezil/Store" target="_blank">Source Code</a>`,
                     title: 'Store',
                     projectLink: 'https://vezil-store.netlify.app'
                 },
                 {
-                    logoLink: 'chat.png',
-                    content: `<br/>This chat was created in react.js and node.js + socket.io.
-                    You can find here some funcionality like emojify.<br/><br/>
+                    logoLink: 'chat.webp',
+                    content: `<br/>A real-time chat application built with React.js and Node.js,
+                    using Socket.io for live, bidirectional communication.
+                    The app supports instant messaging, emoji integration, and real-time updates without page refresh.
+                    This project demonstrates handling WebSocket connections, real-time data flow, and building interactive user experiences.<br/><br/>
                     <a class="project-link"
                     href="https://github.com/Vezil/NodeChat" target="_blank">Source Code</a>`,
                     title: 'Chat',
                     projectLink: 'https://vezil-nodechat.netlify.app'
                 },
                 {
-                    logoLink: 'disney.png',
-                    content: `<br/>This project is reproduce disney plus website
-                    (created in vue.js)<br/><br/>
+                    logoLink: 'disney.webp',
+                    content: `<br/>A front-end recreation of the Disney+ streaming platform interface built with Vue.js.
+                     The project focuses on layout accuracy. It demonstrates practical use of Vue.js for building modern, scalable user interfaces.<br/><br/>
                     <a class="project-link" 
                     href="https://github.com/Vezil/disneyplus" target="_blank">Source Code</a>`,
                     title: 'Disney Plus',
                     projectLink: 'https://vezil-disneyplus.netlify.app'
                 },
                 {
-                    logoLink: 'platformPig.png',
-                    content: `<br/>Experimental Platform Game created
-                    in Javascript.<br/><br/> 
+                    logoLink: 'platform-pig.webp',
+                    content: `<br/>An experimental 2D platform game built in pure JavaScript, featuring pixel-art levels, collectibles,
+                    and a simple scoring system. The project focuses on core gameplay systems such as player movement,
+                    collision detection, basic physics, and responsive input handling.<br/><br/> 
                     <a class="project-link"
                     href="https://github.com/Vezil/PlatformPig" target="_blank">Source Code</a>
                 `,
@@ -123,10 +126,11 @@ export default {
                         'https://vezil.github.io/PlatformPig/PlatformPig.html?07'
                 },
                 {
-                    logoLink: 'erp-system.png',
-                    content: `<br/>Project created mainly in Vue/Node(express)/Sequelize/MySql. In this project, there are two roles.
-                    Admin (Employer) and User (Employee). As a Employee, you can request holidays, and change your password. As an Employer
-                    you can add Employees, add contracts, accept or deny vacations and reset password. Test credentials for a user and admin are available on github project description :)<br/>
+                    logoLink: 'erp.webp',
+                    content: `<br/>Employee Management System.
+                    A role-based HR web application built with Vue.js on the front end and a Node.js/Express API backed by MySQL via Sequelize.
+                    'The system supports two roles: Employer (Admin) and Employee (User).
+                    Employees can submit leave requests, track their status, and manage their account (including password changes).<br/>
                     <a class="project-link"
                     href="https://github.com/Vezil/ERP-Employee-server" target="_blank">Source Code (backend)</a><br/>
                     <a class="project-link" href="https://github.com/Vezil/ERP-Employee-frontend" target="_blank">Source Code (frontend)</a>
@@ -135,9 +139,12 @@ export default {
                     projectLink: 'https://vezil-erp-system.netlify.app'
                 },
                 {
-                    logoLink: '2048-game.png',
-                    content: `<br/>A project based on the game "2048". Project created with javascript + p5.js library,
-                     there are also some unit tests. Special thanks for the Coding Traing channel for inspiration :)<br/><br/>
+                    logoLink: '2048-game.webp',
+                    content: `<br/>2048 Game (JavaScript, p5.js)
+                    A browser-based implementation of the classic 2048 puzzle game built with JavaScript and the p5.js library.
+                    The project includes core game mechanics such as tile merging, score tracking, and game-over detection,
+                    along with basic unit tests to verify game logic.
+                    It demonstrates structured game state management, algorithmic problem-solving, and testable front-end code.<br/><br/>
                     <a class="project-link"
                     href="https://github.com/Vezil/2048-game" target="_blank">Source Code</a><br/>
                      `,
@@ -145,9 +152,11 @@ export default {
                     projectLink: 'https://vezil.github.io/2048-game'
                 },
                 {
-                    logoLink: 'twitter-clone.png',
-                    content: `<br/>Project created mainly in React/Node/Prisma/Typescript/Postgres. Create your account and try it!
-                    In the app you can add your bio, add your tweets, you can follow someone, comment someone other tweet...<br/><br/>
+                    logoLink: 'twitter.webp',
+                    content: `<br/>Social Media Platform - "Twitter clone"
+                    A full-stack social media application built with React and a Node.js API using TypeScript, Prisma, and PostgreSQL.
+                    The platform allows users to create accounts, manage personal profiles, publish posts, follow other users,
+                    and interact through comments.<br/><br/>
                     <a class="project-link"
                     href="https://github.com/Vezil/twitter-clone-backend" target="_blank">Source Code (backend)</a><br/>
                     <a class="project-link" href="https://github.com/Vezil/twitter-clone-frontend" target="_blank">Source Code (frontend)</a>`,

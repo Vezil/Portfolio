@@ -3,10 +3,7 @@
         <span @click="goToProject">
             <div class="box">
                 <div class="img-box">
-                    <img
-                        :src="require(`@/assets/images/${logoLink}`)"
-                        alt="link"
-                    />
+                    <img :src="require(`@/assets/images/${logoLink}`)" alt="link" />
                 </div>
                 <div class="content-box">
                     <div>
@@ -44,9 +41,11 @@ export default {
         }
     },
     methods: {
-        goToProject() {
-            if (this.projectLink) {
-                window.open(this.projectLink, '_blank');
+        goToProject(event) {
+            const link = event.srcElement.href ?? this.projectLink ?? ""
+
+            if (link) {
+                window.open(link, '_blank');
             }
         }
     }
