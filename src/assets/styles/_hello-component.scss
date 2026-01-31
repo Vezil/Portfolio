@@ -43,20 +43,44 @@
         top: 30%;
         left: 19%;
         transform: translate3d(-50%, -50%, 0);
-        background-color: rgba(#000, 0.5);
+
         width: 50%;
         max-width: 320px;
-        padding: 5px;
+        padding: 6px;
+
         font-size: 15px;
         font-weight: 400;
-        border: 0.175rem solid #228dff;
+
+        background: rgba(10, 18, 35, 0.55);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        border-radius: 14px;
+        border: 1px solid rgba(80, 140, 255, 0.45);
+
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.65),
+            0 0 35px rgba(80, 140, 255, 0.25);
+
         div {
             position: relative;
-            border: 0.175rem solid #228dff;
-            padding: 1rem;
-            p {
-                text-align: center;
+            padding: 1.1rem;
+
+            border-radius: 10px;
+            border: 1px solid rgba(120, 180, 255, 0.35);
+
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.06),
+                rgba(255, 255, 255, 0.01)
+            );
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                    line-height: 1.6;
+                    color: rgba(235, 240, 255, 0.92);
+                }
             }
         }
-    }
 }
