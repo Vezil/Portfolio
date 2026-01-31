@@ -155,30 +155,30 @@
 
     .cv {
         .custom-button-href {
-            color: #e2622f;
+            color: #c77dff;
 
             span {
                 &:nth-child(1) {
-                    background: linear-gradient(90deg, transparent, #ff7b00);
+                    background: linear-gradient(90deg, transparent, #8034ba);
                 }
 
                 &:nth-child(2) {
-                    background: linear-gradient(180deg, transparent, #ff7b00);
+                    background: linear-gradient(180deg, transparent, #8034ba);
                 }
 
                 &:nth-child(3) {
-                    background: linear-gradient(270deg, transparent, #ff7b00);
+                    background: linear-gradient(270deg, transparent, #8034ba);
                 }
 
                 &:nth-child(4) {
-                    background: linear-gradient(360deg, transparent, #ff7b00);
+                    background: linear-gradient(360deg, transparent, #8034ba);
                 }
             }
 
             &:hover {
                 color: #000;
-                background: #e2622f;
-                box-shadow: 0 0 10px #ff5e00, 0 0 40px #ff7b00, 0 0 10px #ff7b00;
+                background: #c77dff;
+                box-shadow: 0 0 10px #8034ba, 0 0 40px #8034ba, 0 0 10px #8034ba;
                 transition-delay: 600ms;
             }
         }
