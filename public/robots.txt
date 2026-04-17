@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Explicitly highlight key assets for social scrapers
+User-agent: facebookexternalhit
+User-agent: Facebot
+User-agent: Twitterbot
+User-agent: LinkedInBot
+Allow: /og-image.png
+Allow: /
+
+
+Sitemap: https://szymonwojaczek.pl/sitemap.xml
