@@ -1,12 +1,6 @@
 <template>
     <div class="main-container" id="about-section">
-        <vue-typed-js
-            v-if="!isLoading"
-            :loop="true"
-            :showCursor="true"
-            :backSpeed="50"
-            :strings="typingStrings"
-        >
+        <vue-typed-js v-if="!isLoading" :loop="true" :showCursor="true" :backSpeed="50" :strings="typingStrings">
             <h1 class="typing-text">
                 Hi! Szymon here, I'm a
                 <br />
@@ -17,13 +11,15 @@
         <div v-if="!isLoading">
             <h2 class="static-text">
                 <div>
-                    <p>I have been programming since <b>2016</b>,</p>
                     <p>
-                        accumulating over
-                        <b>{{ yearsOfPrograming }}</b> years of</p
-                    >
-                    <p>commercial experience as a</p>
-                    <p>Software Engineer.</p>
+                        Software Engineer with
+                        <b>{{ yearsOfPrograming }}</b> years of
+                    </p>
+                    <p>
+                        experience, focused on designing scalable backend systems.
+                        I work primarily with Node.js and TypeScript, with a growing focus on system architecture and
+                        AI-powered solutions.
+                    </p>
                 </div>
             </h2>
         </div>
@@ -35,16 +31,16 @@ export default {
         return {
             typingStrings: [
                 'Software Engineer.',
+                'Software Engineer.',
                 'Full-Stack Engineer.',
-                'Front-End Engineer.',
-                'Back-End Engineer.'
+                'AI Engineer.',
             ],
             isLoading: true
         };
     },
     computed: {
         yearsOfPrograming() {
-            return new Date().getFullYear() - 2020;
+            return `${new Date().getFullYear() - 2020}+`;
         }
     },
     mounted() {
