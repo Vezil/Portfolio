@@ -30,7 +30,7 @@ export default {
     data() {
         return {
             typingStrings: [
-                'Software Engineer.',
+                'Software Architect.',
                 'Software Engineer.',
                 'Full-Stack Engineer.',
                 'AI Engineer.',
