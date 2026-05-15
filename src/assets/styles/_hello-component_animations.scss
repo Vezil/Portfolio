@@ -27,3 +27,12 @@
         filter: blur(0);
     }
 }
+
+@keyframes hello-card-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,20 +1,33 @@
-@media screen and (max-width: 550px) {
+// Large desktop fine-tuning
+@media screen and (max-width: 1640px) {
     .main-container {
-        font-size: 18px;
-
         .static-text {
-            width: 90%;
-            padding: 4px;
-            div {
-                padding: 0.5rem;
-            }
-        }
-        .typing-text {
-            min-width: 90% !important;
+            width: min(360px, 36vw);
         }
     }
 }
 
+// Tablet / small laptop
+@media screen and (max-width: 1024px) {
+    .main-container {
+        .static-text {
+            top: clamp(5rem, 12vh, 7rem);
+            left: clamp(1.25rem, 3vw, 2rem);
+            width: min(340px, 42vw);
+            font-size: 0.9rem;
+        }
+
+        .typing-text {
+            right: clamp(1.25rem, 3vw, 2rem);
+            bottom: clamp(1.25rem, 3vh, 2.25rem);
+            font-size: clamp(1rem, 1.8vw, 1.35rem);
+            max-width: min(540px, 90vw);
+        }
+    }
+}
+
+// Mobile baseline — stack both cards at the bottom so they don't
+// cover the figure in the background photo.
 @media screen and (max-width: 768px) {
     .main-container {
         animation: mobile-animate 2s linear;
@@ -22,22 +35,99 @@
             no-repeat bottom center;
         background-size: cover;
 
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 4.5rem 1rem 1.25rem;
+
         &:hover {
             background: url('./assets/images/iceland-background-mobile.webp')
                 no-repeat bottom center;
             background-size: cover;
         }
+
+        .typing-text,
+        .static-text {
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            transform: none;
+
+            width: 100%;
+            max-width: 480px;
+            margin: 0;
+            flex: 0 0 auto;
+        }
+
         .typing-text {
-            font-size: 22px;
-            min-width: 350px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            min-width: 0;
+            padding: 0.9rem 1.1rem;
+            font-size: clamp(1rem, 4.2vw, 1.25rem);
+            line-height: 1.45;
+            text-align: center;
+            border-radius: 16px;
         }
 
         .static-text {
-            top: 70%;
-            left: 50%;
+            font-size: 0.9rem;
+            line-height: 1.55;
+
+            & > div {
+                padding: 0.85rem 1rem;
+
+                p {
+                    text-align: center;
+                }
+
+                p + p {
+                    margin-top: 0.4rem;
+                }
+            }
+        }
+    }
+}
+
+// Small phones
+@media screen and (max-width: 480px) {
+    .main-container {
+        gap: 0.6rem;
+        padding: 4rem 0.85rem 1rem;
+
+        .typing-text {
+            font-size: 1rem;
+            padding: 0.8rem 0.95rem;
+        }
+
+        .static-text {
+            font-size: 0.85rem;
+
+            & > div {
+                padding: 0.75rem 0.9rem;
+            }
+        }
+    }
+}
+
+// Extra small / very short screens
+@media screen and (max-width: 360px),
+    screen and (max-height: 600px) and (max-width: 768px) {
+    .main-container {
+        gap: 0.5rem;
+
+        .static-text {
+            font-size: 0.8rem;
+
+            & > div {
+                padding: 0.65rem 0.8rem;
+            }
+        }
+
+        .typing-text {
+            font-size: 0.95rem;
+            padding: 0.7rem 0.85rem;
         }
     }
 }
@@ -48,12 +138,12 @@
     }
 }
 
-@media screen and (max-width: 1640px) {
-    .main-container {
-        .static-text {
-            div {
-                padding: 1rem;
-            }
-        }
+// Reduced motion accessibility
+@media (prefers-reduced-motion: reduce) {
+    .main-container,
+    .main-container .typing-text,
+    .main-container .static-text {
+        animation: none !important;
+        transition: none !important;
     }
 }

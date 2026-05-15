@@ -14,8 +14,7 @@
                     <p>
                         Software Engineer with
                         <b>{{ yearsOfPrograming }}</b> years of
-                    </p>
-                    <p>
+
                         experience, focused on designing scalable backend systems.
                         I work primarily with Node.js and TypeScript, with a growing focus on system architecture and
                         AI-powered solutions.
@@ -31,8 +30,8 @@ export default {
         return {
             typingStrings: [
                 'Software Architect.',
-                'Software Engineer.',
                 'Full-Stack Engineer.',
+                'Software Engineer.',
                 'AI Engineer.',
             ],
             isLoading: true
