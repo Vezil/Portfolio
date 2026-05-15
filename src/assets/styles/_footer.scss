@@ -24,12 +24,17 @@
 
         .custom-button-href {
             position: relative;
-            display: inline-block;
-            padding: 15px 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            padding: clamp(0.7rem, 1vw, 0.95rem) clamp(1.1rem, 2.2vw, 1.9rem);
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: clamp(2px, 0.25vw, 4px);
             text-decoration: none;
-            font-size: 24px;
+            font-size: clamp(0.95rem, 1.4vw, 1.5rem);
+            line-height: 1.2;
+            white-space: nowrap;
             overflow: hidden;
             transition: 0.2s;
             cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
