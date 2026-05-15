@@ -1,27 +1,83 @@
 .skills-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 45vh;
-    flex-wrap: wrap;
-    background: url('./assets/images/pexels-photo-1287083.jpeg') no-repeat
-        center;
-    background-size: cover;
-    // https://www.pexels.com/photo/trees-surrounded-by-fogs-in-the-forest-1287083/ :)
-}
+    position: relative;
+    padding: var(--space-9) var(--gutter);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.05) 0, transparent 50%),
+        var(--bg-0);
+    border-top: 1px solid var(--border-1);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-4);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    align-content: start;
 
-.skills-container {
     h1 {
-        font-size: 40px;
-        padding: 40px;
-        flex-basis: 100%;
-        color: #fff;
-        text-shadow: 0 0 50px #f06292;
-        font-family: 'Montserrat', sans-serif;
+        grid-column: 1 / -1;
+        margin: 0 0 var(--space-4);
+        padding: 0;
+        font-family: var(--font-sans);
+        font-size: clamp(1.5rem, 4vw, var(--fs-3xl));
+        font-weight: 700;
+        color: var(--text-1);
+        text-shadow: none;
+        letter-spacing: -0.02em;
 
         u {
             text-decoration: none;
-            border-bottom: 10px solid #228dff;
+            border-bottom: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            position: relative;
+            padding-bottom: var(--space-3);
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 56px;
+                height: 3px;
+                background: var(--accent);
+                border-radius: 2px;
+            }
+
+            i {
+                color: var(--accent);
+                font-size: 0.8em;
+            }
         }
+    }
+}
+
+.skills-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skills-container > * { position: relative; z-index: 1; }
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        padding: var(--space-8) var(--space-5);
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: var(--space-3);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-container {
+        padding: var(--space-7) var(--space-4);
+        grid-template-columns: repeat(2, 1fr);
     }
 }

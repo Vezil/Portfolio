@@ -1,99 +1,141 @@
 .page-not-found {
-    background: url('./assets/images/hu-tao.png') no-repeat bottom center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    background:
+        radial-gradient(ellipse at 30% 20%, rgba(34, 211, 238, 0.12) 0, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.10) 0, transparent 50%),
+        var(--bg-0);
+    display: grid;
+    place-items: center;
+    padding: var(--gutter);
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 75%);
+        -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 75%);
+        pointer-events: none;
+    }
 
     .text-wrapper {
-        $light-color: #3e2e6a;
-        $dark-color: #130b52;
-
-        position: fixed;
-        top: 30%;
-        left: 110%;
-        font-weight: 700;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
         width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
 
         .title {
-            font-size: 4rem;
-            color: #fbe6d3;
-            text-transform: uppercase;
-            text-align: center;
-            text-shadow: -1px -1px 0 $dark-color, 1px -1px 0 $dark-color,
-                -1px 1px 0 $dark-color, 1px 1px 0 $dark-color;
-            &:after {
+            position: relative;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            color: var(--text-1);
+            text-shadow: none;
+            text-transform: none;
+            font-size: var(--fs-2xl);
+            letter-spacing: -0.02em;
+
+            &::after {
                 content: attr(data-title);
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: 2;
-                overflow: hidden;
-                color: #f3576c;
-                transform: translate(0.4vw, 0.3vh);
-                mix-blend-mode: darken;
-                text-align: center;
-                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
-                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
-                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
-                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
-                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
-                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
-                    7px 6px 0px $dark-color;
+                position: static;
+                top: auto;
+                left: auto;
+                transform: none;
+                color: inherit;
+                text-shadow: none;
+                mix-blend-mode: normal;
             }
         }
 
         .first-part {
-            $dark-color: #130b52;
-            $light-color: #3e2e6a;
+            font-family: var(--font-mono);
+            font-size: clamp(3.5rem, 14vw, 6.5rem);
+            font-weight: 800;
+            color: var(--accent);
+            text-shadow: 0 0 60px var(--accent-glow);
+            letter-spacing: -0.04em;
+            line-height: 1;
 
-            font-size: 7rem;
-            font-weight: 900;
-            text-shadow: -1px -1px 0 $dark-color 1px -1px 0 $dark-color -1px 1px
-                0 $dark-color 1px 1px 0 $dark-color;
-
-            &:after {
-                position: absolute;
-                top: -168px;
-                left: 60px;
-                transform: translate(2vw, 2vh);
-                text-shadow: 1px 0px 0px $dark-color, 0px 1px 0px $light-color,
-                    2px 1px 0px $dark-color, 1px 2px 0px $light-color,
-                    3px 2px 0px $dark-color, 2px 3px 0px $light-color,
-                    4px 3px 0px $dark-color, 3px 4px 0px $light-color,
-                    5px 4px 0px $dark-color, 4px 5px 0px $light-color,
-                    6px 5px 0px $dark-color, 5px 6px 0px $light-color,
-                    7px 6px 0px $dark-color;
+            &::after {
+                position: static;
+                top: auto;
+                left: auto;
+                transform: none;
+                text-shadow: none;
             }
         }
 
         .second-part {
-            &:after {
-                position: absolute;
-                top: 420px;
-                left: 80px;
+            font-size: clamp(1.5rem, 5vw, var(--fs-3xl));
+            color: var(--text-1);
+            margin-top: var(--space-3);
+
+            &::after {
+                position: static;
+                top: auto;
+                left: auto;
             }
         }
 
         .third-part {
-            &:after {
-                position: absolute;
-                top: 500px;
-                left: 80px;
+            font-size: clamp(1.25rem, 4vw, var(--fs-xl));
+            color: var(--text-3);
+            font-weight: 500;
+
+            &::after {
+                position: static;
+                top: auto;
+                left: auto;
             }
         }
 
         .redirect {
-            position: absolute;
-            top: 600px;
-            left: 120px;
-            transition: color 0.5s ease;
-            cursor: url(/img/custom-cursor-pointer.e0f83a0c.png), pointer !important;
-            font-size: 2rem;
-            color: #fbe6d3;
+            position: static;
+            top: auto;
+            left: auto;
+            margin-top: var(--space-5);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            min-height: 48px;
+            padding: var(--space-3) var(--space-6);
+            background: var(--accent);
+            color: var(--bg-0);
+            font-family: var(--font-sans);
+            font-size: var(--fs-base);
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            align-self: center;
+            transition:
+                background 0.2s var(--ease-out),
+                box-shadow 0.2s var(--ease-out),
+                transform 0.15s var(--ease-out),
+                color 0.2s var(--ease-out);
+
+            i { transition: transform 0.2s var(--ease-out); }
 
             &:hover {
-                color: #f3576c;
+                background: var(--accent-strong);
+                color: var(--bg-0);
+                box-shadow: 0 8px 24px var(--accent-glow);
+                transform: translateY(-1px);
+
+                i { transform: translateX(-2px); }
             }
         }
     }

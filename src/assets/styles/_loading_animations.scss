@@ -1,12 +1,3 @@
 @keyframes loader-animate {
-    0% {
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg);
-        width: 55px;
-        height: 55px;
-    }
-    100% {
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
 }

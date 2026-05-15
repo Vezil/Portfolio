@@ -1,29 +1,20 @@
-@keyframes animate {
-    0% {
-        filter: grayscale(100%);
-        filter: blur(4px);
-        background: url('./assets/images/iceland-background-init.webp')
-            no-repeat bottom center;
-        background-size: cover;
+@keyframes hero-rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
     }
-    100% {
-        filter: grayscale(0%);
-        filter: blur(0);
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes mobile-animate {
-    0% {
-        filter: grayscale(100%);
-        filter: blur(4px);
-
-        background: url('./assets/images/iceland-background-mobile-init.webp')
-            no-repeat bottom center;
-
-        background-size: cover;
+.main-container {
+    .typing-text {
+        animation: hero-rise 0.7s var(--ease-out) both;
     }
-    100% {
-        filter: grayscale(0%);
-        filter: blur(0);
+
+    .static-text {
+        animation: hero-rise 0.7s var(--ease-out) 0.15s both;
     }
 }

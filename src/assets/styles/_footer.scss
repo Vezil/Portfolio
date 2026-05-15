@@ -1,217 +1,100 @@
 .footer-section {
     position: relative;
-    bottom: 0;
     width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: space-evenly;
+    height: auto;
+    margin-top: var(--space-8);
+    padding: var(--space-7) var(--gutter);
+    background: var(--bg-0);
+    color: var(--text-3);
+    font-size: var(--fs-sm);
+    text-transform: none;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
     align-items: center;
-    background: #111111;
-    color: rgb(173, 169, 169);
-    font-size: 2em;
-    text-transform: capitalize;
-    background: url('./assets/images/footerBackground.png') no-repeat left;
-    background-size: 87vw 200px;
-    padding: 16px;
-    margin-top: 32vh;
-    // https://www.rawpixel.com/image/580718/black-geometric-modern-background
+    gap: var(--space-5);
+    border-top: 1px solid var(--border-1);
+
+    .all-rights-reserved {
+        color: var(--text-4);
+        font-size: var(--fs-sm);
+        font-family: var(--font-sans);
+        letter-spacing: 0;
+    }
 
     .custom-button {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Montserrat-Regular';
 
         .custom-button-href {
             position: relative;
-            display: inline-block;
-            padding: 15px 30px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            min-height: 44px;
+            padding: var(--space-3) var(--space-5);
+            font-family: var(--font-sans);
+            font-size: var(--fs-sm);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0;
             text-decoration: none;
-            font-size: 24px;
+            color: var(--text-2);
+            background: var(--surface-1);
+            border: 1px solid var(--border-1);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            transition: 0.2s;
-            cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
+            transition:
+                color 0.2s var(--ease-out),
+                background 0.2s var(--ease-out),
+                border-color 0.2s var(--ease-out),
+                transform 0.15s var(--ease-out),
+                box-shadow 0.2s var(--ease-out);
 
-            span {
-                position: absolute;
-                display: block;
+            i {
+                font-size: 1em;
+                color: var(--text-3);
+                transition: color 0.2s var(--ease-out);
             }
+
+            span { display: none; }
 
             &:hover {
-                color: #000;
-                background: #f6f8fa;
-                box-shadow: 0 0 10px #596e80, 0 0 40px #f6f8fa, 0 0 10px #f6f8fa;
-                transition-delay: 600ms;
+                color: var(--bg-0);
+                background: var(--accent);
+                border-color: var(--accent);
+                box-shadow: 0 6px 18px var(--accent-glow);
+                transform: translateY(-1px);
+
+                i { color: var(--bg-0); }
             }
 
-            span {
-                &:nth-child(1) {
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 2px;
-                }
-
-                &:nth-child(2) {
-                    top: -100%;
-                    right: 0;
-                    width: 2px;
-                    height: 100%;
-                }
-
-                &:nth-child(3) {
-                    bottom: 0;
-                    right: -100%;
-                    width: 100%;
-                    height: 2px;
-                }
-
-                &:nth-child(4) {
-                    bottom: -100%;
-                    left: 0;
-                    width: 2px;
-                    height: 100%;
-                }
-            }
-
-            &:hover {
-                span {
-                    &:nth-child(1) {
-                        left: 100%;
-                        transition: 600ms;
-                    }
-
-                    &:nth-child(2) {
-                        top: 100%;
-                        transition: 600ms;
-                        transition-delay: 150ms;
-                    }
-
-                    &:nth-child(3) {
-                        right: 100%;
-                        transition: 600ms;
-                        transition-delay: 300ms;
-                    }
-
-                    &:nth-child(4) {
-                        bottom: 100%;
-                        transition: 600ms;
-                        transition-delay: 450ms;
-                    }
-                }
-            }
+            &:active { transform: translateY(0); }
         }
     }
 
-    .github {
-        .custom-button-href {
-            color: #555;
+    .github .custom-button-href:hover {
+        background: var(--text-1);
+        border-color: var(--text-1);
+        color: var(--bg-0);
+        box-shadow: 0 6px 18px rgba(255, 255, 255, 0.18);
 
-            span {
-                &:nth-child(1) {
-                    background: linear-gradient(
-                        90deg,
-                        transparent,
-                        rgb(57, 57, 57)
-                    );
-                }
-
-                &:nth-child(2) {
-                    background: linear-gradient(
-                        180deg,
-                        transparent,
-                        rgb(57, 57, 57)
-                    );
-                }
-
-                &:nth-child(3) {
-                    background: linear-gradient(
-                        270deg,
-                        transparent,
-                        rgb(57, 57, 57)
-                    );
-                }
-
-                &:nth-child(4) {
-                    background: linear-gradient(
-                        360deg,
-                        transparent,
-                        rgb(57, 57, 57)
-                    );
-                }
-            }
-
-            &:hover {
-                color: rgb(255, 255, 255);
-                background: #555;
-                box-shadow: 0 0 10px rgb(57, 57, 57), 0 0 40px rgb(57, 57, 57),
-                    0 0 10px rgb(57, 57, 57);
-                transition-delay: 600ms;
-            }
-        }
+        i { color: var(--bg-0); }
     }
 
-    .cv {
-        .custom-button-href {
-            color: #c77dff;
-
-            span {
-                &:nth-child(1) {
-                    background: linear-gradient(90deg, transparent, #8034ba);
-                }
-
-                &:nth-child(2) {
-                    background: linear-gradient(180deg, transparent, #8034ba);
-                }
-
-                &:nth-child(3) {
-                    background: linear-gradient(270deg, transparent, #8034ba);
-                }
-
-                &:nth-child(4) {
-                    background: linear-gradient(360deg, transparent, #8034ba);
-                }
-            }
-
-            &:hover {
-                color: #000;
-                background: #c77dff;
-                box-shadow: 0 0 10px #8034ba, 0 0 40px #8034ba, 0 0 10px #8034ba;
-                transition-delay: 600ms;
-            }
-        }
+    .cv .custom-button-href:hover {
+        background: var(--violet);
+        border-color: var(--violet);
+        color: var(--bg-0);
+        box-shadow: 0 6px 18px rgba(167, 139, 250, 0.4);
     }
 
-    .linkedin {
-        .custom-button-href {
-            color: #0e76a8;
+    .linkedin .custom-button-href:hover {
+        background: #0e76a8;
+        border-color: #0e76a8;
+        color: var(--text-1);
+        box-shadow: 0 6px 18px rgba(14, 118, 168, 0.45);
 
-            span {
-                &:nth-child(1) {
-                    background: linear-gradient(90deg, transparent, #00628f);
-                }
-
-                &:nth-child(2) {
-                    background: linear-gradient(180deg, transparent, #00628f);
-                }
-
-                &:nth-child(3) {
-                    background: linear-gradient(270deg, transparent, #00628f);
-                }
-
-                &:nth-child(4) {
-                    background: linear-gradient(360deg, transparent, #00628f);
-                }
-            }
-
-            &:hover {
-                color: rgb(255, 255, 255);
-                background: #0e76a8;
-                box-shadow: 0 0 10px #00628f, 0 0 40px #00628f, 0 0 10px #00628f;
-                transition-delay: 600ms;
-            }
-        }
+        i { color: var(--text-1); }
     }
 }

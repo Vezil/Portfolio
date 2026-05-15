@@ -1,100 +1,14 @@
-@keyframes pulse {
+@keyframes navbar-fade-in {
     from {
-        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    to {
-        box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0);
-        background: rgba(255, 255, 255, 0);
-    }
-}
-
-@keyframes open-top-line {
-    0% {
-        transform: translateY(-5px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(90deg);
-    }
-}
-
-@keyframes open-mid-line {
-    50% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes open-btm-line {
-    0% {
-        transform: translateY(5px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(90deg);
-    }
-}
-
-@keyframes close-top-line {
-    0% {
-        transform: translateY(-5px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(90deg);
-    }
-}
-
-@keyframes close-mid-line {
-    50% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes close-btm-line {
-    0% {
-        transform: translateY(5px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(90deg);
-    }
-}
-
-@keyframes neon {
-    from {
-        text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000,
-            0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff,
-            0 0 100px #228dff, 0 0 150px #228dff;
+        opacity: 0;
+        transform: translateY(-8px);
     }
     to {
-        text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000,
-            0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff,
-            0 0 50px #228dff, 0 0 75px #228dff;
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.navbar-container .main-header {
+    animation: navbar-fade-in 0.5s var(--ease-out) both;
 }

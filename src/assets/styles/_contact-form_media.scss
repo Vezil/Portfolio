@@ -1,149 +1,43 @@
-@media screen and (max-width: 550px) {
-    .contact-container {
-        .form {
-            .form-group {
-                span {
-                    left: 10%;
-                    font-size: 10px !important;
-                }
-
-                .form-control {
-                    width: 90%;
-                }
-
-                .error {
-                    font-size: 10px !important;
-                }
-
-                textarea {
-                    height: 80px !important;
-                }
-            }
-
-            .send-button-href {
-                font-size: 1rem !important;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 768px) {
     .contact-container {
-        background: url('./assets/images/contact-mobile.png') no-repeat bottom
-            center;
-        background-size: cover;
-        padding: 0;
+        padding: var(--space-8) var(--space-5);
+        margin-left: 0;
 
-        .form {
-            .form-group {
-                span {
-                    left: 11%;
-                }
-            }
-
-            .form-control {
-                width: 80% !important;
-            }
+        .contact h2 {
+            font-size: clamp(1.5rem, 7vw, 2.25rem);
         }
 
-        .contact {
-            position: relative;
-            right: 0;
-            left: 0;
-            top: 50px;
-            bottom: 0;
-
-            h2 {
-                font-size: 5rem;
-            }
-        }
-
-        .about {
-            position: relative;
-            right: 0;
-            left: 0;
-            top: 130px;
-            bottom: 0;
-        }
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .contact-container {
-        margin-left: 30px;
-
-        .contact {
-            h2 {
-                font-size: 3rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1024px) {
-    .contact-container {
-        section {
-            width: 120%;
-        }
-
-        margin-top: 20%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .contact-container {
         .content-box {
-            width: 100%;
+            padding: var(--space-5) var(--space-4);
         }
-    }
-}
-
-@media screen and (max-width: 1376px) {
-    .contact-container {
-        margin-bottom: 17% !important;
-    }
-}
-
-@media screen and (min-width: 2560px) {
-    .contact-container {
-        background: url('./assets/images/contact.png') no-repeat bottom;
-        background-size: contain;
 
         .form {
-            .form-control {
-                height: 150px !important;
-            }
-
-            input,
-            textarea,
-            select {
-                font-size: 28px !important;
-            }
-
             .form-group {
-                span {
-                    font-size: 28px;
-                }
+                .form-control { width: 100%; }
+                span { left: var(--space-4); }
             }
 
             .send-button-href {
-                margin-top: 10%;
-
-                padding: 25px 55px;
-                font-size: 48px;
+                width: 100%;
+                font-size: var(--fs-base);
             }
         }
     }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-width: 480px) {
     .contact-container {
-        margin-bottom: 20%;
-    }
-}
+        padding: var(--space-7) var(--space-4);
 
-@media screen and (max-height: 900px) {
-    .contact-container {
-        margin-bottom: 8%;
+        .form .form-group {
+            .form-control {
+                height: 56px;
+                font-size: 16px;
+            }
+
+            span { font-size: var(--fs-sm); }
+
+            .error { font-size: var(--fs-xs); }
+        }
     }
 }

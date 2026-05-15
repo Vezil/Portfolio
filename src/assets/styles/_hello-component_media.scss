@@ -1,59 +1,35 @@
-@media screen and (max-width: 550px) {
-    .main-container {
-        font-size: 18px;
-
-        .static-text {
-            width: 90%;
-            padding: 4px;
-            div {
-                padding: 0.5rem;
-            }
-        }
-        .typing-text {
-            min-width: 90% !important;
-        }
-    }
-}
-
 @media screen and (max-width: 768px) {
     .main-container {
-        animation: mobile-animate 2s linear;
-        background: url('./assets/images/iceland-background-mobile.webp')
-            no-repeat bottom center;
-        background-size: cover;
+        padding-top: calc(64px + var(--space-6));
+        gap: var(--space-5);
 
-        &:hover {
-            background: url('./assets/images/iceland-background-mobile.webp')
-                no-repeat bottom center;
-            background-size: cover;
-        }
         .typing-text {
-            font-size: 22px;
-            min-width: 350px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            font-size: clamp(1.75rem, 9vw, 3rem);
         }
 
         .static-text {
-            top: 70%;
-            left: 50%;
-        }
-    }
-}
+            width: 100%;
+            font-size: var(--fs-base);
 
-@media screen and (min-width: 769px) {
-    .main-container {
-        animation: animate 2s linear;
-    }
-}
-
-@media screen and (max-width: 1640px) {
-    .main-container {
-        .static-text {
             div {
-                padding: 1rem;
+                padding: var(--space-4) var(--space-5);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container {
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+
+        .typing-text {
+            font-size: 2rem;
+            line-height: 1.1;
+        }
+
+        .static-text div p {
+            font-size: var(--fs-sm);
         }
     }
 }

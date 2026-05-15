@@ -1,107 +1,64 @@
-@media screen and (max-width: 500px) {
-    .navbar-container {
-        .main-header {
-            .nav-links {
-                .nav-link {
-                    a {
-                        &::before {
-                            font-size: 1.7em;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 890px) {
     .navbar-container {
         .main-header {
             .menu-icon {
                 display: block;
-
-                &__line {
-                    animation: close-mid-line 0.8s backwards;
-                    animation-direction: reverse;
-
-                    &::before {
-                        animation: close-top-line 0.8s backwards;
-                        animation-direction: reverse;
-                    }
-
-                    &::after {
-                        animation: close-btm-line 0.8s backwards;
-                        animation-direction: reverse;
-                    }
-                }
+                z-index: 110;
             }
 
             .nav-links {
-                position: absolute;
+                position: fixed;
+                inset: 0;
                 top: 0;
-                left: 0;
-                opacity: 0;
                 flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                padding: 10rem 0;
-                width: 100vw;
+                justify-content: center;
+                align-items: stretch;
+                gap: var(--space-2);
+                width: 100%;
                 height: 100vh;
-                font-size: 1.3rem;
-                color: #ffffff;
-                font-weight: 700;
-                background: url('./assets/images/navbarMobile.png') no-repeat
-                    bottom center;
-                background-size: cover;
-                // https://www.rawpixel.com/image/580049/black-geometrical-background
-                transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
-                clip-path: circle(200px at top right);
+                height: 100dvh;
+                padding: 96px var(--gutter) var(--space-8);
+                background: rgba(6, 9, 18, 0.96);
+                backdrop-filter: blur(20px) saturate(160%);
+                -webkit-backdrop-filter: blur(20px) saturate(160%);
+                font-size: var(--fs-md);
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-12px);
+                transition:
+                    opacity 0.35s var(--ease-out),
+                    transform 0.35s var(--ease-out);
 
                 .nav-link {
-                    opacity: 0;
-                    transform: translateX(100%);
                     width: 100%;
-                    text-align: center;
+                    text-align: left;
+                    transform: translateX(16px);
+                    opacity: 0;
+                    transition:
+                        opacity 0.35s var(--ease-out),
+                        transform 0.35s var(--ease-out);
 
                     a {
-                        display: block;
+                        width: 100%;
+                        min-height: 56px;
+                        padding: var(--space-4) var(--space-5);
+                        font-size: var(--fs-lg);
+                        font-weight: 600;
+                        border-radius: var(--radius-lg);
+                        background: var(--surface-1);
+                        border: 1px solid var(--border-1);
 
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            top: 50%;
-                            left: 45%;
-                            transform: translate(-50px, -50px);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 2.2em;
-                            color: rgba(0, 0, 0, 0.1);
-                            border-radius: 50%;
-                            z-index: -1;
-                            opacity: 0;
-                            font-weight: 900;
-                            text-transform: uppercase;
-                            letter-spacing: 500px;
-                            transition: letter-spacing 0.5s, left 0.5s;
-                            background: none;
+                        &::after { display: none; }
+
+                        i {
+                            margin-left: auto;
+                            font-size: 1em;
                         }
-                    }
 
-                    a {
-                        &:hover {
-                            background: none;
-                            color: black;
-                            text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
-
-                            &:before {
-                                content: attr(data-text);
-                                opacity: 1;
-                                right: 20%;
-                                bottom: 5%;
-                                letter-spacing: 10px;
-                                text-shadow: none;
-                            }
+                        &:hover,
+                        &:focus-visible {
+                            background: var(--surface-2);
+                            border-color: var(--border-2);
                         }
                     }
                 }
@@ -109,48 +66,43 @@
 
             .menu-btn:checked ~ .nav-links {
                 opacity: 1;
-                clip-path: circle(100% at center);
+                pointer-events: auto;
+                transform: translateY(0);
 
                 .nav-link {
                     opacity: 1;
                     transform: translateX(0);
-                    transition: opacity 0.4s ease-in-out,
-                        transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-                    &:nth-of-type(1) {
-                        transition-delay: 0.7s;
-                    }
-                    &:nth-of-type(2) {
-                        transition-delay: 0.8s;
-                    }
-                    &:nth-of-type(3) {
-                        transition-delay: 0.9s;
-                    }
-                    &:nth-of-type(4) {
-                        transition-delay: 1s;
-                    }
+                    &:nth-of-type(1) { transition-delay: 0.05s; }
+                    &:nth-of-type(2) { transition-delay: 0.10s; }
+                    &:nth-of-type(3) { transition-delay: 0.15s; }
+                    &:nth-of-type(4) { transition-delay: 0.20s; }
                 }
             }
 
             .menu-btn:checked ~ .menu-icon {
-                border-radius: 50%;
-                animation: pulse 1s;
-
                 .menu-icon__line {
-                    background: #228dff;
-                    animation: open-mid-line 0.8s forwards;
+                    background: transparent;
 
                     &::before {
-                        background: #228dff;
-                        animation: open-top-line 0.8s forwards;
+                        background: var(--accent);
+                        transform: translateY(0) rotate(45deg);
                     }
 
                     &::after {
-                        background: #228dff;
-                        animation: open-btm-line 0.8s forwards;
+                        background: var(--accent);
+                        transform: translateY(0) rotate(-45deg);
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar-container {
+        .main-header {
+            padding: 0 var(--space-4);
         }
     }
 }

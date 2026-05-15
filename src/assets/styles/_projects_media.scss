@@ -1,7 +1,32 @@
 @media screen and (max-width: 768px) {
     .projects-container {
-        h1 {
-            font-size: 30px;
+        padding: var(--space-8) var(--space-5);
+
+        .projects-section {
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+
+            .card {
+                .box {
+                    grid-template-rows: 180px 1fr;
+                }
+            }
         }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-container {
+        padding: var(--space-7) var(--space-4);
+
+        .projects-section .card .box {
+            grid-template-rows: 160px 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .projects-container .projects-section {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
