@@ -3,5 +3,47 @@
         h1 {
             font-size: 30px;
         }
+
+        .projects-section {
+            .card-wrapper {
+                .source-code-actions {
+                    right: 8px;
+                    bottom: 8px;
+                    gap: 5px;
+                    z-index: 99;
+                }
+
+                .source-code-button {
+                    font-size: 10px;
+                    padding: 5px 10px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-container {
+        .projects-section {
+            .card-wrapper {
+                width: calc(100vw - 32px);
+                max-width: 360px;
+                height: 280px;
+
+                .card .box .content-box div {
+                    padding: 18px 18px 52px;
+
+                    h2 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
     }
 }

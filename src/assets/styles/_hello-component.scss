@@ -28,25 +28,6 @@
         inset: 0;
         z-index: 0;
         pointer-events: none;
-        background:
-            radial-gradient(
-                ellipse at 20% 35%,
-                rgba(10, 18, 35, 0.22) 0%,
-                rgba(10, 18, 35, 0.06) 45%,
-                transparent 70%
-            ),
-            radial-gradient(
-                ellipse at 80% 85%,
-                rgba(20, 10, 40, 0.22) 0%,
-                rgba(20, 10, 40, 0.06) 45%,
-                transparent 70%
-            ),
-            linear-gradient(
-                180deg,
-                rgba(8, 12, 28, 0.1) 0%,
-                rgba(8, 12, 28, 0) 40%,
-                rgba(8, 12, 28, 0.16) 100%
-            );
     }
 
     .typing-text {
