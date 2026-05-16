@@ -1,16 +1,37 @@
 .skills-container {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     min-height: 45vh;
     flex-wrap: wrap;
+    padding: 40px 20px 60px;
     background: url('./assets/images/pexels-photo-1287083.jpeg') no-repeat
         center;
     background-size: cover;
     // https://www.pexels.com/photo/trees-surrounded-by-fogs-in-the-forest-1287083/ :)
-}
+    border-top: 3px groove black;
 
-.skills-container {
+    // Subtle dim/vignette so cards and heading sit cleanly on the photo
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(5, 12, 18, 0.55) 0%,
+            rgba(5, 12, 18, 0.25) 35%,
+            rgba(5, 12, 18, 0.65) 100%
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
     h1 {
         font-size: 40px;
         padding: 40px;
@@ -18,10 +39,18 @@
         color: #fff;
         text-shadow: 0 0 50px #f06292;
         font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
 
         u {
             text-decoration: none;
             border-bottom: 10px solid #228dff;
+            padding-bottom: 2px;
+        }
+
+        i {
+            margin-left: 6px;
+            color: #228dff;
         }
     }
 }

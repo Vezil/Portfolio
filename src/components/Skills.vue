@@ -1,8 +1,8 @@
 <template>
     <div class="skills-container" id="skills-section">
         <h1>
-            <u>My Skills <i class="fa fa-cog" aria-hidden="true"></i> </u
-        ></h1>
+            <u>My Skills <i class="fa fa-cog" aria-hidden="true"></i></u>
+        </h1>
 
         <Skill
             v-for="skill in skills"
@@ -28,8 +28,8 @@ export default {
                     title: 'Html',
                     description: `Hypertext Markup Language (HTML)
                     is the standard markup language for documents
-                    designed to be displayed in a web browser + HTML5 ( the fifth and 
-                    latest major version of HTML that is a  
+                    designed to be displayed in a web browser + HTML5 ( the fifth and
+                    latest major version of HTML that is a
                     (W3C) recommendation).`,
                     logoLink: 'html.png'
                 },
@@ -58,8 +58,8 @@ export default {
                 {
                     title: 'Javascript',
                     description: `JavaScript is a programming language commonly used in web development.
-                    It was originally developed by Netscape as a means to add dynamic and interactive 
-                    elements to websites. 
+                    It was originally developed by Netscape as a means to add dynamic and interactive
+                    elements to websites.
                     (I know ES6+ standard and some libraries like jQuery)
                      `,
                     logoLink: 'js.png'
@@ -77,7 +77,7 @@ export default {
                     title: 'Nuxt',
                     description: `Nuxt.js abstracts away the details of server and client code
                     distribution so you can focus on application development.
-                    The goal with Nuxt is for it to be flexible enough for you to use as a main 
+                    The goal with Nuxt is for it to be flexible enough for you to use as a main
                     project base. `,
                     logoLink: 'nuxt.png'
                 },
@@ -93,8 +93,8 @@ export default {
                     description: `Node.js is an open-source, cross-platform, back-end,
                     JavaScript runtime environment that executes JavaScript code outside a web browser.
                     Node.js lets developers use JavaScript to write command line tools and for
-                    server-side scripting—running 
-                    scripts server-side to produce dynamic web page content 
+                    server-side scripting—running
+                    scripts server-side to produce dynamic web page content
                     before the page is sent to the user's web browser.`,
                     logoLink: 'node.png'
                 },
@@ -109,7 +109,7 @@ export default {
                 {
                     title: 'Hapi',
                     description: `Hapi is a rich framework (Node.js) for building applications and services.
-                     It enables developers to focus on writing reusable application logic instead 
+                     It enables developers to focus on writing reusable application logic instead
                      of spending time building infrastructure.`,
                     logoLink: 'hapi.png'
                 },
@@ -126,14 +126,14 @@ export default {
                     title: 'Redis',
                     description: `Redis is an open source (BSD licensed),
                     in-memory data structure store, used as a database,
-                    cache and message broker. It supports data structures 
+                    cache and message broker. It supports data structures
                     such as strings, hashes, lists, sets. We can use redis for queue also.`,
                     logoLink: 'redis.png'
                 },
                 {
                     title: 'Docker',
                     description: `Docker is a tool designed to make it easier to create,
-                    deploy, and run applications by using containers. Containers allow a 
+                    deploy, and run applications by using containers. Containers allow a
                     developer to package up an application with all of the parts it needs,
                     such as libraries and other dependencies, and deploy it as one package.`,
                     logoLink: 'docker.png'
@@ -157,7 +157,7 @@ export default {
                     title: 'MySQL',
                     description: `A relational database organizes data into one or more data tables
                     in which data types may be related to each other; these relations help structure
-                    the data. SQL is a language programmers use to create, modify and extract data 
+                    the data. SQL is a language programmers use to create, modify and extract data
                     from the relational database, as well as control user access to the database.`,
                     logoLink: 'mysql.png'
                 },

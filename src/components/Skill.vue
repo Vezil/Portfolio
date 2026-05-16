@@ -1,16 +1,11 @@
 <template>
-    <div
-        class="card"
-        :data-content="`${title}`"
-        @mouseover="showDescrption = true"
-        @mouseleave="showDescrption = false"
-    >
+    <div class="card" :data-content="title">
         <div class="img-box">
-            <img :src="require(`@/assets/images/${logoLink}`)" alt="" />
+            <img :src="require(`@/assets/images/${logoLink}`)" :alt="title" />
         </div>
         <div class="content-box">
             <h3>{{ title }}</h3>
-            <h2 v-if="showDescrption" class="description">{{ description }}</h2>
+            <p class="description">{{ description }}</p>
         </div>
     </div>
 </template>
@@ -32,12 +27,6 @@ export default {
             required: true,
             default: ''
         }
-    },
-
-    data() {
-        return {
-            showDescrption: false
-        };
     }
 };
 </script>
