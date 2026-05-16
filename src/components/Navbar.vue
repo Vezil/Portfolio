@@ -18,8 +18,26 @@
                                 x2="100%"
                                 y2="100%"
                             >
-                                <stop offset="0%" stop-color="#0a2540" />
-                                <stop offset="100%" stop-color="#1565c0" />
+                                <stop offset="0%" stop-color="#143a64" />
+                                <stop offset="100%" stop-color="#2b7de0" />
+                            </linearGradient>
+                            <linearGradient
+                                id="logoHighlight"
+                                x1="50%"
+                                y1="0%"
+                                x2="50%"
+                                y2="100%"
+                            >
+                                <stop
+                                    offset="0%"
+                                    stop-color="#ffffff"
+                                    stop-opacity="0.18"
+                                />
+                                <stop
+                                    offset="60%"
+                                    stop-color="#ffffff"
+                                    stop-opacity="0"
+                                />
                             </linearGradient>
                         </defs>
                         <rect
@@ -31,6 +49,16 @@
                             rx="14"
                             ry="14"
                             fill="url(#logoGradient)"
+                        />
+                        <rect
+                            class="logo__sheen"
+                            x="2"
+                            y="2"
+                            width="60"
+                            height="60"
+                            rx="14"
+                            ry="14"
+                            fill="url(#logoHighlight)"
                         />
                         <text
                             class="logo__letter"
