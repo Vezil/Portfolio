@@ -124,6 +124,7 @@
             }
 
             .source-code-button {
+                position: relative;
                 display: inline-flex;
                 align-items: center;
                 gap: 0.45em;
@@ -155,8 +156,20 @@
                 cursor: url('./assets/images/custom-cursor-code.png'),
                     pointer !important;
 
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                    right: -3px;
+                    bottom: -5px;
+                    z-index: 1;
+                }
+
                 i {
                     font-size: 12px;
+                    position: relative;
+                    z-index: 2;
                 }
 
                 &:hover {

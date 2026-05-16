@@ -1,8 +1,47 @@
 <template>
     <div class="navbar-container">
         <header class="main-header">
-            <a href="#about-section">
-                <div class="logo"> </div>
+            <a href="#about-section" aria-label="Szymon Wojaczek — home">
+                <div class="logo">
+                    <svg
+                        class="logo__svg"
+                        viewBox="0 0 64 64"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-label="S"
+                    >
+                        <defs>
+                            <linearGradient
+                                id="logoGradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="100%"
+                            >
+                                <stop offset="0%" stop-color="#0a2540" />
+                                <stop offset="100%" stop-color="#1565c0" />
+                            </linearGradient>
+                        </defs>
+                        <rect
+                            class="logo__tile"
+                            x="2"
+                            y="2"
+                            width="60"
+                            height="60"
+                            rx="14"
+                            ry="14"
+                            fill="url(#logoGradient)"
+                        />
+                        <text
+                            class="logo__letter"
+                            x="50%"
+                            y="54%"
+                            text-anchor="middle"
+                            dominant-baseline="middle"
+                            fill="#ffffff"
+                        >S</text>
+                    </svg>
+                </div>
             </a>
 
             <input type="checkbox" class="menu-btn" id="menu-btn" />

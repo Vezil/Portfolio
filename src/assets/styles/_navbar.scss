@@ -3,10 +3,30 @@
 
     .logo {
         margin-top: 0.5rem;
-        background: url('./assets/images/logo-xl.webp');
-        width: 78px;
-        height: 64px;
+        width: 52px;
+        height: 52px;
         cursor: url('./assets/images/custom-cursor-pointer.png'), pointer !important;
+        transition: width 0.4s ease, height 0.4s ease, transform 0.3s ease,
+            filter 0.3s ease;
+        filter: drop-shadow(0 4px 10px rgba(10, 37, 64, 0.45));
+
+        &__svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        &__letter {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            letter-spacing: -1px;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            filter: drop-shadow(0 6px 14px rgba(21, 101, 192, 0.55));
+        }
     }
 
     .main-header {
@@ -142,10 +162,8 @@
 
             .logo {
                 margin-top: 0rem;
-                width: 52px;
-                height: 42px;
-                background: url('./assets/images/logo.webp');
-                transition: width, height, background 0.4s ease;
+                width: 40px;
+                height: 40px;
             }
 
             .menu-icon {
