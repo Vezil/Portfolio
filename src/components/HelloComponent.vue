@@ -62,6 +62,7 @@ export default {
             typeof window !== 'undefined' &&
             window.matchMedia &&
             window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this._spanPool = [];
 
         setTimeout(() => {
             if (this._destroyed) return;
@@ -149,6 +150,78 @@ export default {
                 Math.floor(Math.random() * SCRAMBLE_CHARS.length)
             ];
         },
+        syncSpanPool(roleEl, length) {
+            while (this._spanPool.length < length) {
+                this._spanPool.push(document.createElement('span'));
+            }
+            for (let i = 0; i < this._spanPool.length; i++) {
+                const span = this._spanPool[i];
+                if (i < length) {
+                    if (span.parentNode !== roleEl) {
+                        roleEl.appendChild(span);
+                    }
+                } else if (span.parentNode === roleEl) {
+                    roleEl.removeChild(span);
+                }
+            }
+        },
+        applyDud(item, char, opacity) {
+            const span = item.span;
+            if (item.state !== 'dud') {
+                span.className = 'scramble-dud';
+                item.state = 'dud';
+            }
+            if (char !== null && span.firstChild) {
+                if (span.firstChild.nodeValue !== char) {
+                    span.firstChild.nodeValue = char;
+                }
+            } else if (char !== null) {
+                span.textContent = char;
+            }
+            if (span.style.opacity !== opacity) {
+                span.style.opacity = opacity;
+            }
+        },
+        applyLock(item, lock, r, g) {
+            const span = item.span;
+            if (item.state !== 'lock') {
+                span.className = 'scramble-lock';
+                item.state = 'lock';
+            }
+            if (span.firstChild) {
+                if (span.firstChild.nodeValue !== item.to) {
+                    span.firstChild.nodeValue = item.to;
+                }
+            } else {
+                span.textContent = item.to;
+            }
+            span.style.setProperty('--lock', lock);
+            span.style.color = `rgb(${r},${g},255)`;
+        },
+        applyPlain(item, text) {
+            const span = item.span;
+            if (item.state !== 'plain') {
+                span.className = '';
+                span.style.cssText = '';
+                item.state = 'plain';
+            }
+            if (span.firstChild) {
+                if (span.firstChild.nodeValue !== text) {
+                    span.firstChild.nodeValue = text;
+                }
+            } else if (text) {
+                span.textContent = text;
+            }
+        },
+        applyEmpty(item) {
+            const span = item.span;
+            if (item.state !== 'empty') {
+                span.className = '';
+                span.style.cssText = '';
+                span.textContent = '';
+                item.state = 'empty';
+            }
+        },
         scrambleTo(target) {
             if (this._destroyed) return;
 
@@ -170,6 +243,8 @@ export default {
             const MIN_DURATION = 460;
             const MAX_DURATION = 720;
 
+            this.syncSpanPool(roleEl, length);
+
             this._queue = [];
             for (let i = 0; i < length; i++) {
                 const from = oldText[i] || '';
@@ -189,12 +264,14 @@ export default {
                     duration,
                     char: this.randomScrambleChar(),
                     lastChange: -Infinity,
-                    baseCycle: 38 + Math.random() * 28
+                    baseCycle: 38 + Math.random() * 28,
+                    span: this._spanPool[i],
+                    state: ''
                 });
             }
 
-            this._lockFade = 420;
-            this._fadeOutMs = 220;
+            this._lockFade = 540;
+            this._fadeOutMs = 240;
             this._lastEnd = this._queue.reduce(
                 (m, q) => Math.max(m, q.start + q.duration),
                 0
@@ -206,14 +283,10 @@ export default {
         scrambleFrame() {
             if (this._destroyed) return;
 
-            const roleEl = this.$refs.roleEl;
-            if (!roleEl) return;
-
             const elapsed = performance.now() - this._scrambleStart;
             const LOCK_FADE = this._lockFade;
             const FADE_OUT = this._fadeOutMs;
 
-            let output = '';
             let complete = 0;
 
             for (let i = 0; i < this._queue.length; i++) {
@@ -227,20 +300,25 @@ export default {
                     if (!item.to) {
                         if (sinceLock < FADE_OUT) {
                             const t = 1 - sinceLock / FADE_OUT;
-                            const opacity = (t * 0.55).toFixed(2);
-                            output += `<span class="scramble-dud" style="opacity:${opacity}">${item.char}</span>`;
+                            this.applyDud(
+                                item,
+                                item.char,
+                                (t * 0.55).toFixed(2)
+                            );
+                        } else {
+                            this.applyEmpty(item);
                         }
                         continue;
                     }
 
                     if (sinceLock < LOCK_FADE) {
-                        const t = 1 - sinceLock / LOCK_FADE;
-                        const lock = (t * t).toFixed(3);
-                        const r = Math.round(214 + (239 - 214) * t);
-                        const g = Math.round(168 + (225 - 168) * t);
-                        output += `<span class="scramble-lock" style="--lock:${lock};color:rgb(${r},${g},255)">${item.to}</span>`;
+                        const tn = sinceLock / LOCK_FADE;
+                        const lock = Math.cos((tn * Math.PI) / 2);
+                        const r = Math.round(214 + (255 - 214) * lock);
+                        const g = Math.round(168 + (255 - 168) * lock);
+                        this.applyLock(item, lock.toFixed(3), r, g);
                     } else {
-                        output += item.to;
+                        this.applyPlain(item, item.to);
                     }
                 } else if (localElapsed >= 0) {
                     const progress = localElapsed / item.duration;
@@ -254,19 +332,18 @@ export default {
 
                     const fadeIn = Math.min(1, localElapsed / 90);
                     const opacity = (0.42 + fadeIn * 0.4).toFixed(2);
-                    output += `<span class="scramble-dud" style="opacity:${opacity}">${item.char}</span>`;
+                    this.applyDud(item, item.char, opacity);
                 } else if (item.from) {
-                    output += item.from;
+                    this.applyPlain(item, item.from);
+                } else {
+                    this.applyEmpty(item);
                 }
             }
-
-            roleEl.innerHTML = output;
 
             if (
                 complete === this._queue.length &&
                 elapsed - this._lastEnd > LOCK_FADE + 40
             ) {
-                roleEl.textContent = this._scrambleTarget;
                 this._currentText = this._scrambleTarget;
                 this.scheduleNext();
             } else {
