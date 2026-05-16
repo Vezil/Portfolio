@@ -43,39 +43,41 @@ export default {
             commercialProjects: [
                 {
                     logoLink: 'weloan.webp',
-                    content: `The project was primarily developed using Nuxt, Vue, and Node.js (Express).
-                    The platform is designed to facilitate private and business loan applications.`,
+                    content: `Built primarily with Nuxt, Vue, and Node.js (Express).
+                    The platform handles private and business loan applications end-to-end.`,
                     title: 'Weloan',
                     // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'israelbody.webp',
-                    content: `The project was primarily developed using Nuxt, Vue, and Node.js (Express).
-                    It also integrates Elasticsearch for content search and the Tranzilla payment system.
-                    The platform features a large online store with a wide range of products, a coupon and discount system, food recipes,
-                    and additional content.`,
+                    content: `Built primarily with Nuxt, Vue, and Node.js (Express),
+                    with Elasticsearch powering content search and Tranzilla handling payments.
+                    The platform includes a large online store with a wide product range,
+                    a coupon and discount system, food recipes, and additional content.`,
                     title: 'Israelbody',
                     // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'takeaway-storekit.webp',
-                    content: `The project was primarily developed using Vue, Node.js (Hapi), and PostgreSQL.
-                    The platform integrates multiple payment systems, including Adyen, PayPal, and POS solutions such as Deliverect.
+                    content: `Built primarily with Vue, Node.js (Hapi), and PostgreSQL.
+                    The platform integrates multiple payment systems including Adyen and PayPal,
+                    as well as POS solutions such as Deliverect.
                     Users can order food for pickup, delivery, or direct-to-table service.`,
                     title: 'Takeaway-Order Storekit',
                     // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'oferteo.webp',
-                    content: `The project was developed using Vue and Java, with my contribution focused exclusively on the frontend.
+                    content: `Built with Vue and Java, where I worked exclusively on the frontend.
                     The platform allows users to request specific services from companies matched to their inquiry (RFP).`,
                     title: 'Oferteo',
                     // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'linked-client.webp',
-                    content: `The project was primarily developed using Vue, Express.js, Typescript and MongoDB.
-                    LinkedClient provides an AI-powered sales assistant designed to increase efficiency and close rates while reducing operational costs and administrative workload.`,
+                    content: `Built primarily with Vue, Express.js, TypeScript, and MongoDB.
+                    LinkedClient provides an AI-powered sales assistant designed to improve efficiency
+                    and close rates while reducing operational costs and administrative workload.`,
                     title: 'LinkedClient',
                     // sourceCode: [{ label: 'Source Code', link: null }]
                 }
@@ -85,7 +87,7 @@ export default {
                 {
                     logoLink: 'store.webp',
                     content: `A fully responsive e-commerce web application built with React.js,
-                    featuring a product catalog, pricing display, and an integrated PayPal payment system.`,
+                    featuring a product catalog, pricing display, and integrated PayPal payments.`,
                     title: 'Store',
                     projectLink: 'https://vezil-store.netlify.app',
                     sourceCode: [
@@ -99,8 +101,8 @@ export default {
                     logoLink: 'chat.webp',
                     content: `A real-time chat application built with React.js and Node.js,
                     using Socket.io for live, bidirectional communication.
-                    The app supports instant messaging, emoji integration, and real-time updates without page refresh.
-                    This project demonstrates handling WebSocket connections, real-time data flow, and building interactive user experiences.`,
+                    The app supports instant messaging, emoji integration, and live updates with no page refresh.
+                    Demonstrates WebSocket connection handling, real-time data flow, and interactive UX patterns.`,
                     title: 'Chat',
                     projectLink: 'https://vezil-nodechat.netlify.app',
                     sourceCode: [
@@ -113,7 +115,8 @@ export default {
                 {
                     logoLink: 'disney.webp',
                     content: `A front-end recreation of the Disney+ streaming platform interface built with Vue.js.
-                    The project focuses on layout accuracy. It demonstrates practical use of Vue.js for building modern, scalable user interfaces.`,
+                    Focused on layout accuracy and demonstrating practical use of Vue.js for building modern,
+                    scalable user interfaces.`,
                     title: 'Disney Plus',
                     projectLink: 'https://vezil-disneyplus.netlify.app',
                     sourceCode: [
@@ -125,8 +128,8 @@ export default {
                 },
                 {
                     logoLink: 'platform-pig.webp',
-                    content: `An experimental 2D platform game built in pure JavaScript, featuring pixel-art levels, collectibles,
-                    and a simple scoring system. The project focuses on core gameplay systems such as player movement,
+                    content: `An experimental 2D platform game built in pure JavaScript, featuring pixel-art levels,
+                    collectibles, and a simple scoring system. Focuses on core gameplay systems such as player movement,
                     collision detection, basic physics, and responsive input handling.`,
                     title: 'Platform Pig',
                     projectLink:
@@ -140,10 +143,11 @@ export default {
                 },
                 {
                     logoLink: 'erp.webp',
-                    content: `Employee Management System.
-                    A role-based HR web application built with Vue.js on the front end and a Node.js/Express API backed by MySQL via Sequelize.
+                    content: `A role-based HR web application built with Vue.js on the frontend
+                    and a Node.js/Express API backed by MySQL via Sequelize.
                     The system supports two roles: Employer (Admin) and Employee (User).
-                    Employees can submit leave requests, track their status, and manage their account (including password changes).`,
+                    Employees can submit leave requests, track their status, and manage their account,
+                    including password changes.`,
                     title: 'ERP System',
                     projectLink: 'https://vezil-erp-system.netlify.app',
                     sourceCode: [
@@ -159,11 +163,11 @@ export default {
                 },
                 {
                     logoLink: '2048-game.webp',
-                    content: `2048 Game (JavaScript, p5.js)
-                    A browser-based implementation of the classic 2048 puzzle game built with JavaScript and the p5.js library.
-                    The project includes core game mechanics such as tile merging, score tracking, and game-over detection,
-                    along with basic unit tests to verify game logic.
-                    It demonstrates structured game state management, algorithmic problem-solving, and testable front-end code.`,
+                    content: `A browser-based implementation of the classic 2048 puzzle game built with JavaScript
+                    and the p5.js library. Includes core game mechanics such as tile merging, score tracking,
+                    and game-over detection, along with basic unit tests covering the game logic.
+                    Demonstrates structured game state management, algorithmic problem-solving,
+                    and testable front-end code.`,
                     title: '2048 Game',
                     projectLink: 'https://vezil.github.io/2048-game',
                     sourceCode: [
@@ -175,9 +179,9 @@ export default {
                 },
                 {
                     logoLink: 'twitter.webp',
-                    content: `Social Media Platform - "Twitter clone"
-                    A full-stack social media application built with React and a Node.js API using TypeScript, Prisma, and PostgreSQL.
-                    The platform allows users to create accounts, manage personal profiles, publish posts, follow other users,
+                    content: `A full-stack social media application built with React on the frontend
+                    and a Node.js API using TypeScript, Prisma, and PostgreSQL.
+                    Users can create accounts, manage personal profiles, publish posts, follow other users,
                     and interact through comments.`,
                     title: 'Twitter Clone',
                     projectLink: 'https://vezil-twitter-clone.netlify.app/',
