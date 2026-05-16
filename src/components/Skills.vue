@@ -27,11 +27,9 @@ export default {
                 // --- Markup & styling ---
                 {
                     title: 'Html',
-                    description: `Hypertext Markup Language (HTML)
-                    is the standard markup language for documents
-                    designed to be displayed in a web browser + HTML5 ( the fifth and
-                    latest major version of HTML that is a
-                    (W3C) recommendation).`,
+                    description: `Hypertext Markup Language (HTML) is the standard
+                    markup language for documents designed to be displayed in a web browser.
+                    I work with HTML5, the latest major version and a W3C recommendation.`,
                     logoLink: 'html.png'
                 },
                 {
@@ -50,9 +48,9 @@ export default {
                 },
                 {
                     title: 'Bootstrap',
-                    description: `
-                    Bootstrap is a free and open-source CSS framework directed at responsive,
-                    mobile-first front-end web development.  (I practiced also other Bootstrap-like frameworks like tailwind,vuetify etc...)`,
+                    description: `Bootstrap is a free and open-source CSS framework directed
+                    at responsive, mobile-first front-end web development.
+                    I have also worked with similar frameworks like Tailwind and Vuetify.`,
                     logoLink: 'bootstrap.png'
                 },
 
@@ -60,10 +58,8 @@ export default {
                 {
                     title: 'Javascript',
                     description: `JavaScript is a programming language commonly used in web development.
-                    It was originally developed by Netscape as a means to add dynamic and interactive
-                    elements to websites.
-                    (I know ES6+ standard and some libraries like jQuery)
-                     `,
+                    It was originally developed by Netscape to add dynamic and interactive elements to websites.
+                    I know the ES6+ standard and libraries like jQuery.`,
                     logoLink: 'js.png'
                 },
                 {
@@ -77,61 +73,55 @@ export default {
                 // --- Frontend frameworks ---
                 {
                     title: 'Vue + Vuex',
-                    description: `Vue is an open-source model–view–viewmodel front end JavaScript framework
+                    description: `Vue is an open-source, model-view-viewmodel JavaScript framework
                     for building user interfaces and single-page applications.
-                    Vuex is a state management pattern. It serves as a centralized store for all the components
-                    in an application.
-                     `,
+                    Vuex is a state management pattern that serves as a centralized store
+                    for all components in an application.`,
                     logoLink: 'vue.png'
                 },
                 {
                     title: 'Nuxt',
-                    description: `Nuxt.js abstracts away the details of server and client code
-                    distribution so you can focus on application development.
-                    The goal with Nuxt is for it to be flexible enough for you to use as a main
-                    project base. `,
+                    description: `Nuxt.js abstracts away the details of server and client code distribution,
+                    so you can focus on application development.
+                    Its goal is to be flexible enough to serve as the main project base.`,
                     logoLink: 'nuxt.png'
                 },
                 {
                     title: 'React',
-                    description: ` is an open-source, front end, JavaScript library for building user interfaces or UI components.
-                    It is maintained by Facebook and a community of individual developers and companies.
-                    React can be used as a base in the development of single-page or mobile applications.`,
+                    description: `React is an open-source, front-end JavaScript library for building user interfaces
+                    and UI components. It is maintained by Facebook and a community of individual developers
+                    and companies. React can be used as a base for single-page or mobile applications.`,
                     logoLink: 'react.png'
                 },
 
                 // --- Node backend stack ---
                 {
                     title: 'Node',
-                    description: `Node.js is an open-source, cross-platform, back-end,
-                    JavaScript runtime environment that executes JavaScript code outside a web browser.
-                    Node.js lets developers use JavaScript to write command line tools and for
-                    server-side scripting—running
-                    scripts server-side to produce dynamic web page content.`,
+                    description: `Node.js is an open-source, cross-platform, back-end JavaScript runtime environment
+                    that executes JavaScript code outside a web browser. It lets developers use JavaScript
+                    to write command line tools and run server-side scripts that produce dynamic web page content.`,
                     logoLink: 'node.png'
                 },
                 {
                     title: 'Express',
-                    description: `Express.js is a back end web application framework for Node.js,
-                    released as free and open-source software under the MIT License. It is designed for building web
-                    applications and APIs.
-                    It has been called the de facto standard server framework for Node.js`,
+                    description: `Express.js is a back-end web application framework for Node.js,
+                    released as free and open-source software under the MIT License.
+                    It is designed for building web applications and APIs, and has been called
+                    the de facto standard server framework for Node.js.`,
                     logoLink: 'express.png'
                 },
                 {
                     title: 'Hapi',
-                    description: `Hapi is a rich framework (Node.js) for building applications and services.
-                     It enables developers to focus on writing reusable application logic instead
-                     of spending time building infrastructure.`,
+                    description: `Hapi is a rich Node.js framework for building applications and services.
+                    It lets developers focus on writing reusable application logic instead of
+                    spending time building infrastructure.`,
                     logoLink: 'hapi.png'
                 },
                 {
                     title: 'Sequelize',
-                    description: `
-                    Sequelize is a powerful library in Javascript that makes it
-                    easy to manage a SQL database. Sequelize can layer over different protocols,
-                    but here we'll use PostgreSQL. At its core, Sequelize is an Object-Relational Mapper.
-                    `,
+                    description: `Sequelize is a powerful JavaScript library that makes it easy
+                    to manage SQL databases like PostgreSQL, MySQL, and SQLite.
+                    At its core, Sequelize is an Object-Relational Mapper.`,
                     logoLink: 'sequelize.png'
                 },
 
@@ -145,28 +135,25 @@ export default {
                 },
                 {
                     title: 'Laravel',
-                    description: `Laravel is a free, open-source PHP web framework,
-                    intended for the development of web applications following the model–view–controller (MVC)
-                    architectural pattern and based on Symfony.
-                    `,
+                    description: `Laravel is a free, open-source PHP web framework intended
+                    for the development of web applications following the model-view-controller (MVC)
+                    architectural pattern, based on Symfony.`,
                     logoLink: 'laravel.png'
                 },
 
                 // --- Databases ---
                 {
                     title: 'MySQL',
-                    description: `A relational database organizes data into one or more data tables
-                    in which data types may be related to each other; these relations help structure
-                    the data. SQL is a language programmers use to create, modify and extract data
-                    from the relational database, as well as control user access to the database.`,
+                    description: `MySQL is a relational database that organizes data into tables
+                    with relations between them. SQL is the language used to create, modify, and extract data
+                    from the database, as well as control user access.`,
                     logoLink: 'mysql.png'
                 },
                 {
                     title: 'Redis',
-                    description: `Redis is an open source (BSD licensed),
-                    in-memory data structure store, used as a database,
-                    cache and message broker. It supports data structures
-                    such as strings, hashes, lists, sets. We can use redis for queue also.`,
+                    description: `Redis is an open-source (BSD-licensed), in-memory data structure store
+                    used as a database, cache, and message broker. It supports data structures
+                    such as strings, hashes, lists, and sets, and can also be used as a queue.`,
                     logoLink: 'redis.png'
                 },
 
@@ -183,30 +170,26 @@ export default {
                     title: 'Git',
                     description: `Git is a distributed version-control system for tracking
                     changes in source code during software development.
-                    It is designed for coordinating work among programmers,
-                    but it can be used to track changes in any set of files.
-                    `,
+                    It is designed for coordinating work among programmers, but it can be used
+                    to track changes in any set of files.`,
                     logoLink: 'git.png'
                 },
 
                 // --- Other languages & misc ---
                 {
                     title: 'C++',
-                    description: `The language has expanded significantly over time,
-                    and modern C++ now has object-oriented, generic, and functional.
-                    Based on this language later was created popular programming language like
-                    Javascript, Php and others...
-                     `,
+                    description: `C++ has expanded significantly over time, and modern C++ now supports
+                    object-oriented, generic, and functional programming.
+                    Many popular languages like JavaScript and PHP were later inspired by it.`,
                     logoLink: 'cplusplus.png'
                 },
                 {
                     title: 'Others',
-                    description: `I know also others stuff who can be usefull
-                    during the programing like:
+                    description: `I also know other tools that come in handy while programming, like
                     Photoshop (graphic editor), Camtasia Studio (video editor),
-                    Postman (for testing API), SEO (Search Engine Optimization), Facebook Pixel (Advertisements for facebook),
-                     Jest (for testing), OAuth 2.0 protocol (authorizing via e.g Google) ...
-                   `,
+                    Postman (for testing APIs), SEO (Search Engine Optimization),
+                    Facebook Pixel (Facebook advertisements), Jest (for testing),
+                    and the OAuth 2.0 protocol (authorization via Google etc.).`,
                     logoLink: 'others.png'
                 }
             ]
