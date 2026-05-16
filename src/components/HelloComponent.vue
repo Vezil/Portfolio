@@ -142,21 +142,21 @@ export default {
                 this._stringIndex =
                     (this._stringIndex + 1) % this.typingStrings.length;
                 this.scrambleTo(this.typingStrings[this._stringIndex]);
-            }, 2800);
+            }, 2400);
+        },
+        randomScrambleChar() {
+            return SCRAMBLE_CHARS[
+                Math.floor(Math.random() * SCRAMBLE_CHARS.length)
+            ];
         },
         scrambleTo(target) {
-            if (this._destroyed) {
-              return;
-            }
+            if (this._destroyed) return;
 
             const roleEl = this.$refs.roleEl;
-
-            if (!roleEl) {
-              return;
-            }
+            if (!roleEl) return;
 
             if (this._reducedMotion) {
-              roleEl.textContent = target;
+                roleEl.textContent = target;
                 this._currentText = target;
                 this.scheduleNext();
                 return;
@@ -164,61 +164,112 @@ export default {
 
             const oldText = this._currentText;
             const length = Math.max(oldText.length, target.length);
-            this._queue = [];
 
+            const STAGGER = 42;
+            const JITTER = 90;
+            const MIN_DURATION = 460;
+            const MAX_DURATION = 720;
+
+            this._queue = [];
             for (let i = 0; i < length; i++) {
                 const from = oldText[i] || '';
                 const to = target[i] || '';
-                const start = Math.floor(Math.random() * 60);
-                const end = start + 50 + Math.floor(Math.random() * 50);
-                this._queue.push({ from, to, start, end, char: '' });
+                const start = Math.max(
+                    0,
+                    i * STAGGER + (Math.random() - 0.5) * JITTER
+                );
+                const duration = to
+                    ? MIN_DURATION +
+                      Math.random() * (MAX_DURATION - MIN_DURATION)
+                    : MIN_DURATION * 0.55;
+                this._queue.push({
+                    from,
+                    to,
+                    start,
+                    duration,
+                    char: this.randomScrambleChar(),
+                    lastChange: -Infinity,
+                    baseCycle: 38 + Math.random() * 28
+                });
             }
 
-            this._frame = 0;
+            this._lockFade = 420;
+            this._fadeOutMs = 220;
+            this._lastEnd = this._queue.reduce(
+                (m, q) => Math.max(m, q.start + q.duration),
+                0
+            );
+            this._scrambleStart = performance.now();
             this._scrambleTarget = target;
             this.scrambleFrame();
         },
         scrambleFrame() {
-            if (this._destroyed) {
-              return;
-            }
+            if (this._destroyed) return;
 
             const roleEl = this.$refs.roleEl;
+            if (!roleEl) return;
 
-            if (!roleEl) {
-              return;
-            }
+            const elapsed = performance.now() - this._scrambleStart;
+            const LOCK_FADE = this._lockFade;
+            const FADE_OUT = this._fadeOutMs;
 
             let output = '';
             let complete = 0;
-            for (let i = 0; i < this._queue.length; i++) {
-                const queueElement = this._queue[i];
 
-                if (this._frame >= queueElement.end) {
+            for (let i = 0; i < this._queue.length; i++) {
+                const item = this._queue[i];
+                const localElapsed = elapsed - item.start;
+
+                if (localElapsed >= item.duration) {
                     complete++;
-                    output += queueElement.to;
-                } else if (this._frame >= queueElement.start) {
-                    if (!queueElement.char || Math.random() < 0.12) {
-                      queueElement.char =
-                            SCRAMBLE_CHARS[
-                                Math.floor(
-                                    Math.random() * SCRAMBLE_CHARS.length
-                                )
-                            ];
+                    const sinceLock = localElapsed - item.duration;
+
+                    if (!item.to) {
+                        if (sinceLock < FADE_OUT) {
+                            const t = 1 - sinceLock / FADE_OUT;
+                            const opacity = (t * 0.55).toFixed(2);
+                            output += `<span class="scramble-dud" style="opacity:${opacity}">${item.char}</span>`;
+                        }
+                        continue;
                     }
-                    output += `<span class="scramble-dud">${queueElement.char}</span>`;
-                } else {
-                    output += queueElement.from;
+
+                    if (sinceLock < LOCK_FADE) {
+                        const t = 1 - sinceLock / LOCK_FADE;
+                        const lock = (t * t).toFixed(3);
+                        const r = Math.round(214 + (239 - 214) * t);
+                        const g = Math.round(168 + (225 - 168) * t);
+                        output += `<span class="scramble-lock" style="--lock:${lock};color:rgb(${r},${g},255)">${item.to}</span>`;
+                    } else {
+                        output += item.to;
+                    }
+                } else if (localElapsed >= 0) {
+                    const progress = localElapsed / item.duration;
+                    const cycleMs =
+                        item.baseCycle * (1 + progress * progress * 2.6);
+
+                    if (localElapsed - item.lastChange >= cycleMs) {
+                        item.char = this.randomScrambleChar();
+                        item.lastChange = localElapsed;
+                    }
+
+                    const fadeIn = Math.min(1, localElapsed / 90);
+                    const opacity = (0.42 + fadeIn * 0.4).toFixed(2);
+                    output += `<span class="scramble-dud" style="opacity:${opacity}">${item.char}</span>`;
+                } else if (item.from) {
+                    output += item.from;
                 }
             }
 
-          roleEl.innerHTML = output;
+            roleEl.innerHTML = output;
 
-            if (complete === this._queue.length) {
+            if (
+                complete === this._queue.length &&
+                elapsed - this._lastEnd > LOCK_FADE + 40
+            ) {
+                roleEl.textContent = this._scrambleTarget;
                 this._currentText = this._scrambleTarget;
                 this.scheduleNext();
             } else {
-                this._frame++;
                 this._frameId = requestAnimationFrame(this.scrambleFrame);
             }
         }
