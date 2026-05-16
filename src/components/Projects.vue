@@ -46,7 +46,7 @@ export default {
                     content: `The project was primarily developed using Nuxt, Vue, and Node.js (Express).
                     The platform is designed to facilitate private and business loan applications.`,
                     title: 'Weloan',
-                    sourceCode: [{ label: 'Source Code', link: null }]
+                    // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'israelbody.webp',
@@ -55,7 +55,7 @@ export default {
                     The platform features a large online store with a wide range of products, a coupon and discount system, food recipes,
                     and additional content.`,
                     title: 'Israelbody',
-                    sourceCode: [{ label: 'Source Code', link: null }]
+                    // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'takeaway-storekit.webp',
@@ -63,21 +63,21 @@ export default {
                     The platform integrates multiple payment systems, including Adyen, PayPal, and POS solutions such as Deliverect.
                     Users can order food for pickup, delivery, or direct-to-table service.`,
                     title: 'Takeaway-Order Storekit',
-                    sourceCode: [{ label: 'Source Code', link: null }]
+                    // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'oferteo.webp',
                     content: `The project was developed using Vue and Java, with my contribution focused exclusively on the frontend.
                     The platform allows users to request specific services from companies matched to their inquiry (RFP).`,
                     title: 'Oferteo',
-                    sourceCode: [{ label: 'Source Code', link: null }]
+                    // sourceCode: [{ label: 'Source Code', link: null }]
                 },
                 {
                     logoLink: 'linked-client.webp',
                     content: `The project was primarily developed using Vue, Express.js, Typescript and MongoDB.
                     LinkedClient provides an AI-powered sales assistant designed to increase efficiency and close rates while reducing operational costs and administrative workload.`,
                     title: 'LinkedClient',
-                    sourceCode: [{ label: 'Source Code', link: null }]
+                    // sourceCode: [{ label: 'Source Code', link: null }]
                 }
             ],
 

@@ -138,12 +138,38 @@
     }
 }
 
+// Disable parallax tilt and cursor glow on touch / non-hover devices
+@media (hover: none) {
+    .main-container {
+        .typing-text,
+        .static-text {
+            transform: none !important;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
 // Reduced motion accessibility
 @media (prefers-reduced-motion: reduce) {
     .main-container,
     .main-container .typing-text,
-    .main-container .static-text {
+    .main-container .static-text,
+    .main-container {
         animation: none !important;
         transition: none !important;
+    }
+
+    .main-container {
+        .typing-text,
+        .static-text {
+            transform: none !important;
+
+            &::after {
+                display: none;
+            }
+        }
     }
 }

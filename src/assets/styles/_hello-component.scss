@@ -19,19 +19,37 @@
     font-family: 'Montserrat', sans-serif;
     transition: background 0.8s ease-in-out;
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        pointer-events: none;
-    }
+
 
     .typing-text,
     .static-text {
         font-family: 'Montserrat', sans-serif;
         font-feature-settings: 'kern' 1, 'liga' 1;
         -webkit-font-smoothing: antialiased;
+
+        transform: perspective(900px)
+            rotateX(var(--tilt-x, 0deg))
+            rotateY(var(--tilt-y, 0deg))
+            translateZ(0);
+        transition: transform 280ms ease-out;
+        will-change: transform;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            opacity: var(--glow, 0);
+            transition: opacity 320ms ease-out;
+        }
+    }
+
+    .scramble-dud {
+        color: #b8a0e0;
+        opacity: 0.75;
+        text-shadow: none;
     }
 
     .typing-text {
@@ -65,14 +83,36 @@
         animation: hello-card-in 0.7s ease-out both;
         animation-delay: 0.15s;
 
+        &::after {
+            background: radial-gradient(
+                320px circle at var(--mx, 50%) var(--my, 50%),
+                rgba(199, 125, 255, 0.38),
+                transparent 60%
+            );
+        }
+
         br {
             line-height: 2;
         }
 
-        .typing {
+        .typing-slot {
+            position: relative;
+            display: inline-block;
             font-weight: 700;
-            color: #d6a8ff;
             letter-spacing: 0.4px;
+
+            &__ghost {
+                visibility: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        .typing {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            color: #d6a8ff;
             text-shadow:
                 0 0 14px rgba(199, 125, 255, 0.55),
                 0 2px 6px rgba(15, 8, 30, 0.85);
@@ -107,6 +147,14 @@
             inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
         animation: hello-card-in 0.7s ease-out both;
+
+        &::after {
+            background: radial-gradient(
+                320px circle at var(--mx, 50%) var(--my, 50%),
+                rgba(106, 177, 255, 0.34),
+                transparent 60%
+            );
+        }
 
         & > div {
             padding: clamp(1rem, 1.4vw, 1.35rem) clamp(1rem, 1.6vw, 1.5rem);
