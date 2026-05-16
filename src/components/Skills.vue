@@ -24,6 +24,7 @@ export default {
     data() {
         return {
             skills: [
+                // --- Markup & styling ---
                 {
                     title: 'Html',
                     description: `Hypertext Markup Language (HTML)
@@ -33,7 +34,6 @@ export default {
                     (W3C) recommendation).`,
                     logoLink: 'html.png'
                 },
-
                 {
                     title: 'Css',
                     description: `Cascading Style Sheets (CSS) is a style sheet language used
@@ -55,6 +55,8 @@ export default {
                     mobile-first front-end web development.  (I practiced also other Bootstrap-like frameworks like tailwind,vuetify etc...)`,
                     logoLink: 'bootstrap.png'
                 },
+
+                // --- JS / TS languages ---
                 {
                     title: 'Javascript',
                     description: `JavaScript is a programming language commonly used in web development.
@@ -64,6 +66,15 @@ export default {
                      `,
                     logoLink: 'js.png'
                 },
+                {
+                    title: 'Typescript',
+                    description: `TypeScript is an open-source language which builds on JavaScript,
+                    one of the world’s most used tools, by adding static type definitions. All valid JavaScript code is also TypeScript code.
+                     `,
+                    logoLink: 'Typescript_logo_2020.png'
+                },
+
+                // --- Frontend frameworks ---
                 {
                     title: 'Vue + Vuex',
                     description: `Vue is an open-source model–view–viewmodel front end JavaScript framework
@@ -88,14 +99,15 @@ export default {
                     React can be used as a base in the development of single-page or mobile applications.`,
                     logoLink: 'react.png'
                 },
+
+                // --- Node backend stack ---
                 {
                     title: 'Node',
                     description: `Node.js is an open-source, cross-platform, back-end,
                     JavaScript runtime environment that executes JavaScript code outside a web browser.
                     Node.js lets developers use JavaScript to write command line tools and for
                     server-side scripting—running
-                    scripts server-side to produce dynamic web page content
-                    before the page is sent to the user's web browser.`,
+                    scripts server-side to produce dynamic web page content.`,
                     logoLink: 'node.png'
                 },
                 {
@@ -122,22 +134,8 @@ export default {
                     `,
                     logoLink: 'sequelize.png'
                 },
-                {
-                    title: 'Redis',
-                    description: `Redis is an open source (BSD licensed),
-                    in-memory data structure store, used as a database,
-                    cache and message broker. It supports data structures
-                    such as strings, hashes, lists, sets. We can use redis for queue also.`,
-                    logoLink: 'redis.png'
-                },
-                {
-                    title: 'Docker',
-                    description: `Docker is a tool designed to make it easier to create,
-                    deploy, and run applications by using containers. Containers allow a
-                    developer to package up an application with all of the parts it needs,
-                    such as libraries and other dependencies, and deploy it as one package.`,
-                    logoLink: 'docker.png'
-                },
+
+                // --- PHP stack ---
                 {
                     title: 'Php',
                     description: `PHP (recursive acronym for PHP: Hypertext Preprocessor)
@@ -153,6 +151,8 @@ export default {
                     `,
                     logoLink: 'laravel.png'
                 },
+
+                // --- Databases ---
                 {
                     title: 'MySQL',
                     description: `A relational database organizes data into one or more data tables
@@ -160,6 +160,24 @@ export default {
                     the data. SQL is a language programmers use to create, modify and extract data
                     from the relational database, as well as control user access to the database.`,
                     logoLink: 'mysql.png'
+                },
+                {
+                    title: 'Redis',
+                    description: `Redis is an open source (BSD licensed),
+                    in-memory data structure store, used as a database,
+                    cache and message broker. It supports data structures
+                    such as strings, hashes, lists, sets. We can use redis for queue also.`,
+                    logoLink: 'redis.png'
+                },
+
+                // --- DevOps / tooling ---
+                {
+                    title: 'Docker',
+                    description: `Docker is a tool designed to make it easier to create,
+                    deploy, and run applications by using containers. Containers allow a
+                    developer to package up an application with all of the parts it needs,
+                    such as libraries and other dependencies, and deploy it as one package.`,
+                    logoLink: 'docker.png'
                 },
                 {
                     title: 'Git',
@@ -170,6 +188,8 @@ export default {
                     `,
                     logoLink: 'git.png'
                 },
+
+                // --- Other languages & misc ---
                 {
                     title: 'C++',
                     description: `The language has expanded significantly over time,
@@ -178,13 +198,6 @@ export default {
                     Javascript, Php and others...
                      `,
                     logoLink: 'cplusplus.png'
-                },
-                {
-                    title: 'Typescript',
-                    description: `TypeScript is an open-source language which builds on JavaScript,
-                    one of the world’s most used tools, by adding static type definitions. All valid JavaScript code is also TypeScript code.
-                     `,
-                    logoLink: 'Typescript_logo_2020.png'
                 },
                 {
                     title: 'Others',
