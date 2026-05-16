@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 .main-container {
     position: relative;
@@ -19,7 +18,7 @@
     padding: clamp(2rem, 6vw, 5rem);
 
     color: #f6f8ff;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: background 0.8s ease-in-out;
 
     &::before {
@@ -28,6 +27,13 @@
         inset: 0;
         z-index: 0;
         pointer-events: none;
+    }
+
+    .typing-text,
+    .static-text {
+        font-family: 'Montserrat', sans-serif;
+        font-feature-settings: 'kern' 1, 'liga' 1;
+        -webkit-font-smoothing: antialiased;
     }
 
     .typing-text {
@@ -40,19 +46,18 @@
         padding: clamp(1rem, 2vw, 1.75rem) clamp(1.25rem, 2.5vw, 2.25rem);
         max-width: min(620px, 92vw);
 
-        font-family: 'Source Code Pro', ui-monospace, 'Menlo', monospace;
         font-size: clamp(1.05rem, 1.55vw, 1.55rem);
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.5;
-        letter-spacing: 0;
+        letter-spacing: 0.2px;
         text-align: left;
 
-        background: rgba(10, 18, 35, 0.42);
+        background: rgba(10, 18, 35, 0.45);
         backdrop-filter: blur(18px) saturate(140%);
         -webkit-backdrop-filter: blur(18px) saturate(140%);
 
-        border: 1px solid rgba(199, 125, 255, 0.32);
-        border-radius: 18px 4px 18px 4px;
+        border: 1px solid rgba(199, 125, 255, 0.35);
+        border-radius: 16px;
 
         box-shadow:
             0 14px 40px rgba(0, 0, 0, 0.5),
@@ -69,7 +74,7 @@
         .typing {
             font-weight: 700;
             color: #d6a8ff;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
             text-shadow:
                 0 0 14px rgba(199, 125, 255, 0.55),
                 0 2px 6px rgba(15, 8, 30, 0.85);
@@ -86,10 +91,10 @@
         padding: 6px;
         width: min(380px, 38vw);
 
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        font-size: clamp(0.875rem, 0.95vw, 1rem);
+        font-size: clamp(0.9rem, 0.95vw, 1.02rem);
         font-weight: 400;
         line-height: 1.65;
+        letter-spacing: 0.1px;
 
         background: rgba(10, 18, 35, 0.5);
         backdrop-filter: blur(14px) saturate(140%);
@@ -129,10 +134,10 @@
             }
 
             b {
-                color: #d6a8ff;
+                color: #6ab1ff;
                 font-weight: 700;
                 letter-spacing: 0.3px;
-                text-shadow: 0 0 12px rgba(199, 125, 255, 0.45);
+                text-shadow: 0 0 12px rgba(80, 140, 255, 0.45);
             }
         }
     }
