@@ -72,9 +72,18 @@ export default {
     },
     beforeDestroy() {
         this._destroyed = true;
-        if (this._frameId) cancelAnimationFrame(this._frameId);
-        if (this._holdTimeout) clearTimeout(this._holdTimeout);
-        if (this._mouseFrameId) cancelAnimationFrame(this._mouseFrameId);
+
+        if (this._frameId) {
+          cancelAnimationFrame(this._frameId);
+        }
+
+        if (this._holdTimeout) {
+          clearTimeout(this._holdTimeout);
+        }
+
+        if (this._mouseFrameId) {
+          cancelAnimationFrame(this._mouseFrameId);
+        }
     },
     methods: {
         onMouseMove(e) {
@@ -83,10 +92,17 @@ export default {
                 clientY: e.clientY,
                 rect: e.currentTarget.getBoundingClientRect()
             };
-            if (this._mouseFrameId) return;
+
+            if (this._mouseFrameId) {
+              return;
+            }
+
             this._mouseFrameId = requestAnimationFrame(() => {
                 this._mouseFrameId = null;
-                if (this._destroyed || !this._pendingMouse) return;
+
+                if (this._destroyed || !this._pendingMouse) {
+                  return;
+                }
                 this.applyMouse(this._pendingMouse);
             });
         },
@@ -156,6 +172,7 @@ export default {
             }
             for (let i = 0; i < this._spanPool.length; i++) {
                 const span = this._spanPool[i];
+
                 if (i < length) {
                     if (span.parentNode !== roleEl) {
                         roleEl.appendChild(span);
@@ -184,10 +201,12 @@ export default {
         },
         applyLock(item, lock, r, g) {
             const span = item.span;
+
             if (item.state !== 'lock') {
                 span.className = 'scramble-lock';
                 item.state = 'lock';
             }
+
             if (span.firstChild) {
                 if (span.firstChild.nodeValue !== item.to) {
                     span.firstChild.nodeValue = item.to;
@@ -200,11 +219,13 @@ export default {
         },
         applyPlain(item, text) {
             const span = item.span;
+
             if (item.state !== 'plain') {
                 span.className = '';
                 span.style.cssText = '';
                 item.state = 'plain';
             }
+
             if (span.firstChild) {
                 if (span.firstChild.nodeValue !== text) {
                     span.firstChild.nodeValue = text;
@@ -215,6 +236,7 @@ export default {
         },
         applyEmpty(item) {
             const span = item.span;
+
             if (item.state !== 'empty') {
                 span.className = '';
                 span.style.cssText = '';
@@ -226,7 +248,10 @@ export default {
             if (this._destroyed) return;
 
             const roleEl = this.$refs.roleEl;
-            if (!roleEl) return;
+
+            if (!roleEl) {
+              return;
+            }
 
             if (this._reducedMotion) {
                 roleEl.textContent = target;
@@ -246,6 +271,7 @@ export default {
             this.syncSpanPool(roleEl, length);
 
             this._queue = [];
+
             for (let i = 0; i < length; i++) {
                 const from = oldText[i] || '';
                 const to = target[i] || '';
@@ -281,7 +307,9 @@ export default {
             this.scrambleFrame();
         },
         scrambleFrame() {
-            if (this._destroyed) return;
+            if (this._destroyed) {
+              return;
+            }
 
             const elapsed = performance.now() - this._scrambleStart;
             const LOCK_FADE = this._lockFade;
